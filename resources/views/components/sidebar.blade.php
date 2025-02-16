@@ -12,7 +12,7 @@
                 <img src="{{ asset('admin/dist/img/default_photo_profile.png') }}" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-                <a href="#" class="d-block">Administrator</a>
+                <a href="#" class="d-block">{{ auth()->user()->name ?? 'Administrator' }}</a>
             </div>
         </div>
 
@@ -63,7 +63,7 @@
                     </x-nav-link>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="{{ route('logout') }}" class="nav-link">
                         <i class="nav-icon fas fa-door-open"></i>
                         <p>
                             Sign Out
