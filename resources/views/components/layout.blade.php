@@ -14,7 +14,10 @@
         <x-navbar></x-navbar>
         <x-sidebar></x-sidebar>
         <div class="content-wrapper">
-            {{ $slot }}
+            <x-header>{{ $title }}</x-header>
+            <section class="content">
+                {{ $slot }}
+            </section>
         </div>
     </div>
 </body>
