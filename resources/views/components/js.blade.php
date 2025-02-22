@@ -9,3 +9,24 @@
 <script src="{{ asset('admin/plugins/datatables-buttons/js/dataTables.buttons.min.js') }}"></script>
 <script src="{{ asset('admin/plugins/datatables-buttons/js/buttons.bootstrap4.min.js') }}"></script>
 <script src="{{ asset('js/script.js') }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+@if (session()->has('success'))
+    <script>
+        Swal.fire({
+            title: "Success",
+            text: "{{ session('success') }}",
+            icon: "success"
+        })
+    </script>
+@endif
+
+@if (session()->has('failed'))
+    <script>
+        Swal.fire({
+            title: "Oops!",
+            text: "{{ session('failed') }}",
+            icon: "warning"
+        })
+    </script>
+@endif
