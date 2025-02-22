@@ -15,6 +15,9 @@ Route::get('/instructors', [InstructorController::class, 'index'])->middleware('
 Route::get('/clients', [ClientController::class, 'index'])->middleware('auth')->name('clients');
 
 Route::get('/services', [ServiceController::class, 'index'])->middleware('auth')->name('services');
+Route::post('/services/create', [ServiceController::class, 'store'])->middleware('auth')->name('services.store');
+Route::get('/services/{id}/delete', [ServiceController::class, 'delete'])->middleware('auth')->name('services.delete');
+Route::put('/services/{id}/update', [ServiceController::class, 'update'])->middleware('auth')->name('services.update');
 
 Route::get('/orders', [OrderController::class, 'index'])->middleware('auth')->name('orders');
 

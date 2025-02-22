@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\Category;
+use App\Models\Service;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -23,5 +25,7 @@ class DatabaseSeeder extends Seeder
             'is_admin' => true,
             'password' => Hash::make('kudanil123')
         ]);
+
+        Service::factory(10)->recycle(Category::factory(2)->create())->create();
     }
 }
