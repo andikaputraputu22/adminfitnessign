@@ -10,6 +10,7 @@
 <script src="{{ asset('admin/plugins/datatables-buttons/js/buttons.bootstrap4.min.js') }}"></script>
 <script src="{{ asset('js/script.js') }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://unpkg.com/trix@2.0.8/dist/trix.umd.min.js"></script>
 
 @if (session()->has('success'))
     <script>

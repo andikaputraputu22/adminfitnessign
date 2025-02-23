@@ -56,7 +56,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form action="/services/create" method="POST">
+                <form action="/services/store" method="POST">
                     @csrf
                     <div class="modal-body">
                         <div class="form-group">

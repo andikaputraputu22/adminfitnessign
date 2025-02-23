@@ -31,7 +31,7 @@
                     </x-nav-link>
                 </li>
                 <li class="nav-item">
-                    <x-nav-link href="/instructors" :active="request()->is('instructors')">
+                    <x-nav-link href="/instructors" :active="request()->is('instructors*')">
                         <x-slot name="icon">
                             <i class="nav-icon fas fa-users"></i>
                         </x-slot>

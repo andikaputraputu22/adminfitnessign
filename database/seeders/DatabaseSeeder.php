@@ -26,6 +26,14 @@ class DatabaseSeeder extends Seeder
             'password' => Hash::make('kudanil123')
         ]);
 
-        Service::factory(10)->recycle(Category::factory(2)->create())->create();
+        Category::factory()->create([
+            'name' => 'Indoor'
+        ]);
+
+        Category::factory()->create([
+            'name' => 'Outdoor'
+        ]);
+
+        // Service::factory(10)->recycle(Category::factory(2)->create())->create();
     }
 }

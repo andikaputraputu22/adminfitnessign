@@ -1,0 +1,87 @@
+.file-dnd {
+    width: 100%;
+    height: 340px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;
+    gap: 10px;
+    box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.05);
+}
+
+.file-dnd input {
+    display: none;
+}
+
+.file-dnd .before-upload {
+    border: 1px dashed #888;
+    flex: 1;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.file-dnd .before-upload > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.file-dnd .before-upload > div i {
+    font-size: 40px;
+    color: #5750d9;
+}
+
+.file-dnd .before-upload > div h4 {
+    color: #111;
+    margin-top: 5px;
+    font-size: 16px;
+    width: 160px;
+}
+
+.file-dnd .before-upload > div p {
+    color: #555;
+    font-size: 14px;
+}
+
+.file-dnd.active .before-upload {
+    border: 1px solid #5750d9;
+    background: #f5f5ff;
+}
+
+.file-dnd .after-upload {
+    position: relative;
+    display: none;
+}
+
+.file-dnd .after-upload img {
+    width: 100%;
+    border-radius: 5px;
+    max-height: 260px;
+    object-fit: cover;
+}
+
+.file-dnd .after-upload .clear-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    line-height: 15px;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+trix-toolbar [data-trix-button-group="file-tools"] {
+    display: none !important;
+}
