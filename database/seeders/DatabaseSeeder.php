@@ -34,6 +34,18 @@ class DatabaseSeeder extends Seeder
             'name' => 'Outdoor'
         ]);
 
+        Service::factory()->create([
+            'name' => 'Twisting Yoga',
+            'description' => 'Latihan yoga yang akan fokus pada gerakan gerakan memutar (twisting) tubuh.',
+            'category_id' => 1
+        ]);
+
+        Service::factory()->create([
+            'name' => 'Pectoralis Exercise',
+            'description' => 'Latihan ini merupakan latihan untuk meningkatkan kekuatan dan daya tahan otot Dada dan perut.',
+            'category_id' => 2
+        ]);
+
         // Service::factory(10)->recycle(Category::factory(2)->create())->create();
     }
 }

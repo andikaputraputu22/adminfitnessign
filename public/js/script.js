@@ -18,21 +18,37 @@ $(document).ready(function() {
         "autoWidth": false,
         "responsive": true
     });
+});
 
-    $('#deleteService').click(function(e) {
-        e.preventDefault();
-        let deleteUrl = $(this).data("url");
-        Swal.fire({
-            title: "Are you sure?",
-            text: "This action cannot be undone!",
-            icon: "warning",
-            showCancelButton: true,
-            confirmButtonText: "Yes, delete it!"
-        }).then((result) => {
-            if (result.isConfirmed) {
-                window.location.href = deleteUrl;
-            }
-        });
+$(document).on("click", '#deleteService', function(e) {
+    e.preventDefault();
+    let deleteUrl = $(this).data("url");
+    Swal.fire({
+        title: "Are you sure?",
+        text: "This action cannot be undone!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonText: "Yes, delete it!"
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location.href = deleteUrl;
+        }
+    });
+});
+
+$(document).on("click", '#deleteInstructor', function(e) {
+    e.preventDefault();
+    let deleteUrl = $(this).data("url");
+    Swal.fire({
+        title: "Are you sure?",
+        text: "This action cannot be undone!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonText: "Yes, delete it!"
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location.href = deleteUrl;
+        }
     });
 });
 

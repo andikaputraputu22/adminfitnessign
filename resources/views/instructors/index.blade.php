@@ -24,7 +24,7 @@
                                         <td>{{ $instructor->name }}</td>
                                         <td>{{ $instructor->email }}</td>
                                         <td>{{ $instructor->phone }}</td>
-                                        <td>{{ Str::limit($instructor->description, 80) }}</td>
+                                        <td>{{ Str::limit(strip_tags($instructor->description), 80) }}</td>
                                         <td class="text-center">
                                             <button id="editInstructor" type="button" class="btn btn-primary">
                                                 <i class="fa-solid fas fa-pen"></i>

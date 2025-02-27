@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Instructor;
 use App\Models\Service;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class InstructorController extends Controller
 {
@@ -38,5 +39,14 @@ class InstructorController extends Controller
 
         Instructor::create($validateData);
         return redirect('/instructors')->with('success', 'New instructor has been added!');
+    }
+
+    public function delete($id) {
+        $instructor = Instructor::find($id);
+        if ($instructor->photo) {
+            Storage::delete($instructor->photo);
+        }
+        $instructor->delete();
+        return redirect()->back()->with('success', 'Instructor has been deleted');
     }
 }
