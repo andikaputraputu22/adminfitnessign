@@ -127,6 +127,54 @@ class AuthController extends Controller
         return response()->json(compact('user'), 200);
     }
 
+    public function updateProfile(Request $request) {
+        try {
+            $user = JWTAuth::parseToken()->authenticate();
+            $validator = Validator::make($request->all(), [
+                'name' => 'required',
+                'phone' => 'required'
+            ]);
+
+            if ($validator->fails()) {
+                return response()->json([
+                    'success' => false,
+                    'message' => $validator->errors()
+                ], 422);
+            }
+
+            $user->update([
+                'name' => $request->name,
+                'phone' => $request->phone
+            ]);
+
+            return response()->json([
+                'success' => true,
+                'message' => 'Profile updated successfully',
+                'user' => $user
+            ], 200);
+        } catch (TokenExpiredException $e) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Token expired'
+            ], 401);
+        } catch (TokenInvalidException $e) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Token invalid'
+            ], 401);
+        } catch (JWTException $e) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Token is missing'
+            ], 401);
+        } catch (\Exception $e) {
+            return response()->json([
+                'success' => false,
+                'message' => $e->getMessage()
+            ], 500);
+        }
+    }
+
     public function logout() {
         try {
             $token = JWTAuth::getToken();

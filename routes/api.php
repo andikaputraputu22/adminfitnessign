@@ -13,6 +13,7 @@ Route::post('/resend-verification-email', [AuthController::class, 'resendVerific
 
 Route::middleware([AuthMiddleware::class, EnsureEmailVerified::class])->group(function() {
     Route::get('/profile', [AuthController::class, 'profile'])->name('profile');
+    Route::post('/profile/update', [AuthController::class, 'updateProfile'])->name('profile.update');
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 });
 

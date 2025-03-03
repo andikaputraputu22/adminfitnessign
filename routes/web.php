@@ -16,6 +16,8 @@ Route::post('/instructors/store', [InstructorController::class, 'store'])->middl
 Route::get('/instructors/{id}/delete', [InstructorController::class, 'delete'])->middleware('auth')->name('instructors.delete');
 
 Route::get('/clients', [ClientController::class, 'index'])->middleware('auth')->name('clients');
+Route::get('/clients/detail/{id}', [ClientController::class, 'detail'])->middleware('auth')->name('clients.detail');
+Route::get('/clients/{id}/delete', [ClientController::class, 'delete'])->middleware('auth')->name('clients.delete');
 
 Route::get('/services', [ServiceController::class, 'index'])->middleware('auth')->name('services');
 Route::post('/services/store', [ServiceController::class, 'store'])->middleware('auth')->name('services.store');
