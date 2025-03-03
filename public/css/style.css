@@ -1,6 +1,6 @@
 .file-dnd {
     width: 100%;
-    height: 340px;
+    height: 430px;
     border-radius: 10px;
     border: 1px solid #ddd;
     padding: 15px;
@@ -63,7 +63,7 @@
 .file-dnd .after-upload img {
     width: 100%;
     border-radius: 5px;
-    max-height: 260px;
+    max-height: 350px;
     object-fit: cover;
 }
 

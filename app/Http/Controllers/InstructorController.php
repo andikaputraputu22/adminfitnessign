@@ -12,7 +12,7 @@ class InstructorController extends Controller
     public function index() {
         return view('instructors.index', [
             'title' => 'Instructors',
-            'instructors' => Instructor::with('service')->get()
+            'instructors' => Instructor::with('services')->get()
         ]);
     }
 
@@ -25,7 +25,8 @@ class InstructorController extends Controller
 
     public function store(Request $request) {
         $validateData = $request->validate([
-            'service_id' => 'required',
+            'service_id' => 'required|array',
+            'service_id.*' => 'exists:services,id',
             'name' => 'required',
             'email' => 'required|email',
             'phone' => 'required',
@@ -37,7 +38,8 @@ class InstructorController extends Controller
             $validateData['photo'] = $request->file('photo')->store('instructors');
         }
 
-        Instructor::create($validateData);
+        $instructor = Instructor::create($validateData);
+        $instructor->services()->attach($request->service_id);
         return redirect('/instructors')->with('success', 'New instructor has been added!');
     }
 

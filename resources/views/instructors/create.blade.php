@@ -46,9 +46,9 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="service">Select Service</label>
-                                        <select id="service" class="form-control" name="service_id">
-                                            @foreach ($services as $service)
-                                                <option value="{{ $service->id }}">{{ $service->name }}</option>
+                                        <select id="service" class="form-control" name="service_id[]" multiple size="5">
+                                            @foreach ($services as $index => $service)
+                                                <option value="{{ $service->id }}" {{ $index === 0 ? 'selected' : '' }}>{{ $service->name }}</option>
                                             @endforeach
                                         </select>
                                     </div>
