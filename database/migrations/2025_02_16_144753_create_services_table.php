@@ -16,6 +16,9 @@ return new class extends Migration
             $table->string('name');
             $table->text('description');
             $table->string('photo')->nullable();
+            $table->integer('min_person');
+            $table->integer('max_person');
+            $table->integer('price');
             $table->foreignId('category_id')->constrained(
                 table: 'categories',
                 indexName: 'services_category_id'

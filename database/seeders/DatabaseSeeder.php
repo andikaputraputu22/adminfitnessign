@@ -37,13 +37,19 @@ class DatabaseSeeder extends Seeder
         Service::factory()->create([
             'name' => 'Twisting Yoga',
             'description' => 'Latihan yoga yang akan fokus pada gerakan gerakan memutar (twisting) tubuh.',
-            'category_id' => 1
+            'category_id' => 1,
+            'min_person' => 20,
+            'max_person' => 30,
+            'price' => 1000000
         ]);
 
         Service::factory()->create([
             'name' => 'Pectoralis Exercise',
             'description' => 'Latihan ini merupakan latihan untuk meningkatkan kekuatan dan daya tahan otot Dada dan perut.',
-            'category_id' => 2
+            'category_id' => 2,
+            'min_person' => 10,
+            'max_person' => 20,
+            'price' => 2000000
         ]);
 
         // Service::factory(10)->recycle(Category::factory(2)->create())->create();

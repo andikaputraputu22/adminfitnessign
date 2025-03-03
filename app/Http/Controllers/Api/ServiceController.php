@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use App\Models\Service;
 use Illuminate\Http\Request;
 
@@ -28,6 +29,21 @@ class ServiceController extends Controller
         return response()->json([
             'success' => true,
             'data' => $service->instructors->makeHidden('pivot')
+        ], 200);
+    }
+
+    public function getCategory($id) {
+        $category = Category::with('services')->find($id);
+        if (!$category) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Category not found'
+            ], 404);
+        }
+
+        return response()->json([
+            'success' => true,
+            'data' => $category
         ], 200);
     }
 }

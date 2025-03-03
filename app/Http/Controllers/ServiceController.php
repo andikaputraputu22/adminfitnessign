@@ -20,7 +20,10 @@ class ServiceController extends Controller
         $validateData = $request->validate([
             'category_id' => 'required',
             'name' => 'required',
-            'description' => 'required'
+            'description' => 'required',
+            'min_person' => 'required|integer|min:1',
+            'max_person' => 'required|integer|min:1',
+            'price' => 'required|integer|min:1'
         ]);
 
         Service::create($validateData);

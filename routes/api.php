@@ -17,3 +17,4 @@ Route::middleware([AuthMiddleware::class, EnsureEmailVerified::class])->group(fu
 });
 
 Route::get('/services/instructors', [ServiceController::class, 'getInstructors'])->name('get-instructors');
+Route::get('/categories/{id}', [ServiceController::class, 'getCategory'])->name('get-category');
