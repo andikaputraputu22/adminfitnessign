@@ -30,6 +30,22 @@ $(document).ready(function() {
     });
 });
 
+$(document).on("click", '#logoutAdmin', function(e) {
+    e.preventDefault();
+    let deleteUrl = $(this).data("url");
+    Swal.fire({
+        title: "Sign out?",
+        text: "This action cannot be undone!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonText: "Yes, sign out!"
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location.href = deleteUrl;
+        }
+    });
+});
+
 $(document).on("click", '#deleteService', function(e) {
     e.preventDefault();
     let deleteUrl = $(this).data("url");
