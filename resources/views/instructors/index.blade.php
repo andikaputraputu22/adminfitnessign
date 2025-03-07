@@ -13,7 +13,7 @@
                                 <tr>
                                     <th>Name</th>
                                     <th>Email</th>
-                                    <th>Telepon</th>
+                                    <th>Phone</th>
                                     <th>Description</th>
                                     <th class="text-center">Action</th>
                                 </tr>

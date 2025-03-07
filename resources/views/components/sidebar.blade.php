@@ -63,7 +63,7 @@
                     </x-nav-link>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('logout') }}" class="nav-link">
+                    <a id="logoutAdmin" data-url="{{ route('logout') }}" class="nav-link">
                         <i class="nav-icon fas fa-door-open"></i>
                         <p>
                             Sign Out
