@@ -28,6 +28,16 @@ $(document).ready(function() {
         "autoWidth": false,
         "responsive": true
     });
+
+    $('#tableOrder').DataTable({
+        "paging": true,
+        "lengthChange": true,
+        "searching": true,
+        "ordering": true,
+        "info": true,
+        "autoWidth": false,
+        "responsive": true
+    });
 });
 
 $(document).on("click", '#logoutAdmin', function(e) {

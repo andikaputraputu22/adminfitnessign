@@ -8,7 +8,7 @@
                         <h3 class="card-title">All Data Orders</h3>
                     </div>
                     <div class="card-body">
-                        <table id="tableClient" class="table table-bordered table-hover">
+                        <table id="tableOrder" class="table table-bordered table-hover">
                             <thead>
                                 <tr>
                                     <th>Order ID</th>
