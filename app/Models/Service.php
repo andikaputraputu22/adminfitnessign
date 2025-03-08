@@ -22,6 +22,10 @@ class Service extends Model
         return $this->belongsToMany(Instructor::class, 'instructor_service');
     }
 
+    public function orders() {
+        return $this->hasMany(Order::class);
+    }
+
     protected function serializeDate(\DateTimeInterface $date) {
         return Carbon::parse($date)->timezone('Asia/Jakarta')->toDateTimeString();
     }

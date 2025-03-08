@@ -16,6 +16,8 @@ return new class extends Migration
             $table->id();
             $table->string('order_id')->unique();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->foreignId('service_id')->nullable()->constrained()->onDelete('set null');
+            $table->foreignId('instructor_id')->nullable()->constrained()->onDelete('set null');
             $table->string('customer_name');
             $table->string('customer_email');
             $table->string('customer_phone');

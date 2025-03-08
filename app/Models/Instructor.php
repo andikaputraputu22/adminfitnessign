@@ -17,6 +17,10 @@ class Instructor extends Model
         return $this->belongsToMany(Service::class, 'instructor_service');
     }
 
+    public function orders() {
+        return $this->hasMany(Order::class);
+    }
+
     public function getPhotoAttribute($value) {
         return $value ? Storage::url($value) : null;
     }

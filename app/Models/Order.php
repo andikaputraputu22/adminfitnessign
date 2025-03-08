@@ -9,6 +9,8 @@ class Order extends Model
     protected $fillable = [
         'order_id',
         'user_id',
+        'service_id',
+        'instructor_id',
         'customer_name',
         'customer_email',
         'customer_phone',
@@ -19,5 +21,13 @@ class Order extends Model
 
     public function user() {
         return $this->belongsTo(User::class);
+    }
+
+    public function service() {
+        return $this->belongsTo(Service::class)->withDefault();
+    }
+
+    public function instructor() {
+        return $this->belongsTo(Instructor::class)->withDefault();
     }
 }
