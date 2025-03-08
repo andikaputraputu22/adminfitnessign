@@ -21,8 +21,8 @@ return new class extends Migration
             $table->string('customer_name');
             $table->string('customer_email');
             $table->string('customer_phone');
-            $table->string('status')->default(OrderStatus::PENDING);
-            $table->decimal('amount', 15, 2);
+            $table->tinyInteger('status')->default(OrderStatus::PENDING);
+            $table->bigInteger('amount');
             $table->string('snap_token')->nullable();
             $table->timestamps();
         });

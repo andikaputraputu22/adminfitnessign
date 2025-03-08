@@ -3,7 +3,7 @@
 namespace App\Enums;
 
 class OrderStatus {
-    public const PENDING = 'pending';
-    public const PAID = 'paid';
-    public const CANCELED = 'canceled';
+    public const PENDING = 0;
+    public const PAID = 1;
+    public const CANCELED = 2;
 }
