@@ -16,6 +16,7 @@ class Order extends Model
         'customer_phone',
         'status',
         'amount',
+        'order_datetime',
         'snap_token'
     ];
 

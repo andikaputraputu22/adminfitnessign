@@ -23,8 +23,10 @@ return new class extends Migration
             $table->string('customer_phone');
             $table->tinyInteger('status')->default(OrderStatus::PENDING);
             $table->bigInteger('amount');
+            $table->dateTime('order_datetime');
             $table->string('snap_token')->nullable();
             $table->timestamps();
+            $table->unique(['instructor_id', 'order_datetime']);
         });
     }
 
