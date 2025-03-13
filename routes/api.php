@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\PaymentController;
 use App\Http\Controllers\Api\ServiceController;
 use App\Http\Middleware\AuthMiddleware;
 use App\Http\Middleware\EnsureEmailVerified;
@@ -15,6 +16,7 @@ Route::middleware([AuthMiddleware::class, EnsureEmailVerified::class])->group(fu
     Route::get('/profile', [AuthController::class, 'profile'])->name('profile');
     Route::post('/profile/update', [AuthController::class, 'updateProfile'])->name('profile.update');
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+    Route::post('/payment', [PaymentController::class, 'createTransaction'])->name('payment.create');
 });
 
 Route::get('/services/instructors', [ServiceController::class, 'getInstructors'])->name('get-instructors');
