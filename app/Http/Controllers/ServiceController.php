@@ -11,19 +11,14 @@ class ServiceController extends Controller
     public function index() {
         return view('services.index', [
             'title' => 'Services',
-            'services' => Service::with('category')->get(),
-            'categories' => Category::all()
+            'services' => Service::all()
         ]);
     }
 
     public function store(Request $request) {
         $validateData = $request->validate([
-            'category_id' => 'required',
             'name' => 'required',
-            'description' => 'required',
-            'min_person' => 'required|integer|min:1',
-            'max_person' => 'required|integer|min:1',
-            'price' => 'required|integer|min:1'
+            'description' => 'required'
         ]);
 
         Service::create($validateData);
