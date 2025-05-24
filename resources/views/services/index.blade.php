@@ -13,9 +13,7 @@
                             <thead>
                                 <tr>
                                     <th>Name</th>
-                                    <th>Category</th>
                                     <th>Description</th>
-                                    <th>Price</th>
                                     <th class="text-center">Action</th>
                                 </tr>
                             </thead>
@@ -23,17 +21,11 @@
                                 @foreach ($services as $service)
                                     <tr>
                                         <td>{{ Str::limit($service->name, 30) }}</td>
-                                        <td>{{ $service->category->name ?? 'No category' }}</td>
-                                        <td>{{ Str::limit($service->description, 70) }}</td>
-                                        <td>{{ formatRupiah($service->price) }}</td>
+                                        <td>{{ Str::limit($service->description, 100) }}</td>
                                         <td class="text-center">
                                             <button id="editService" type="button" class="btn btn-primary"
                                                 data-id="{{ $service->id }}"
-                                                data-category="{{ $service->category_id }}"
                                                 data-name="{{ $service->name }}"
-                                                data-min_person="{{ $service->min_person }}"
-                                                data-max_person="{{ $service->max_person }}"
-                                                data-price="{{ $service->price }}"
                                                 data-description="{{ $service->description }}">
                                                 <i class="fa-solid fas fa-pen"></i>
                                             </button>
@@ -65,40 +57,9 @@
                     @csrf
                     <div class="modal-body">
                         <div class="form-group">
-                            <label for="serviceCategory">Select Category</label>
-                            <select id="serviceCategory" class="form-control" name="category_id">
-                                @foreach ($categories as $category)
-                                    <option value="{{ $category->id }}">{{ $category->name }}</option>
-                                @endforeach
-                            </select>
-                        </div>
-                        <div class="form-group">
                             <label for="serviceName">Name</label>
                             <input required type="text" class="form-control" id="serviceName" name="name"
                                 placeholder="Enter service name">
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="serviceMinPerson">Min Person</label>
-                                    <input required type="number" min="1" class="form-control" id="serviceMinPerson" name="min_person"
-                                        placeholder="Enter min participant">
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="serviceMaxPerson">Max Person</label>
-                                    <input required type="number" min="1" class="form-control" id="serviceMaxPerson" name="max_person"
-                                        placeholder="Enter max participant">
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="servicePrice">Price</label>
-                                    <input required type="number" min="1" class="form-control" id="servicePrice" name="price"
-                                        placeholder="Enter price">
-                                </div>
-                            </div>
                         </div>
                         <div class="form-group">
                             <label for="serviceDescription">Description</label>
@@ -130,40 +91,9 @@
                     @method('PUT')
                     <div class="modal-body">
                         <div class="form-group">
-                            <label for="editServiceCategory">Select Category</label>
-                            <select id="editServiceCategory" class="form-control" name="category_id">
-                                @foreach ($categories as $category)
-                                    <option value="{{ $category->id }}">{{ $category->name }}</option>
-                                @endforeach
-                            </select>
-                        </div>
-                        <div class="form-group">
                             <label for="editServiceName">Name</label>
                             <input required type="text" class="form-control" id="editServiceName" name="name"
                                 placeholder="Enter service name">
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="editServiceMinPerson">Min Person</label>
-                                    <input required type="number" min="1" class="form-control" id="editServiceMinPerson" name="min_person"
-                                        placeholder="Enter min participant">
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="editServiceMaxPerson">Max Person</label>
-                                    <input required type="number" min="1" class="form-control" id="editServiceMaxPerson" name="max_person"
-                                        placeholder="Enter max participant">
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="editServicePrice">Price</label>
-                                    <input required type="number" min="1" class="form-control" id="editServicePrice" name="price"
-                                        placeholder="Enter price">
-                                </div>
-                            </div>
                         </div>
                         <div class="form-group">
                             <label for="editServiceDescription">Description</label>

@@ -106,18 +106,10 @@ $(document).on("click", '#deleteClient', function(e) {
 
 $(document).on("click", '#editService', function() {
     let serviceId = $(this).data("id");
-    let categoryId = $(this).data("category");
     let name = $(this).data("name");
-    let minPerson = $(this).data("min_person");
-    let maxPerson = $(this).data("max_person");
-    let price = $(this).data("price");
     let description = $(this).data("description");
 
-    $('#editServiceCategory').val(categoryId);
     $('#editServiceName').val(name);
-    $('#editServiceMinPerson').val(minPerson);
-    $('#editServiceMaxPerson').val(maxPerson);
-    $('#editServicePrice').val(price);
     $('#editServiceDescription').val(description);
 
     $('#formEditService').attr("action", `/services/${serviceId}/update`);

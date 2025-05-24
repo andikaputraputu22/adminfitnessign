@@ -11,11 +11,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 class Service extends Model
 {
     use HasFactory;
-    protected $fillable = ['category_id', 'name', 'description', 'min_person', 'max_person', 'price'];
-
-    public function category(): BelongsTo {
-        return $this->belongsTo(Category::class);
-    }
+    protected $fillable = ['name', 'description'];
 
     public function instructors(): BelongsToMany {
         return $this->belongsToMany(Instructor::class, 'instructor_service');

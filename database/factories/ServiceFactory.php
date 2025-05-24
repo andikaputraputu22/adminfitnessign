@@ -19,8 +19,7 @@ class ServiceFactory extends Factory
     {
         return [
             'name' => fake()->sentence(),
-            'description' => fake()->text(),
-            'category_id' => Category::factory()
+            'description' => fake()->text()
         ];
     }
 }
