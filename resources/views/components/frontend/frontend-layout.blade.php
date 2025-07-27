@@ -22,8 +22,7 @@
 <body class="index-page">
     <x-frontend.frontend-header></x-frontend.frontend-header>
     <main class="main">
-        <x-frontend.frontend-hero></x-frontend.frontend-hero>
-        <x-frontend.frontend-instructor></x-frontend.frontend-instructor>
+        {{ $slot }}
     </main>
 
     <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
