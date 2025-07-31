@@ -11,7 +11,7 @@
             <ul>
                 <li><a href="#hero" class="active">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#services">Instructors</a></li>
+                <li><a href="/instructors">Instructors</a></li>
                 <li class="dropdown"><a href="#"><span>Services</span> <i
                             class="bi bi-chevron-down toggle-dropdown"></i></a>
                     <ul>
