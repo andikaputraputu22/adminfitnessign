@@ -10,8 +10,8 @@
         <nav id="navmenu" class="navmenu">
             <ul>
                 <li><a href="/" class="active">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#about">Healt</a></li>
+                <li><a href="{{ route('frontend.about') }}">About</a></li>
+                <li><a href="{{ route('frontend.health') }}">Health</a></li>
 
                 <li class="dropdown"><a href="#"><span>Personal Training</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                     <ul>
