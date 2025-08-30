@@ -19,7 +19,7 @@
 
 </head>
 
-<body class="index-page" styles ="background-color2: #000000ff">
+<body class="index-page">
     <x-frontend.frontend-header></x-frontend.frontend-header>
     <main class="main">
         {{ $slot }}
