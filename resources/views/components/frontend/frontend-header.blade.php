@@ -13,18 +13,17 @@
                 <li><a href="/blog">Health</a></li>
                 <li class="dropdown"><a href="#"><span>Personal Training</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                     <ul>
-                        <li><a href="#">Dropdown 1</a></li>
-                        <li><a href="#">Dropdown 2</a></li>
-                        <li><a href="#">Dropdown 3</a></li>
-                        <li><a href="#">Dropdown 4</a></li>
+                        <li><a href="#">ADVANCE</a></li>
+                        <li><a href="#">PRIME</a></li>
+                       
                     </ul>
                 </li>
                 <li class="dropdown"><a href="#"><span>Instructor Class</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                     <ul>
-                        <li><a href="#">Dropdown 1</a></li>
-                        <li><a href="#">Dropdown 2</a></li>
-                        <li><a href="#">Dropdown 3</a></li>
-                        <li><a href="#">Dropdown 4</a></li>
+                        <li><a href="#">POUNDFIT</a></li>
+                        <li><a href="#">ZUMBA</a></li>
+                        <li><a href="#">AEROBIC</a></li>
+                        <li><a href="#">BODY COMBAT</a></li>
                     </ul>
                 </li>
                 <li><a href="/about">About</a></li>
