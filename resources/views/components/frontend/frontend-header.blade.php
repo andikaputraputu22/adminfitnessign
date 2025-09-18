@@ -15,7 +15,7 @@
                     <ul>
                         <li><a href="#">ADVANCE</a></li>
                         <li><a href="#">PRIME</a></li>
-                       
+
                     </ul>
                 </li>
                 <li class="dropdown"><a href="#"><span>Instructor Class</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
@@ -26,7 +26,7 @@
                         <li><a href="#">BODY COMBAT</a></li>
                     </ul>
                 </li>
-                <li><a href="/about">About</a></li>
+                <li><a href="#about">About</a></li>
             </ul>
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
