@@ -7,6 +7,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('frontend.home');
 
-Route::get('/instructors', [InstructorController::class, 'index'])->name('frontend.instructor');
+Route::get('/instructors/{id}', [InstructorController::class, 'index'])->name('frontend.instructor');
 
 Route::get('/blog', [BlogController::class, 'index'])->name('frontend.blog');

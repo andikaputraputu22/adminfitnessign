@@ -7,9 +7,9 @@ use Illuminate\Http\Request;
 
 class InstructorController extends Controller
 {
-    public function index() {
+    public function index($id) {
         return view('frontend.instructor.index', [
-            'title' => 'Instructors'
+            'title' => strtoupper($id)
         ]);
     }
 }
