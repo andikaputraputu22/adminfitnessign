@@ -13,8 +13,8 @@
                 <li><a href="/blog">Health</a></li>
                 <li class="dropdown"><a href="#"><span>Personal Training</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                     <ul>
-                        <li><a href="#">ADVANCE</a></li>
-                        <li><a href="#">PRIME</a></li>
+                        <li><a href="{{ route('frontend.trainer', ['id' => 'advance']) }}">ADVANCE</a></li>
+                        <li><a href="{{ route('frontend.trainer', ['id' => 'prime']) }}">PRIME</a></li>
 
                     </ul>
                 </li>
