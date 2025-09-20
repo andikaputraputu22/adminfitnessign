@@ -1846,8 +1846,9 @@ section,
 }
 
 .about-img {
-    max-width: 85%;
-    height: auto;
+    max-width: 100%;
+    max-height: 400px;
+    object-fit: cover;
 }
 
 .about-text {
