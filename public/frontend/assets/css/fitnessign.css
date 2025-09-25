@@ -1,0 +1,129 @@
+/* Header styling */
+.fitnessign-header {
+  background: #0B0B0B; /* White background */
+  box-shadow: 0px 2px 15px rgba(0,0,0,0.05);
+  padding: 15px 0;
+}
+
+.fitnessign-header .logo .sitename {
+  font-size: 28px;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.fitnessign-header .logo .text-green {
+  color: #00ff40; /* Neon green dot */
+}
+
+/* Nav menu */
+.navmenu ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.navmenu ul li a {
+  font-size: 16px;
+  font-weight: 500;
+  color: #FFFFFF;
+  transition: color 0.3s ease;
+}
+
+/* Hover + active state */
+.navmenu ul li a:hover,
+.navmenu ul li a.active {
+  color: #00ff40; /* Green highlight */
+}
+
+/* Dropdown */
+.navmenu .dropdown ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 10px 0;
+  border-radius: 6px;
+  z-index: 99;
+}
+
+.navmenu .dropdown:hover ul {
+  display: block;
+}
+
+.navmenu .dropdown ul li {
+  min-width: 180px;
+}
+
+.navmenu .dropdown ul li a {
+  display: block;
+  padding: 10px 20px;
+  color: #0B0B0B;
+}
+
+.navmenu .dropdown ul li a:hover {
+  color: #15FF00;
+  background: rgba(21, 255, 0, 0.05);
+}
+
+
+
+.fitnessign-text-green {
+    color: #15FF00 !important;
+}
+
+.fitnessign-bg-green {
+    background-color: #0B0B0B !important;
+}
+
+.fitnessign-btn-get-started {
+    background: #1E1E1E;
+    color: #FFFFFF;
+    border: 2px solid transparent; /* start with no visible border */
+    padding: 10px 30px;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out; /* only animate text color */
+}
+
+.fitnessign-btn-get-started:hover {
+    color: #15FF00;           /* text turns neon green */
+    border-color: #15FF00;    /* border fades in green */
+    background: #1E1E1E;      /* keep background the same */
+}
+
+.fitnessign-btn-watch-video {
+  font-size: 16px;
+  transition: 0.5s;
+  margin-left: 25px;
+  font-weight: 400;
+  color: #FFFFFF;
+  transition: color 0.5s ease;
+}
+
+.fitnessign-btn-watch-video i {
+  color: var(#15FF00);
+  font-size: 32px;
+  transition: 0.5 ease;
+  line-height: 0;
+  margin-right: 8px;
+}
+
+.fitnessign-btn-watch-video:hover {
+  color: #15FF00
+}
+
+.fitnessign-btn-watch-video:hover i {
+  color: #15FF00
+}
+
+
+/* Instructor */
+
+.fitnessign-light-background {
+  --background-color: #0B0B0B !important;
+  --surface-color: #0B0B0B !important;
+}

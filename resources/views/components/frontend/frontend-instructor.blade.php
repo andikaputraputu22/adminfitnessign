@@ -1,4 +1,4 @@
-<section id="team" class="team section light-background">
+<section id="team" class="team section fitnessign-light-background">
     <div class="container section-title" data-aos="fade-up">
         <h2>PERSONAL TRAINING </h2>
         <p>CHECK OUR PERSONAL TRAINING </p>
@@ -55,8 +55,8 @@
 
 <section id="team" class="team section light-background">
     <div class="container section-title" data-aos="fade-up">
-        <h2>INSTRUCTOURS CLASS </h2>
-        <p>CHECK OUR INSTRUCTUOURS CLASS </p>
+        <h2>INSTRUCTOR CLASS </h2>
+        <p>CHECK OUR INSTRUCTOR CLASS </p>
     </div>
     <div class="container">
         <div class="row gy-5">

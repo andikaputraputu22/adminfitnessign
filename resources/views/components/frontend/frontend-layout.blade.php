@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="/frontend/assets/vendor/glightbox/css/glightbox.min.css">
     <link rel="stylesheet" href="/frontend/assets/vendor/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="/frontend/assets/css/main.css">
+    <link rel="stylesheet" href="/frontend/assets/css/fitnessign.css">
 
 </head>
 
