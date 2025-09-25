@@ -1,7 +1,7 @@
 <section id="team" class="team section fitnessign-light-background">
     <div class="container section-title" data-aos="fade-up">
-        <h2>PERSONAL TRAINING </h2>
-        <p>CHECK OUR PERSONAL TRAINING </p>
+        <h2>PERSONAL TRAINING</h2>
+        <p>CHECK OUR PERSONAL TRAINING</p>
     </div>
     <div class="container">
         <div class="row gy-5">
@@ -66,7 +66,7 @@
                     <div class="member-info">
                         <h4>COACH ()</h4>
                          <span>POUND FIT </span>
-                        
+
                         <div class="social">
                             <a href=""><i class="bi bi-facebook"></i></a>
                             <a href=""><i class="bi bi-instagram"></i></a>

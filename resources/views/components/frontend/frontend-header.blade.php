@@ -11,21 +11,20 @@
                 <li><a href="/blog">Health</a></li>
                 <li class="dropdown"><a href="#"><span>Personal Training</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                     <ul>
-                        <li><a href="#">Dropdown 1</a></li>
-                        <li><a href="#">Dropdown 2</a></li>
-                        <li><a href="#">Dropdown 3</a></li>
-                        <li><a href="#">Dropdown 4</a></li>
+                        <li><a href="{{ route('frontend.trainer', ['id' => 'advance']) }}">ADVANCE</a></li>
+                        <li><a href="{{ route('frontend.trainer', ['id' => 'prime']) }}">PRIME</a></li>
+
                     </ul>
                 </li>
                 <li class="dropdown"><a href="#"><span>Instructor Class</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                     <ul>
-                        <li><a href="#">Dropdown 1</a></li>
-                        <li><a href="#">Dropdown 2</a></li>
-                        <li><a href="#">Dropdown 3</a></li>
-                        <li><a href="#">Dropdown 4</a></li>
+                        <li><a href="{{ route('frontend.instructor', ['id' => 'poundfit']) }}">POUNDFIT</a></li>
+                        <li><a href="{{ route('frontend.instructor', ['id' => 'zumba']) }}">ZUMBA</a></li>
+                        <li><a href="{{ route('frontend.instructor', ['id' => 'aerobic']) }}">AEROBIC</a></li>
+                        <li><a href="{{ route('frontend.instructor', ['id' => 'body combat']) }}">BODY COMBAT</a></li>
                     </ul>
                 </li>
-                <li><a href="/about">About</a></li>
+                <li><a href="#about">About</a></li>
             </ul>
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>

@@ -5,10 +5,10 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class InstructorController extends Controller
+class TrainerController extends Controller
 {
     public function index($id) {
-        return view('frontend.instructor.index', [
+        return view('frontend.trainer.index', [
             'title' => strtoupper($id)
         ]);
     }

@@ -1,4 +1,4 @@
 <x-frontend.frontend-layout>
     <x-slot:title>{{ $title }}</x-slot:title>
-    <x-frontend.instructors>{{ $title }}</x-frontend.instructors>
+    <x-frontend.trainer>{{ $title }}</x-frontend.trainer>
 </x-frontend.frontend-layout>
