@@ -266,5 +266,6 @@
 }
 
 #about {
-  background-color: #000 !important;
+  background: linear-gradient(135deg, #1E1E1E 70%, #003300 100%);
+  color: #FFFFFF !important;
 }
