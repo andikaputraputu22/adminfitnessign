@@ -53,7 +53,7 @@
     </div>
 </section>
 
-<section id="team" class="team section light-background">
+<section id="team" class="team section fitnessign-light-background">
     <div class="container section-title" data-aos="fade-up">
         <h2>INSTRUCTOR CLASS </h2>
         <p>CHECK OUR INSTRUCTOR CLASS </p>
