@@ -3,6 +3,14 @@
         <img src="{{ asset('frontend/assets/img/page-trainer-advanced.jpg') }}" alt="" data-aos="fade-in">
     @elseif(request()->is('trainer/prime'))
         <img src="{{ asset('frontend/assets/img/page-trainer-prime.jpg') }}" alt="" data-aos="fade-in">
+    @elseif(request()->is('instructors/poundfit'))
+        <img src="{{ asset('frontend/assets/img/header-image-poundfit.jpg') }}" alt="" data-aos="fade-in">
+    @elseif(request()->is('instructors/zumba'))
+        <img src="{{ asset('frontend/assets/img/header-image-zumba.jpg') }}" alt="" data-aos="fade-in">
+    @elseif(request()->is('instructors/aerobic'))
+        <img src="{{ asset('frontend/assets/img/header-image-aerobic.jpg') }}" alt="" data-aos="fade-in">
+    @elseif(request()->is('instructors/body combat'))
+        <img src="{{ asset('frontend/assets/img/header-image-body-combat.jpg') }}" alt="" data-aos="fade-in">
     @else
         <img src="{{ asset('frontend/assets/img/hero-bg-gym.jpg') }}" alt="" data-aos="fade-in">
     @endif

@@ -242,6 +242,22 @@
   font-family: var(--heading-font);
 }
 
+.title-description {
+    padding-bottom: 60px;
+    position: relative;
+    color: #FFFFFF;
+    font-size: 24px;
+    font-family: var(--heading-font);
+}
+
+.fitnessign-blog-title {
+    color: #FFFFFF !important;
+}
+
+.fitnessign-blog-description {
+    color: #FFFFFF !important;
+}
+
 @media (max-width: 768px) {
   .section-title p {
     font-size: 24px;
