@@ -45,7 +45,6 @@
 <script src="/frontend/assets/vendor/swiper/swiper-bundle.min.js"></script>
 <script src="/frontend/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
 <script src="/frontend/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-document.getElementById("year").innerText = new Date().getFullYear();
 <script src="/frontend/assets/js/main.js"></script>
 
 <!-- Dynamic year -->
