@@ -269,10 +269,37 @@
 
 }
 
+/*--------------------------------------------------------------
+# Section Title Overrides (Fitnessign Custom)
+--------------------------------------------------------------*/
+
+.section-title h2 {
+  font-size: 16px;                /* slightly bigger */
+  font-weight: 600;               /* stronger weight */
+  color: #00cc44;                 /* green accent */
+  letter-spacing: 2px;            /* a bit more spacing */
+}
+
+.section-title h2::after {
+  background: #00cc44;            /* green underline */
+  width: 80px;                    /* shorter underline for style */
+}
+
+.section-title p {
+  color: #ffffff;                 /* make "CHECK OUR INFO" white */
+  font-size: 40px;                /* bolder headline */
+  font-weight: 900;               /* extra bold */
+  letter-spacing: 1px;
+  text-transform: none;           /* optional: normal case instead of ALL CAPS */
+}
+
 .about-img {
     max-width: 100%;
-    max-height: 400px;
+    max-height: 520px;
     object-fit: cover;
+    border-radius: 20px; /* increase for smoother corners */
+    margin-left: 20px; /* spacing from text */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4); /* subtle shadow for depth */
 }
 
 .about-text {
@@ -356,3 +383,32 @@
   margin-top: 10px;
   color: #e0dcdc; /* softer grey for copyright */
 }
+
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+#preloader {
+  background: #000; /* solid black */
+  /* or */
+  background: linear-gradient(135deg, #000 70%, #003300 100%);
+}
+
+#preloader:before {
+  border: 6px solid #fff;
+  border-color: #15FF00 transparent #15FF00 transparent; /* green spinner */
+  width: 80px;
+  height: 80px;
+  top: calc(50% - 40px);
+  left: calc(50% - 40px);
+}
+
+@keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+

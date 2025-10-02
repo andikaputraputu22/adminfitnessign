@@ -33,6 +33,8 @@
 
   <!-- Preloader -->
   <div id="preloader"></div>
+
+  
 </body>
 
 <script src="/frontend/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -44,5 +46,10 @@
 <script src="/frontend/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
 <script src="/frontend/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 <script src="/frontend/assets/js/main.js"></script>
+
+<!-- Dynamic year -->
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 </html>
