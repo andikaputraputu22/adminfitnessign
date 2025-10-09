@@ -1,8 +1,8 @@
 <section id="hero" class="hero section dark-background">
     @if(request()->is('trainer/advance'))
-        <img src="{{ asset('frontend/assets/img/page-trainer-advanced.jpg') }}" alt="" data-aos="fade-in">
+        <img src="{{ asset('frontend/assets/img/page-trainer-rud.jpg') }}" alt="" data-aos="fade-in">
     @elseif(request()->is('trainer/prime'))
-        <img src="{{ asset('frontend/assets/img/page-trainer-prime.jpg') }}" alt="" data-aos="fade-in">
+        <img src="{{ asset('frontend/assets/img/page-trainer-putu.jpg') }}" alt="" data-aos="fade-in">
     @elseif(request()->is('instructors/poundfit'))
         <img src="{{ asset('frontend/assets/img/header-image-poundfit.jpg') }}" alt="" data-aos="fade-in">
     @elseif(request()->is('instructors/zumba'))

@@ -1,5 +1,5 @@
 <section id="hero" class="hero section dark-background">
-    <img src="frontend/assets/img/Background-homepage.jpg" alt="" data-aos="fade-in">
+    <img src="frontend/assets/img/PRIVATE RUD.jpg" alt="" data-aos="fade-in">
     <div class="container d-flex flex-column align-items-center">
         <h2 class="fitnessign-text-green" data-aos="fade-up" data-aos-delay="100">COACH .  TRANSFORM  . CHAMPIONS</h2>
         <p class="fitnessign-text-green" data-aos="fade-up" data-aos-delay="200">We are a team of experienced instructors helping you achieve your fitness goals</p>

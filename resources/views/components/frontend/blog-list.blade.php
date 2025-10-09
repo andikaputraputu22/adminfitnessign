@@ -1,6 +1,6 @@
 <section id="services" class="services section fitnessign-light-background">
     <div class="container title-description text-center" data-aos="fade-up">
-        <p>Disini kami berbagi inspirasi seputar gaya hidup sehat, mulai dari tips menjaga kebugaran, panduan nutrisi, hingga kesehatan mental, kesehatan umum dan lifestyle.</p>
+        <p>Disini kami berbagi inspirasi seputar gaya hidup sehat, mulai dari tips menjaga kebugaran, panduan nutrisi, hingga kesehatan mental, kesehatan umum dan lifestyle Usia lanjut.</p>
     </div>
     <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row gy-5">

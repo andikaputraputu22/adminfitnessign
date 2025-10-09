@@ -13,7 +13,7 @@
                         
                 </div>
                 <div class="col-lg-6 order-1 order-lg-2 d-flex justify-content-end">
-                    <img src="frontend/assets/img/about_us2.jpg" alt="" class="img-fluid about-img">
+                    <img src="frontend/assets/img/about2.jpg" alt=""class="img-fluid about-img">
                 </div>
             </div>
         </div>
