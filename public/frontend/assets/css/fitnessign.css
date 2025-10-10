@@ -15,6 +15,18 @@
   color: #00ff40; /* Neon green dot */
 }
 
+.logo-img {
+  height: 40px; /* adjust based on your original text height */
+  width: auto; /* keeps proportions */
+  object-fit: contain;
+  display: block !important;
+}
+
+.header .logo {
+  display: flex;
+  align-items: center;
+}
+
 /* Nav menu */
 .navmenu ul {
   list-style: none;
