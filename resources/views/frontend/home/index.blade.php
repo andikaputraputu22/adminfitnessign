@@ -3,4 +3,5 @@
     <x-frontend.frontend-hero></x-frontend.frontend-hero>
     <x-frontend.frontend-instructor></x-frontend.frontend-instructor>
     <x-frontend.frontend-about></x-frontend.frontend-about>
+    <x-frontend.pricing></x-frontend.pricing>
 </x-frontend.frontend-layout>
