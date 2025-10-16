@@ -8,6 +8,10 @@
             <p>hasbdas</p>
         @elseif(request()->is('instructors/body combat'))
             <p>bhasbdhas</p>
+        @elseif(request()->is('trainer/advance'))
+            <p>RUDI SUROSO</p>
+        @elseif(request()->is('trainer/prime'))
+            <p>LORD CAHYONO</p>
         @else
             <p>Coach Advance Fitnessign ialah pelatih yang sudah berada ditingkat level yang sudah melewati tahap dasar dan menengah ditingkat level profesional dibidang 5 tahun lebih didunia fitness, tentunya coach Advace Fitnessign bersertifikasi dan memiliki program yang menarik untuk kamu pada saat latihan bersama kami dan tentunya memberikan program yang menarik, tantangan baru dan aman. Berikut List Coach Fitnessign kami :</p>
         @endif
