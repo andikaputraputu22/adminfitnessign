@@ -1,6 +1,6 @@
 <footer class="footer">
     <div class="container text-center">
-        <h2 class="sitename">FITNESSIGN.</h2>
+        <img style="max-height: 45px;" src="{{ asset('frontend/assets/img/FITNESSIGN_WHITE.png') }}" alt="FITNESSIGN Logo" class="logo-img">
         <nav>
             <a href="{{ url('/') }}">Home</a>
             <a href="{{ url('/#about') }}">About</a>

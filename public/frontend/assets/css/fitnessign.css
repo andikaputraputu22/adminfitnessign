@@ -15,17 +15,6 @@
   color: #00ff40; /* Neon green dot */
 }
 
-.logo-img {
-  height: 40px; /* adjust based on your original text height */
-  width: auto; /* keeps proportions */
-  object-fit: contain;
-  display: block !important;
-}
-
-.header .logo {
-  display: flex;
-  align-items: center;
-}
 
 /* Nav menu */
 .navmenu ul {
@@ -455,8 +444,13 @@
 }
 
 .pricing-card ul li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
   margin-bottom: 8px;
+  line-height: 1.5;
 }
+
 
 .btn-dark {
   background: #000;

@@ -2,7 +2,7 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
         <a href="index.html" class="logo d-flex align-items-center me-auto">
-            <img src="{{ asset('frontend/assets/img/NEW FT.png') }}" alt="FITNESSIGN Logo" class="logo-img">
+            <img style="max-height: 45px;" src="{{ asset('frontend/assets/img/FITNESSIGN_WHITE.png') }}" alt="FITNESSIGN Logo" class="logo-img">
         </a>
 
         <nav id="navmenu" class="navmenu">
@@ -10,7 +10,7 @@
                 <li><a href="/">Home</a></li>
                 <li><a href="/blog">Health</a></li>
                 <li class="dropdown"><a href="#"><span>Personal Training</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                    <ul>
+                    <ul>    
                         <li><a href="{{ route('frontend.trainer', ['id' => 'advance']) }}">ADVANCE</a></li>
                         <li><a href="{{ route('frontend.trainer', ['id' => 'prime']) }}">PRIME</a></li>
 
