@@ -2,7 +2,7 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
         <a href="index.html" class="logo d-flex align-items-center me-auto">
-            <img src="{{ asset('frontend/assets/img/Background-homepage.jpg') }}" alt="FITNESSIGN Logo" class="logo-img">
+            <img src="{{ asset('frontend/assets/img/NEW FT.png') }}" alt="FITNESSIGN Logo" class="logo-img">
         </a>
 
         <nav id="navmenu" class="navmenu">

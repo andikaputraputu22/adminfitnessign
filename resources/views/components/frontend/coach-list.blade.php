@@ -1,6 +1,6 @@
 <section id="team" class="team section fitnessign-light-background">
     <div class="container title-description text-center" data-aos="fade-up">
-        <p>Disini kami berbagi inspirasi seputar gaya hidup sehat, mulai dari tips menjaga kebugaran, panduan nutrisi, hingga kesehatan mental, kesehatan umum dan lifestyle Usia lanjut.</p>
+        <p>Coach Advance Fitnessign ialah pelatih yang sudah berada ditingkat level yang sudah melewati tahap dasar dan menengah ditingkat level profesional dibidang 5 tahun lebih didunia fitness, tentunya coach Advace Fitnessign bersertifikasi dan memiliki program yang menarik untuk kamu pada saat latihan bersama kami dan tentunya memberikan program yang menarik, tantangan baru dan aman. Berikut List Coach Fitnessign kami :</p>
         <div class="row gy-5">
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
                 <div class="member">
