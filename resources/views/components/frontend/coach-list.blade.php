@@ -1,7 +1,7 @@
 <section id="team" class="team section fitnessign-light-background">
     <div class="container title-description text-center" data-aos="fade-up">
         @if(request()->is('instructors/poundfit'))
-            <p>ajdnasjkdncj</p>
+            <p>Poundfit olahraga yang mulai populer di Amerika Serikat pada tahun 2011 yang di populerkan oleh Kirsten Potenza dan Cristina Preenboom (keduanya dikenal sebagai fommer drummers). Dalam kelas poundfit, peserta menggunakan Ripxtick stick drum khusus yang lebih ringan dari stick drum biasa. </p>
         @elseif(request()->is('instructors/zumba'))
             <p>webej</p>
         @elseif(request()->is('instructors/aerobic'))
