@@ -12,7 +12,7 @@
             <h4 class="fw-bold text-uppercase">PRIVATE COACH</h4>
             <p class="mb-3">Start Rp.120.000</p>
             <ul class="list-unstyled text-start small">
-              <li>1 x session duration 60 minutes</li>
+              <li><i class="fa-solid fa-house"></i> 1 x session duration 60 minutes</li>
               <li>full payment or deposite system</li>
               <li>there is no expired period for session purchases</li>
               <li>Body condition assesment & fitness target consultation</li>
