@@ -17,18 +17,20 @@
         @endif
         <div class="row gy-5">
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                <div class="member">
-                    <div class="pic"><img style="height: 420px; width: 100%; object-fit: cover;" src="/frontend/assets/img/team/FOTO PT BACKGROUND.jpeg" class="img-fluid" alt=""></div>
-                    <div class="member-info">
-                        <h4>Lord Suroso</h4>
-                        <span>Certified :</span>
-                        <span> Specialist : </span>
-                        <div class="social">
-                            <a href=""><i class="bi bi-facebook"></i></a>
-                            <a href=""><i class="bi bi-instagram"></i></a>
+                <a href="{{ route('frontend.detail_instructor') }}">
+                    <div class="member">
+                        <div class="pic"><img style="height: 420px; width: 100%; object-fit: cover;" src="/frontend/assets/img/team/FOTO PT BACKGROUND.jpeg" class="img-fluid" alt=""></div>
+                        <div class="member-info">
+                            <h4>Lord Suroso</h4>
+                            <span>Certified :</span>
+                            <span> Specialist : </span>
+                            <div class="social">
+                                <a href=""><i class="bi bi-facebook"></i></a>
+                                <a href=""><i class="bi bi-instagram"></i></a>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
 
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
