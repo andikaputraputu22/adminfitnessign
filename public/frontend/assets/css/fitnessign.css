@@ -464,3 +464,8 @@
   background: #00ff40;
   color: #000;
 }
+
+.title-description p {
+  text-align: justify;
+  text-justify: inter-word !important;
+}
