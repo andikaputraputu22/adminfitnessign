@@ -10,7 +10,7 @@
                         <img src="frontend/assets/img/services-1.jpg" class="img-fluid" alt="">
                     </div>
                     <div class="details position-relative">
-                        <a href="#" class="stretched-link">
+                        <a href="{{ route('frontend.detail_health') }}" class="stretched-link">
                             <h3 class="fitnessign-blog-title">Nesciunt Mete</h3>
                         </a>
                         <p class="fitnessign-blog-description">Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis.</p>
