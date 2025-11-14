@@ -436,6 +436,12 @@
 
 .pricing-card h4 {
   color: #000 !important;
+  margin-bottom: 10px;
+}
+
+.pricing-card p {
+  font-size: 14px;
+  color: #333;
 }
 
 .pricing-card:hover {
@@ -443,14 +449,31 @@
   box-shadow: 0 0 20px rgba(0, 255, 64, 0.3);
 }
 
+/* Fix bullet alignment */
+.pricing-card ul {
+  padding: 0;
+  margin: 0;
+}
+
 .pricing-card ul li {
   display: flex;
   align-items: flex-start;
-  gap: 8px;
-  margin-bottom: 8px;
-  line-height: 1.5;
+  gap: 10px;
+  color: #000;
+  margin-bottom: 10px;
+  line-height: 1.6;
 }
 
+.pricing-card ul li i {
+  color: #333;
+  font-size: 14px;
+  margin-top: 4px; /* tweak for perfect vertical centering */
+  flex-shrink: 0;
+}
+
+.pricing-card ul li span {
+  flex: 1;
+}
 
 .btn-dark {
   background: #000;
