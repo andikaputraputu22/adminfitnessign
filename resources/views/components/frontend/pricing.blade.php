@@ -13,19 +13,19 @@
             <p class="mb-3">Start Rp.120.000</p>
             <ul class="list-unstyled text-start small">
               <li>
-                <i class="fa-solid fa-circle-dot"></i>
+                <i class="fa-regular fa-alarm-clock"></i>
                 <span>1x session duration 60 minutes</span>
               </li>
               <li>
-                <i class="fa-solid fa-circle-dot"></i>
+                <i class="fa-solid fa-sack-dollar"></i>
                 <span>Full payment or deposit system</span>
               </li>
               <li>
-                <i class="fa-solid fa-circle-dot"></i>
+                <i class="fa-solid fa-hourglass-half"></i>
                 <span>There is no expired period for session purchases</span>
               </li>
               <li>
-                <i class="fa-solid fa-circle-dot"></i>
+                <i class="fa-solid fa-list-check"></i>
                 <span>Body condition assessment & fitness target consultation</span>
               </li>
             </ul>
@@ -44,19 +44,19 @@
             <p class="mb-3">Start Rp.750.000</p>
             <ul class="list-unstyled text-start small">
               <li>
-                <i class="fa-solid fa-circle-dot"></i>
+                <i class="fa-regular fa-alarm-clock"></i>
                 <span>Duration 90 minutes</span>
               </li>
               <li>
-                <i class="fa-solid fa-circle-dot"></i>
+                <i class="fa-solid fa-sack-dollar"></i>
                 <span>Full payment or deposit system</span>
               </li>
               <li>
-                <i class="fa-solid fa-circle-dot"></i>
+                <i class="fa-solid fa-users-line"></i>
                 <span>Maximum participants 20 trainee</span>
               </li>
               <li>
-                <i class="fa-solid fa-circle-dot"></i>
+                <i class="fa-solid fa-dumbbell"></i>
                 <span>Suitable for community or office. Equipment is provided by our coaches</span>
               </li>
             </ul>
