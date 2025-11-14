@@ -9,7 +9,7 @@ class DetailInstructorController extends Controller
 {
     public function index() {
         return view('frontend.detail_instructor.index', [
-            'title' => 'Detail Instructor'
+                'title' => 'COACH ADVANCE'
         ]);
     }
 }

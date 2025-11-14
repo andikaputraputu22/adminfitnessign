@@ -18,7 +18,7 @@
               <li><i class="fa-solid fa-circle-dot"></i> Body condition assesment & fitness target consultation</li>
             </ul>
           </div>
-          <a href="https://wa.me/6282118317062?text={{ urlencode('Halo, saya ingin menanyakan produk Anda.') }}" target="_blank" class="fitnessign-btn-get-started mt-3">Order</a>
+          <a href="https://wa.me/6282118317062?text={{ urlencode('Halo, saya ingin menanyakan seputar tentang coach dan instructuor Fitnessign.') }}" target="_blank" class="fitnessign-btn-get-started mt-3">Order</a>
         </div>
       </div>
 
@@ -35,7 +35,7 @@
               <li><i class="fa-solid fa-circle-dot"></i>Suitable for community or office. Equipment is provided by our coaches</li>
             </ul>
           </div>
-          <a href="https://wa.me/6282118317062?text={{ urlencode('Halo, saya ingin menanyakan produk Anda.') }}" target="_blank" class="fitnessign-btn-get-started mt-3">Order</a>
+          <a href="https://wa.me/6282118317062?text={{ urlencode('Halo, saya ingin menanyakan seputar Coach & Instructuor Fitnessign.') }}" target="_blank" class="fitnessign-btn-get-started mt-3">Order</a>
         </div>
       </div>
     </div>

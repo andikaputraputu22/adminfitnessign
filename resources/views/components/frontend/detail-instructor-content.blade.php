@@ -7,7 +7,7 @@
                 </div>
                 <div class="col-lg-8 order-1 order-lg-2 d-flex align-items-center">
                     <p class="about-text">
-                        Hahahahahahha aku babi
+                                COACH ADVANCE (DESKRIPSI)
                     </p>
                 </div>
             </div>
