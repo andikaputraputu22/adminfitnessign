@@ -59,13 +59,7 @@
               </li>
             </ul>
           </div>
-<<<<<<< HEAD
           <a href="https://wa.me/6282118317062?text={{ urlencode('Halo, saya ingin menanyakan seputar Coach & Instructuor Fitnessign.') }}" target="_blank" class="fitnessign-btn-get-started mt-3">Order</a>
-=======
-          <a href="https://wa.me/6282118317062?text={{ urlencode('Halo, saya ingin menanyakan produk Anda.') }}" 
-             target="_blank" 
-             class="fitnessign-btn-get-started mt-3">Order</a>
->>>>>>> 58826c02b3a104e8b5094cb2a14314c4c151921e
         </div>
       </div>
     </div>
