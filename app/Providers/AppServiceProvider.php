@@ -2,8 +2,10 @@
 
 namespace App\Providers;
 
+use App\Models\Service;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Blade;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -25,5 +27,10 @@ class AppServiceProvider extends ServiceProvider
         Carbon::setLocale('id');
 
         Blade::componentNamespace('App\\View\\Components', 'frontend');
+
+        // Share services data ke header component
+        View::composer('components.frontend.frontend-header', function ($view) {
+            $view->with('services', Service::all());
+        });
     }
 }

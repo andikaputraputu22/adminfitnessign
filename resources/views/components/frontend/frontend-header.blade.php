@@ -10,7 +10,7 @@
                 <li><a href="/">Home</a></li>
                 <li><a href="/blog">Health</a></li>
                 <li class="dropdown"><a href="#"><span>Personal Training</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                    <ul>    
+                    <ul>
                         <li><a href="{{ route('frontend.trainer', ['id' => 'advance']) }}">ADVANCE</a></li>
                         <li><a href="{{ route('frontend.trainer', ['id' => 'prime']) }}">PRIME</a></li>
 
@@ -18,10 +18,13 @@
                 </li>
                 <li class="dropdown"><a href="#"><span>Instructor Class</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                     <ul>
-                        <li><a href="{{ route('frontend.instructor', ['id' => 'poundfit']) }}">POUNDFIT</a></li>
+                        @foreach ($services as $service)
+                        <li><a href="{{ route('frontend.instructor', ['id' => Str::slug($service->name)]) }}">{{ strtoupper($service->name) }}</a></li>
+                        @endforeach
+                        <!-- <li><a href="{{ route('frontend.instructor', ['id' => 'poundfit']) }}">POUNDFIT</a></li>
                         <li><a href="{{ route('frontend.instructor', ['id' => 'zumba']) }}">ZUMBA</a></li>
                         <li><a href="{{ route('frontend.instructor', ['id' => 'aerobic']) }}">AEROBIC</a></li>
-                        <li><a href="{{ route('frontend.instructor', ['id' => 'body combat']) }}">BODY COMBAT</a></li>
+                        <li><a href="{{ route('frontend.instructor', ['id' => 'body combat']) }}">BODY COMBAT</a></li> -->
                     </ul>
                 </li>
                 <li><a href="#about">About</a></li>
