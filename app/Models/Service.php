@@ -11,17 +11,20 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 class Service extends Model
 {
     use HasFactory;
-    protected $fillable = ['name', 'description'];
+    protected $fillable = ['name', 'description', 'is_personal_training'];
 
-    public function instructors(): BelongsToMany {
+    public function instructors(): BelongsToMany
+    {
         return $this->belongsToMany(Instructor::class, 'instructor_service');
     }
 
-    public function orders() {
+    public function orders()
+    {
         return $this->hasMany(Order::class);
     }
 
-    protected function serializeDate(\DateTimeInterface $date) {
+    protected function serializeDate(\DateTimeInterface $date)
+    {
         return Carbon::parse($date)->timezone('Asia/Jakarta')->toDateTimeString();
     }
 }

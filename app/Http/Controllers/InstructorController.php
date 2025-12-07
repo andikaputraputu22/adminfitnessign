@@ -30,7 +30,9 @@ class InstructorController extends Controller
             'name' => 'required',
             'email' => 'required|email',
             'phone' => 'required',
-            'description' => 'required',
+            'certificate' => 'nullable',
+            'specialist' => 'nullable',
+            'description' => 'nullable',
             'photo' => 'image|file|max:5120'
         ]);
 

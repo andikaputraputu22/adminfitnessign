@@ -11,21 +11,25 @@ use Illuminate\Support\Facades\Storage;
 class Instructor extends Model
 {
     use HasFactory;
-    protected $fillable = ['name', 'email', 'phone', 'description', 'photo'];
+    protected $fillable = ['name', 'email', 'phone', 'certificate', 'specialist', 'description', 'photo'];
 
-    public function services(): BelongsToMany {
+    public function services(): BelongsToMany
+    {
         return $this->belongsToMany(Service::class, 'instructor_service');
     }
 
-    public function orders() {
+    public function orders()
+    {
         return $this->hasMany(Order::class);
     }
 
-    public function getPhotoAttribute($value) {
+    public function getPhotoAttribute($value)
+    {
         return $value ? Storage::url($value) : null;
     }
 
-    protected function serializeDate(\DateTimeInterface $date) {
+    protected function serializeDate(\DateTimeInterface $date)
+    {
         return Carbon::parse($date)->timezone('Asia/Jakarta')->toDateTimeString();
     }
 }
