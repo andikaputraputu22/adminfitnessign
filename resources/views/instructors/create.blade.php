@@ -6,16 +6,16 @@
                 <div class="card">
                     <div class="card-header">
                         <ul class="nav nav-pills">
-                            <li class="nav-item"><a class="nav-link active" href="#private_class" data-toggle="tab">Private
-                                    Class</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="#personal_training" data-toggle="tab">Personal
+                                    Training</a></li>
                             <li class="nav-item"><a class="nav-link" href="#instructor_class"
                                     data-toggle="tab">Instructor Class</a></li>
                         </ul>
                     </div>
                     <div class="card-body">
                         <div class="tab-content">
-                            <!-- Private Class -->
-                            <div class="tab-pane active" id="private_class">
+                            <!-- Personal Training -->
+                            <div class="tab-pane active" id="personal_training">
                                 <form action="/instructors/store" method="POST" enctype="multipart/form-data">
                                     @csrf
                                     <div class="row">
@@ -53,17 +53,27 @@
                                                     name="phone" placeholder="Enter phone">
                                             </div>
                                             <div class="form-group">
-                                                <label for="service">Select Service</label>
-                                                <select id="service" class="form-control" name="service_id[]" multiple
+                                                <label for="service_personal">Select Service</label>
+                                                <select id="service_personal" class="form-control" name="service_id[]" multiple
                                                     size="5">
-                                                    @foreach ($services as $index => $service)
-                                                        <option value="{{ $service->id }}"
-                                                            {{ $index === 0 ? 'selected' : '' }}>{{ $service->name }}
-                                                        </option>
+                                                    @foreach ($services->where('is_personal_training', true) as $service)
+                                                    <option value="{{ $service->id }}"
+                                                        {{ $loop->first ? 'selected' : '' }}>{{ $service->name }}
+                                                    </option>
                                                     @endforeach
                                                 </select>
                                             </div>
                                         </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="certificate">Certificate</label>
+                                        <input type="text" class="form-control" id="certificate"
+                                            name="certificate" placeholder="Enter certificate">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="specialist">Specialist</label>
+                                        <input type="text" class="form-control" id="specialist"
+                                            name="specialist" placeholder="Enter specialist">
                                     </div>
                                     <div class="form-group">
                                         <label for="description">Description</label>
@@ -75,7 +85,7 @@
                                     </div>
                                 </form>
                             </div>
-                            
+
                             <!-- Instructor Class -->
                             <div class="tab-pane" id="instructor_class">
                                 <form action="/instructors/store" method="POST" enctype="multipart/form-data">
@@ -115,17 +125,22 @@
                                                     name="phone" placeholder="Enter phone">
                                             </div>
                                             <div class="form-group">
-                                                <label for="service">Select Service</label>
-                                                <select id="service" class="form-control" name="service_id[]" multiple
+                                                <label for="service_class">Select Service</label>
+                                                <select id="service_class" class="form-control" name="service_id[]" multiple
                                                     size="5">
-                                                    @foreach ($services as $index => $service)
-                                                        <option value="{{ $service->id }}"
-                                                            {{ $index === 0 ? 'selected' : '' }}>{{ $service->name }}
-                                                        </option>
+                                                    @foreach ($services->where('is_personal_training', false) as $service)
+                                                    <option value="{{ $service->id }}"
+                                                        {{ $loop->first ? 'selected' : '' }}>{{ $service->name }}
+                                                    </option>
                                                     @endforeach
                                                 </select>
                                             </div>
                                         </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="certificate">Certificate</label>
+                                        <input type="text" class="form-control" id="certificate"
+                                            name="certificate" placeholder="Enter certificate">
                                     </div>
                                     <div class="form-group">
                                         <label for="description">Description</label>

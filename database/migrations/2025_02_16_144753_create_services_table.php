@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->text('description');
             $table->string('photo')->nullable();
+            $table->boolean('is_personal_training')->default(false);
             $table->timestamps();
         });
     }

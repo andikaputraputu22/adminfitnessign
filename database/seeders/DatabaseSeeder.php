@@ -35,13 +35,27 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Service::factory()->create([
+            'name' => 'Prime',
+            'description' => 'Ini adalah deskripsi untuk Prime',
+            'is_personal_training' => true
+        ]);
+
+        Service::factory()->create([
+            'name' => 'Advanced',
+            'description' => 'Ini adalah deskripsi untuk Advanced',
+            'is_personal_training' => true
+        ]);
+
+        Service::factory()->create([
             'name' => 'Aerobic',
-            'description' => 'Latihan yoga yang akan fokus pada gerakan gerakan memutar (twisting) tubuh.'
+            'description' => 'Latihan yoga yang akan fokus pada gerakan gerakan memutar (twisting) tubuh.',
+            'is_personal_training' => false
         ]);
 
         Service::factory()->create([
             'name' => 'Pectoralis Exercise',
-            'description' => 'Latihan ini merupakan latihan untuk meningkatkan kekuatan dan daya tahan otot Dada dan perut.'
+            'description' => 'Latihan ini merupakan latihan untuk meningkatkan kekuatan dan daya tahan otot Dada dan perut.',
+            'is_personal_training' => false
         ]);
 
         // Service::factory(10)->recycle(Category::factory(2)->create())->create();
