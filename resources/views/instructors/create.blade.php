@@ -20,7 +20,7 @@
                                     @csrf
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <div class="file-dnd">
+                                            <div class="file-dnd" data-form="personal_training">
                                                 <label for="photo">Upload Photo</label>
                                                 <input type="file" id="photo" name="photo">
                                                 <div class="before-upload">
@@ -92,9 +92,9 @@
                                     @csrf
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <div class="file-dnd">
+                                            <div class="file-dnd" data-form="instructor_class">
                                                 <label for="photo">Upload Photo</label>
-                                                <input type="file" id="photo" name="photo">
+                                                <input type="file" id="photo_instructor_class" name="photo">
                                                 <div class="before-upload">
                                                     <div>
                                                         <i class="fa fa-image"></i>
@@ -144,8 +144,8 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="description">Description</label>
-                                        <input type="hidden" class="form-control" id="description" name="description">
-                                        <trix-editor input="description"></trix-editor>
+                                        <input type="hidden" class="form-control" id="description_instructor_class" name="description">
+                                        <trix-editor input="description_instructor_class"></trix-editor>
                                     </div>
                                     <div class="text-right">
                                         <button type="submit" class="btn btn-primary">Save</button>

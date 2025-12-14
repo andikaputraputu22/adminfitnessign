@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 class Service extends Model
 {
     use HasFactory;
-    protected $fillable = ['name', 'description', 'is_personal_training'];
+    protected $fillable = ['name', 'slug', 'description', 'is_personal_training'];
 
     public function instructors(): BelongsToMany
     {

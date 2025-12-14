@@ -37,7 +37,7 @@ class InstructorController extends Controller
         ]);
 
         if ($request->file('photo')) {
-            $validateData['photo'] = $request->file('photo')->store('instructors');
+            $validateData['photo'] = $request->file('photo')->store('instructors', 'public');
         }
 
         $instructor = Instructor::create($validateData);

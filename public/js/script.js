@@ -174,4 +174,6 @@ function applyDnDFile($el) {
     });
 }
 
-applyDnDFile($(".file-dnd"));
+$(".file-dnd").each(function () {
+    applyDnDFile($(this));
+});
