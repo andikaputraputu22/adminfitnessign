@@ -3,13 +3,14 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use App\Models\Service;
 
 class InstructorController extends Controller
 {
-    public function index($id) {
+    public function index(Service $service) {
         return view('frontend.instructor.index', [
-            'title' => strtoupper($id)
+            'title' => strtoupper($service->name),
+            'instructors' => $service->instructors
         ]);
     }
 }

@@ -10,9 +10,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('frontend.home');
 
-Route::get('/instructors/{id}', [InstructorController::class, 'index'])->name('frontend.instructor');
+Route::get('/instructors/{service:slug}', [InstructorController::class, 'index'])->name('frontend.instructor');
 
-Route::get('/trainer/{id}', [TrainerController::class, 'index'])->name('frontend.trainer');
+Route::get('/trainer/{service:slug}', [TrainerController::class, 'index'])->name('frontend.trainer');
 
 Route::get('/blog', [BlogController::class, 'index'])->name('frontend.blog');
 
