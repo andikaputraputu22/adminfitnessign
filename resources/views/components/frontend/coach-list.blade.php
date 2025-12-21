@@ -18,7 +18,7 @@
         <div class="row gy-5">
             @foreach($instructors as $instructor)
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                <a href="{{ route('frontend.detail_instructor') }}">
+                <a href="{{ route('frontend.detail_instructor', ['slug' => $instructor->slug]) }}">
                     <div class="member">
                         <div class="pic"><img style="height: 420px; width: 100%; object-fit: cover;" src="{{ asset($instructor->photo) }}" class="img-fluid" alt=""></div>
                         <div class="member-info">
