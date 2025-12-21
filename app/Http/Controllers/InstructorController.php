@@ -6,6 +6,7 @@ use App\Models\Instructor;
 use App\Models\Service;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class InstructorController extends Controller
 {
@@ -39,6 +40,17 @@ class InstructorController extends Controller
             'description' => 'nullable',
             'photo' => 'image|file|max:5120'
         ]);
+        
+        // Generate unique slug
+        $slug = Str::slug($request->name);
+        $originalSlug = $slug;
+        $count = 1;
+
+        while (Instructor::where('slug', $slug)->exists()) {
+            $slug = $originalSlug . '-' . $count++;
+        }
+
+        $validateData['slug'] = $slug;
 
         if ($request->file('photo')) {
             $validateData['photo'] = $request->file('photo')->store('instructors', 'public');

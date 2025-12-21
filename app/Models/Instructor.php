@@ -15,6 +15,7 @@ class Instructor extends Model
         'name',
         'email',
         'phone',
+        'slug',
         'price_4_sessions',
         'price_8_sessions',
         'price_16_sessions',

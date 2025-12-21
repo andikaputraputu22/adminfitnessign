@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('email');
             $table->string('phone');
+            $table->string('slug')->unique();
             $table->unsignedBigInteger('price_4_sessions')->nullable();
             $table->unsignedBigInteger('price_8_sessions')->nullable();
             $table->unsignedBigInteger('price_16_sessions')->nullable();

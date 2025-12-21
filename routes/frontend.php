@@ -16,6 +16,6 @@ Route::get('/trainer/{service:slug}', [TrainerController::class, 'index'])->name
 
 Route::get('/blog', [BlogController::class, 'index'])->name('frontend.blog');
 
-Route::get('/detail_instructor', [DetailInstructorController::class, 'index'])->name('frontend.detail_instructor');
+Route::get('/detail_instructor/{slug}', [DetailInstructorController::class, 'index'])->name('frontend.detail_instructor');
 
 Route::get('/detail_health', [DetailHealthController::class, 'index'])->name('frontend.detail_health');
