@@ -11,7 +11,19 @@ use Illuminate\Support\Facades\Storage;
 class Instructor extends Model
 {
     use HasFactory;
-    protected $fillable = ['name', 'email', 'phone', 'certificate', 'specialist', 'description', 'photo'];
+    protected $fillable = [
+        'name',
+        'email',
+        'phone',
+        'price_4_sessions',
+        'price_8_sessions',
+        'price_16_sessions',
+        'price_24_sessions',
+        'certificate',
+        'specialist',
+        'description',
+        'photo'
+    ];
 
     public function services(): BelongsToMany
     {

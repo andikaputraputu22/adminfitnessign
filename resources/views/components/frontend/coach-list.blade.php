@@ -23,12 +23,8 @@
                         <div class="pic"><img style="height: 420px; width: 100%; object-fit: cover;" src="{{ asset($instructor->photo) }}" class="img-fluid" alt=""></div>
                         <div class="member-info">
                             <h4>{{ $instructor->name }}</h4>
-                            <span>Certified :</span>
-                            <span> Specialist : </span>
-                            <div class="social">
-                                <a href=""><i class="bi bi-facebook"></i></a>
-                                <a href=""><i class="bi bi-instagram"></i></a>
-                            </div>
+                            <span>Certified: {{ $instructor->certificate }}</span>
+                            <span>Specialist: {{ $instructor->specialist }}</span>
                         </div>
                     </div>
                 </a>
