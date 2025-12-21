@@ -16,6 +16,10 @@ return new class extends Migration
             $table->string('name');
             $table->string('email');
             $table->string('phone');
+            $table->unsignedBigInteger('price_4_sessions')->nullable();
+            $table->unsignedBigInteger('price_8_sessions')->nullable();
+            $table->unsignedBigInteger('price_16_sessions')->nullable();
+            $table->unsignedBigInteger('price_24_sessions')->nullable();
             $table->text('certificate')->nullable();
             $table->text('specialist')->nullable();
             $table->text('description')->nullable();
