@@ -5,7 +5,7 @@
       <!-- LEFT: PHOTO + INFO -->
       <div class="col-lg-4">
         <div class="coach-card">
-          <img src="{{ asset('storage/'.$instructor->photo) }}" class="img-fluid rounded-4">
+          <img src="{{ asset($instructor->photo) }}" class="img-fluid rounded-4">
 
           <h5 class="coach-name mt-3">{{ $instructor->name }}</h5>
 
