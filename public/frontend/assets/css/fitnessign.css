@@ -570,3 +570,48 @@
 
 /*Detail Instructor Page*/
 
+/* Hide the radio input */
+.session-radio {
+  display: none;
+}
+
+/* Card default style */
+.session-card {
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  display: block;
+}
+
+.session-card:hover {
+  transform: translateY(-5px);
+}
+
+.session-card h6 {
+  margin-top: 10px;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.session-card p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.85;
+  color: #fff;
+}
+
+/* Highlight text and border when input is checked */
+.session-radio:checked + .session-card {
+  border-color: #0f0;
+}
+
+.session-radio:checked + .session-card h6,
+.session-radio:checked + .session-card p {
+  color: #0f0;
+  font-weight: 600;
+}
