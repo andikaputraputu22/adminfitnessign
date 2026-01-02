@@ -173,6 +173,21 @@
                                             name="certificate" placeholder="Enter certificate">
                                     </div>
                                     <div class="form-group">
+                                        <div class="form-group">
+                                            <label for="participants_number">Participants Number</label>
+                                            <input required type="number" class="form-control" id="participants_number"
+                                                name="participants_number" placeholder="Enter max participants" min="0" step="1">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="level_class">Select Level</label>
+                                        <select id="level_class" class="form-control" name="level_class">
+                                            <option selected value="Beginner">Beginner</option>
+                                            <option value="Intermediate">Intermediate</option>
+                                            <option value="Pro">Pro</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
                                         <label for="description">Description</label>
                                         <input type="hidden" class="form-control" id="description_instructor_class" name="description">
                                         <trix-editor input="description_instructor_class"></trix-editor>
