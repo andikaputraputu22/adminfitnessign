@@ -26,7 +26,8 @@
                                         <td>{{ $instructor->phone }}</td>
                                         <td>{{ Str::limit(strip_tags($instructor->description), 80) }}</td>
                                         <td class="text-center">
-                                            <button id="editInstructor" type="button" class="btn btn-primary">
+                                            <button id="editInstructor" type="button" class="editInstructor btn btn-primary"
+                                                data-instructor='@json($instructor)'>
                                                 <i class="fa-solid fas fa-pen"></i>
                                             </button>
                                             <a id="deleteInstructor" class="btn btn-danger"
