@@ -637,3 +637,23 @@
 .coach-title-color {
   color: #15FF00;
 }
+
+/* Instructor classes */
+
+.class-meta {
+  font-size: 0.95rem;
+  color: #e6e6e6;
+}
+
+.class-meta .meta-item {
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+.divider-line {
+  border-top: 1px solid rgba(0, 255, 0, 0.35);
+}
+
+.coach-title-color {
+  letter-spacing: 1px;
+}
