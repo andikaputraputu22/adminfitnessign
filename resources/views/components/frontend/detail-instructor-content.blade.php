@@ -2,22 +2,24 @@
   <div class="container">
     <div class="row align-items-start">
 
-      <!-- LEFT: PHOTO + BASIC INFO -->
+      <!-- LEFT -->
       <div class="col-lg-4">
         <div class="coach-card">
 
-          {{-- Coach Photo --}}
           <img 
-            src="{{($instructor->photo) }}"
+            src="{{ $instructor->photo }}"
             class="img-detail-coach rounded-4"
             alt="{{ $instructor->name }}"
           >
 
           <div class="profile-card rounded-4 mt-3">
-            <h5 class="coach-name text-center mb-3">{{ $instructor->name }}</h5>
+            <h5 class="coach-name text-center mb-3">
+              {{ $instructor->name }}
+            </h5>
+
             <hr class="divider-line">
-          {{-- Certificate --}}
-          @if(!empty($certificates))
+
+            @if(!empty($certificates))
             <div class="coach-block">
               <h6>Certified</h6>
               <ul>
@@ -26,10 +28,9 @@
                 @endforeach
               </ul>
             </div>
-          @endif
+            @endif
 
-          {{-- Specialist --}}
-          @if(!empty($specialists))
+            @if(!empty($specialists))
             <div class="coach-block">
               <h6>Specialist</h6>
               <ul>
@@ -38,91 +39,121 @@
                 @endforeach
               </ul>
             </div>
-          @endif
+            @endif
 
-        </div>
           </div>
+        </div>
       </div>
 
-      <!-- RIGHT: CONTENT -->
+      <!-- RIGHT -->
       <div class="col-lg-8">
 
-        {{-- Detect Personal Training --}}
         @php
           $isPersonalTraining = $instructor->services
             ->contains(fn($service) => $service->is_personal_training);
+
+          // TEMP HARDCODE
+          $classType = 'aerobic'; // aerobic | pectoralis
+          $trainingLevel = 'Advance'; // Advance | Prime
+
+          if ($classType === 'aerobic') {
+            $className = 'Aerobic Class';
+            $classLevel = 'Beginner - Intermediate';
+            $maxParticipant = 25;
+          } else {
+            $className = 'Pectoralis Exercise';
+            $classLevel = 'Advance';
+            $maxParticipant = 15;
+          }
         @endphp
 
-        {{-- Title --}}
         <h2 class="coach-title coach-title-color">
-          {{ $isPersonalTraining ? 'FITNESSIGN PERSONAL TRAINING' : 'FITNESSIGN INSTRUCTOR CLASS' }}
+          {{ $isPersonalTraining 
+              ? 'FITNESSIGN PERSONAL TRAINING' 
+              : 'CLASS ' . strtoupper($className) 
+          }}
         </h2>
 
-        {{-- Description --}}
-        <div class="coach-description">
+        @if(!$isPersonalTraining)
+        <div class="class-meta d-flex gap-4 mt-3">
+          <div class="meta-item">
+            <i class="bi bi-star-fill text-success me-2"></i>
+            {{ $classLevel }}
+          </div>
+          <div class="meta-item">
+            <i class="bi bi-people-fill text-success me-2"></i>
+            Maks {{ $maxParticipant }} peserta
+          </div>
+        </div>
+        <hr class="divider-line mt-3">
+        @endif
+
+        <div class="coach-description mt-3">
           {!! $instructor->description !!}
         </div>
 
-      {{-- SESSION OPTION BOX (ONLY FOR PERSONAL TRAINING) --}}
-      @if($isPersonalTraining)
-        <div class="session-box mt-5">
-          <h4 class="mb-3 text-center">Join Sekarang, Push Your Limit!</h4>
+        {{-- PERSONAL TRAINING --}}
+        @if($isPersonalTraining)
+        <form 
+          action="https://wa.me/6289637883174"
+          method="GET"
+          target="_blank"
+          class="mt-4"
+        >
+          <input type="hidden" name="text" value="Halo Admin Fitnessign
 
-    <form id="sessionForm">
-      <div class="row g-3">
+Saya tertarik untuk Personal Training.
 
-        @if($instructor->price_4_sessions)
-        <div class="col-md-3 col-6">
-          <input type="radio" id="session4" name="session" value="4" class="session-radio">
-          <label class="session-card" for="session4">
-            <h6>4 Sessions</h6>
-            <p>Rp {{ number_format($instructor->price_4_sessions, 0, ',', '.') }}</p>
-          </label>
-        </div>
+Coach:
+{{ $instructor->name }}
+
+Level:
+{{ $trainingLevel }}
+
+Pilihan paket tersedia:
+- 4 sesi
+- 8 sesi
+- 16 sesi
+- 24 sesi
+
+Mohon info detail dan rekomendasi paket.
+">
+          <button class="btn btn-success px-4 py-2">
+            BOOK NOW
+          </button>
+        </form>
         @endif
 
+        {{-- INSTRUCTOR CLASS --}}
+        @if(!$isPersonalTraining)
+        <form 
+          action="https://wa.me/6289637883174"
+          method="GET"
+          target="_blank"
+          class="mt-4"
+        >
+          <input type="hidden" name="text" value="Halo Admin Fitnessign
 
-        @if($instructor->price_8_sessions)
-        <div class="col-md-3 col-6">
-          <input type="radio" id="session8" name="session" value="8" class="session-radio">
-          <label class="session-card" for="session8">
-            <h6>8 Sessions</h6>
-            <p>Rp {{ number_format($instructor->price_8_sessions, 0, ',', '.') }}</p>
-          </label>
-        </div>
-        @endif
+Saya ingin mendaftar kelas.
 
-        @if($instructor->price_16_sessions)
-        <div class="col-md-3 col-6">
-          <input type="radio" id="session16" name="session" value="16" class="session-radio">
-          <label class="session-card" for="session16">
-            <h6>16 Sessions</h6>
-            <p>Rp {{ number_format($instructor->price_16_sessions, 0, ',', '.') }}</p>
-          </label>
-        </div>
-        @endif
+Class:
+{{ $className }}
 
-        @if($instructor->price_24_sessions)
-        <div class="col-md-3 col-6">
-          <input type="radio" id="session24" name="session" value="24" class="session-radio">
-          <label class="session-card" for="session24">
-            <h6>24 Sessions</h6>
-            <p>Rp {{ number_format($instructor->price_24_sessions, 0, ',', '.') }}</p>
-          </label>
-        </div>
+Coach:
+{{ $instructor->name }}
+
+Level:
+{{ $classLevel }}
+
+Mohon info jadwal dan biaya.
+">
+          <button class="btn btn-success px-4 py-2">
+            BOOK NOW
+          </button>
+        </form>
         @endif
 
       </div>
-    </form>
-  </div>
-@endif
-
-        {{-- BOOK NOW --}}
-        <a href="https://wa.me/62XXXXXXXX" class="btn btn-success mt-4">
-          BOOK NOW
-        </a>
-      </div>
-
     </div>
   </div>
 </section>
