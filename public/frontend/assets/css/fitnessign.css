@@ -615,3 +615,25 @@
   color: #0f0;
   font-weight: 600;
 }
+
+.img-detail-coach {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+}
+
+.profile-card {
+  background-color: #1E1E1E;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.divider-line {
+  color: #15FF00;
+}
+
+.coach-title-color {
+  color: #15FF00;
+}

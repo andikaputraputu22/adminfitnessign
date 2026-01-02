@@ -9,12 +9,13 @@
           {{-- Coach Photo --}}
           <img 
             src="{{($instructor->photo) }}"
-            class="img-fluid rounded-4"
+            class="img-detail-coach rounded-4"
             alt="{{ $instructor->name }}"
           >
 
-          <h5 class="coach-name mt-3">{{ $instructor->name }}</h5>
-
+          <div class="profile-card rounded-4 mt-3">
+            <h5 class="coach-name text-center mb-3">{{ $instructor->name }}</h5>
+            <hr class="divider-line">
           {{-- Certificate --}}
           @if(!empty($certificates))
             <div class="coach-block">
@@ -40,6 +41,7 @@
           @endif
 
         </div>
+          </div>
       </div>
 
       <!-- RIGHT: CONTENT -->
@@ -52,7 +54,7 @@
         @endphp
 
         {{-- Title --}}
-        <h2 class="coach-title">
+        <h2 class="coach-title coach-title-color">
           {{ $isPersonalTraining ? 'FITNESSIGN PERSONAL TRAINING' : 'FITNESSIGN INSTRUCTOR CLASS' }}
         </h2>
 
@@ -64,7 +66,7 @@
       {{-- SESSION OPTION BOX (ONLY FOR PERSONAL TRAINING) --}}
       @if($isPersonalTraining)
         <div class="session-box mt-5">
-          <h4 class="mb-3">Session Options</h4>
+          <h4 class="mb-3 text-center">Join Sekarang, Push Your Limit!</h4>
 
     <form id="sessionForm">
       <div class="row g-3">
