@@ -23,6 +23,8 @@ class Instructor extends Model
         'certificate',
         'specialist',
         'description',
+        'level_class',
+        'participants_number',
         'photo'
     ];
 

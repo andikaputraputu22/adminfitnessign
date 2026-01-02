@@ -38,6 +38,8 @@ class InstructorController extends Controller
             'certificate' => 'nullable',
             'specialist' => 'nullable',
             'description' => 'nullable',
+            'participants_number' => 'required',
+            'level_class' => 'required|in:Beginner,Intermediate,Pro',
             'photo' => 'image|file|max:5120'
         ]);
         
