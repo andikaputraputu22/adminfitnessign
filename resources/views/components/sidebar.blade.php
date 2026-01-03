@@ -63,6 +63,14 @@
                     </x-nav-link>
                 </li>
                 <li class="nav-item">
+                    <x-nav-link href="/blogs" :active="request()->is('blogs')">
+                        <x-slot name="icon">
+                            <i class="nav-icon fas fa-newspaper"></i>
+                        </x-slot>
+                        Blog
+                    </x-nav-link>
+                </li>
+                <li class="nav-item">
                     <a id="logoutAdmin" data-url="{{ route('logout') }}" class="nav-link">
                         <i class="nav-icon fas fa-door-open"></i>
                         <p>
