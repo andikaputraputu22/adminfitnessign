@@ -28,6 +28,8 @@ Route::put('/services/{id}/update', [ServiceController::class, 'update'])->middl
 Route::get('/orders', [OrderController::class, 'index'])->middleware('auth')->name('orders');
 
 Route::get('/blogs', [BlogController::class, 'index'])->middleware('auth')->name('blogs');
+Route::post('/blogs/store', [BlogController::class, 'store'])->middleware('auth')->name('blogs.store');
+Route::get('/blogs/{id}/delete', [BlogController::class, 'delete'])->middleware('auth')->name('blogs.delete');
 
 Route::get('/login', [LoginController::class, 'index'])->middleware('guest')->name('login');
 Route::post('/login', [LoginController::class, 'authenticate']);

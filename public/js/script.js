@@ -38,6 +38,16 @@ $(document).ready(function() {
         "autoWidth": false,
         "responsive": true
     });
+
+    $('#tableBlog').DataTable({
+        "paging": true,
+        "lengthChange": true,
+        "searching": true,
+        "ordering": true,
+        "info": true,
+        "autoWidth": false,
+        "responsive": true
+    });
 });
 
 $(document).on("click", '#logoutAdmin', function(e) {
@@ -89,6 +99,22 @@ $(document).on("click", '#deleteInstructor', function(e) {
 });
 
 $(document).on("click", '#deleteClient', function(e) {
+    e.preventDefault();
+    let deleteUrl = $(this).data("url");
+    Swal.fire({
+        title: "Are you sure?",
+        text: "This action cannot be undone!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonText: "Yes, delete it!"
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location.href = deleteUrl;
+        }
+    });
+});
+
+$(document).on("click", '#deleteBlog', function(e) {
     e.preventDefault();
     let deleteUrl = $(this).data("url");
     Swal.fire({
