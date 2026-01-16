@@ -52,20 +52,9 @@
           $isPersonalTraining = $instructor->services
             ->contains(fn($service) => $service->is_personal_training);
 
-          // TEMP HARDCODE
-          $classType = 'aerobic'; // aerobic | pectoralis
-          $trainingLevel = 'Advance'; // Advance | Prime
-
-          if ($classType === 'aerobic') {
-            $className = 'Aerobic Class';
-            $classLevel = 'Beginner - Intermediate';
-            $maxParticipant = 25;
-          } else {
-            $className = 'Pectoralis Exercise';
-            $classLevel = 'Advance';
-            $maxParticipant = 15;
-          }
+          $className = $instructor->services->first()?->name ?? 'Class';
         @endphp
+
 
         <h2 class="coach-title coach-title-color">
           {{ $isPersonalTraining 
@@ -75,17 +64,16 @@
         </h2>
 
         @if(!$isPersonalTraining)
-        <div class="class-meta d-flex gap-4 mt-3">
-          <div class="meta-item">
-            <i class="bi bi-star-fill text-success me-2"></i>
-            {{ $classLevel }}
+          <div class="class-meta d-flex gap-4 mt-3">
+            <div class="meta-item">
+              <i class="bi bi-star-fill text-success me-2"></i>
+              {{ ucfirst($instructor->level_class) }}
+            </div>
+            <div class="meta-item">
+              <i class="bi bi-people-fill text-success me-2"></i>
+              Maks {{ $instructor->participants_number }} peserta
+            </div>
           </div>
-          <div class="meta-item">
-            <i class="bi bi-people-fill text-success me-2"></i>
-            Maks {{ $maxParticipant }} peserta
-          </div>
-        </div>
-        <hr class="divider-line mt-3">
         @endif
 
         <div class="coach-description mt-3">
@@ -143,7 +131,7 @@ Coach:
 {{ $instructor->name }}
 
 Level:
-{{ $classLevel }}
+{{ ucfirst($instructor->level_class) }}
 
 Mohon info jadwal dan biaya.
 ">
