@@ -30,6 +30,7 @@ Route::get('/orders', [OrderController::class, 'index'])->middleware('auth')->na
 Route::get('/blogs', [BlogController::class, 'index'])->middleware('auth')->name('blogs');
 Route::post('/blogs/store', [BlogController::class, 'store'])->middleware('auth')->name('blogs.store');
 Route::get('/blogs/{id}/delete', [BlogController::class, 'delete'])->middleware('auth')->name('blogs.delete');
+Route::put('/blogs/{id}/update', [BlogController::class, 'update'])->middleware('auth')->name('blogs.update');
 
 Route::get('/login', [LoginController::class, 'index'])->middleware('guest')->name('login');
 Route::post('/login', [LoginController::class, 'authenticate']);
