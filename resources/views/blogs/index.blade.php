@@ -28,7 +28,8 @@
                                         <button id="editBlog" type="button" class="btn btn-primary"
                                             data-id="{{ $blog->id }}"
                                             data-title="{{ $blog->title }}"
-                                            data-content="{{ $blog->content }}">
+                                            data-content="{{ $blog->content }}"
+                                            data-photo="{{ $blog->photo }}">
                                             <i class="fa-solid fas fa-pen"></i>
                                         </button>
                                         <a id="deleteBlog" class="btn btn-danger"
@@ -93,6 +94,62 @@
                     <div class="modal-footer justify-content-between">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                         <button type="submit" class="btn btn-primary">Save</button>
+                    </div>
+                </form>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+    <div class="modal fade" id="modalEditBlog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Edit Article</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form id="formEditBlog" method="POST" enctype="multipart/form-data">
+                    @csrf
+                    @method('PUT')
+                    <div class="modal-body">
+                        <div class="file-dnd" data-form="blogPhoto">
+                            <label for="photo">Upload Photo</label>
+                            <input type="file" id="editBlogPhoto" name="photo">
+                            <div class="before-upload">
+                                <div>
+                                    <i class="fa fa-image"></i>
+                                    <h4>Drag & Drop Image File or Browse</h4>
+                                    <p>Supports: JPEG, PNG, GIF, TIFF</p>
+                                </div>
+                            </div>
+                            <div class="after-upload">
+                                <div class="clear-btn">&times;</div>
+                                <img src="" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="editBlogTitle">Title</label>
+                            <input required type="text" class="form-control" id="editBlogTitle" name="title"
+                                placeholder="Enter article title">
+                        </div>
+                        <div class="form-group">
+                            <label for="select_author">Select Author</label>
+                            <select id="select_author" class="form-control" name="author">
+                                <option selected value="Admin Fitnessign">Admin Fitnessign</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="editBlogContent">Content</label>
+                            <input type="hidden" class="form-control" id="edit_blog_content" name="content">
+                            <trix-editor input="edit_blog_content"></trix-editor>
+                        </div>
+                    </div>
+                    <div class="modal-footer justify-content-between">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Update</button>
                     </div>
                 </form>
             </div>
