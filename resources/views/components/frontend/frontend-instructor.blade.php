@@ -1,107 +1,67 @@
-<section id="team" class="team section fitnessign-light-background">
-    <div class="container section-title" data-aos="fade-up">
-        <h2>PERSONAL TRAINING</h2>
-        <p>CHECK OUR PERSONAL TRAINING</p>
-    </div>
-    <div class="container">
-        <div class="row gy-5">
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                <div class="member">
-                    <div class="pic"><img style="height: 420px; width: 100%; object-fit: cover;" src="/frontend/assets/img/team/FOTO PT BACKGROUND.jpeg" class="img-fluid" alt=""></div>
-                    <div class="member-info">
-                        <h4>COACH ()</h4>
-                        <span>Certified :</span>
-                        <span> Specialist : </span>
-                        <div class="social">
-                            <a href=""><i class="bi bi-facebook"></i></a>
-                            <a href=""><i class="bi bi-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+@php
+$personalTrainers = [
+    [
+        'image' => '/frontend/assets/img/team/FOTO PT BACKGROUND.jpeg',
+        'name' => 'Coach A',
+        'certified' => 'NASM',
+        'specialist' => 'Weight Training',
+        'instagram' => '#',
+    ],
+    [
+        'image' => '/frontend/assets/img/team/PERSONAL TRAINER WANITA.jpg',
+        'name' => 'Coach B',
+        'certified' => 'ACE',
+        'specialist' => 'Cardio',
+        'instagram' => '#',
+    ],
+    [
+        'image' => '/frontend/assets/img/team/personal PT3.jpg',
+        'name' => 'Coach C',
+        'certified' => 'ISSA',
+        'specialist' => 'Strength',
+        'instagram' => '#',
+    ],
+];
+@endphp
 
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                <div class="member">
-                    <div class="pic"><img style="height: 420px; width: 100%; object-fit: cover;" src="/frontend/assets/img/team/PERSONAL TRAINER WANITA.jpg" class="img-fluid" alt=""></div>
-                    <div class="member-info">
-                        <h4>COACH ()</h4>
-                        <span>Certified :</span>
-                        <span>Specialist :</span>
-                        <div class="social">
-                            <a href=""><i class="bi bi-facebook"></i></a>
-                            <a href=""><i class="bi bi-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+@php
+$classInstructors = [
+    [
+        'image' => '/frontend/assets/img/team/poundfit JPG.jpg',
+        'name' => 'Coach D',
+        'class' => 'POUND FIT',
+        'instagram' => '#',
+    ],
+    [
+        'image' => '/frontend/assets/img/team/ZUMBA JPG.jpg',
+        'name' => 'Coach E',
+        'class' => 'ZUMBA',
+        'instagram' => '#',
+    ],
+    [
+        'image' => '/frontend/assets/img/team/AEROBIC JPG.jpg',
+        'name' => 'Coach F',
+        'class' => 'AEROBIC',
+        'instagram' => '#',
+    ],
+];
+@endphp
 
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                <div class="member">
-                    <div class="pic"><img style="height: 420px; width: 100%; object-fit: cover;" src="/frontend/assets/img/team/personal PT3.jpg" class="img-fluid" alt=""></div>
-                    <div class="member-info">
-                        <h4>COACH ()</h4>
-                        <span>Certified :</span>
-                        <span>Specialist :</span>
-                        <div class="social">
-                            <a href=""><i class="bi bi-facebook"></i></a>
-                            <a href=""><i class="bi bi-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<section class="team section fitnessign-light-background">
+    <x-section-header
+        title="Personal Training"
+        subtitle="Check our personal training"
+    />
+
+    <x-instructor-grid :instructors="$personalTrainers" />
 </section>
 
-<section id="team" class="team section fitnessign-light-background">
-    <div class="container section-title" data-aos="fade-up">
-        <h2>INSTRUCTOR CLASS </h2>
-        <p>CHECK OUR INSTRUCTOR CLASS </p>
-    </div>
-    <div class="container">
-        <div class="row gy-5">
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                <div class="member">
-                    <div class="pic"><img style="height: 420px; width: 100%; object-fit: cover;" src="/frontend/assets/img/team/poundfit JPG.jpg" class="img-fluid" alt=""></div>
-                    <div class="member-info">
-                        <h4>COACH ()</h4>
-                         <span>POUND FIT </span>
+<section class="team section fitnessign-light-background">
+    <x-section-header
+        title="Instructor Class"
+        subtitle="Check our instructor class"
+    />
 
-                        <div class="social">
-                            <a href=""><i class="bi bi-facebook"></i></a>
-                            <a href=""><i class="bi bi-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                <div class="member">
-                    <div class="pic"><img style="height: 420px; width: 100%; object-fit: cover;" src="/frontend/assets/img/team/ZUMBA JPG.jpg" class="img-fluid" alt=""></div>
-                    <div class="member-info">
-                        <h4>COACH ()</h4>
-                         <span>ZUMBA </span>
-                        <div class="social">
-                            <a href=""><i class="bi bi-facebook"></i></a>
-                            <a href=""><i class="bi bi-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                <div class="member">
-                    <div class="pic"><img style="height: 420px; width: 100%; object-fit: cover;" src="/frontend/assets/img/team/AEROBIC JPG.jpg" class="img-fluid" alt=""></div>
-                    <div class="member-info">
-                        <h4>COACH ()</h4>
-                        <span>AEROBIC </span>
-                        <div class="social">
-                            <a href=""><i class="bi bi-facebook"></i></a>
-                            <a href=""><i class="bi bi-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <x-instructor-grid :instructors="$classInstructors" />
 </section>
+

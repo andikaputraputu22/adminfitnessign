@@ -64,82 +64,56 @@
         </h2>
 
         @if(!$isPersonalTraining)
-          <div class="class-meta d-flex gap-4 mt-3">
-            <div class="meta-item">
-              <i class="bi bi-star-fill text-success me-2"></i>
-              {{ ucfirst($instructor->level_class) }}
-            </div>
-            <div class="meta-item">
-              <i class="bi bi-people-fill text-success me-2"></i>
-              Maks {{ $instructor->participants_number }} peserta
-            </div>
-          </div>
+          <x-frontend.class-meta 
+            :level="$instructor->level_class"
+            :participants="$instructor->participants_number"
+          />
         @endif
 
         <div class="coach-description mt-3">
           {!! $instructor->description !!}
         </div>
 
-        {{-- PERSONAL TRAINING --}}
-        @if($isPersonalTraining)
-        <form 
-          action="https://wa.me/6289637883174"
-          method="GET"
-          target="_blank"
-          class="mt-4"
-        >
-          <input type="hidden" name="text" value="Halo Admin Fitnessign
 
-Saya tertarik untuk Personal Training.
+        @php
+          $waNumber = '6289637883174';
 
-Coach:
-{{ $instructor->name }}
+          if ($isPersonalTraining) {
+            $waText = "Halo Admin Fitnessign
 
-Level:
-{{ $trainingLevel }}
+            Saya tertarik untuk Personal Training.
 
-Pilihan paket tersedia:
-- 4 sesi
-- 8 sesi
-- 16 sesi
-- 24 sesi
+            Coach:
+            {$instructor->name}
 
-Mohon info detail dan rekomendasi paket.
-">
-          <button class="btn btn-success px-4 py-2">
-            BOOK NOW
-          </button>
-        </form>
-        @endif
+            Pilihan paket:
+            - 4 sesi
+            - 8 sesi
+            - 16 sesi
+            - 24 sesi
 
-        {{-- INSTRUCTOR CLASS --}}
-        @if(!$isPersonalTraining)
-        <form 
-          action="https://wa.me/6289637883174"
-          method="GET"
-          target="_blank"
-          class="mt-4"
-        >
-          <input type="hidden" name="text" value="Halo Admin Fitnessign
+            Mohon info detail dan rekomendasi paket yang cocok. Terima kasih.";
+          } 
+            else {
+            $waText = "Halo Admin Fitnessign
 
-Saya ingin mendaftar kelas.
+            Saya ingin mendaftar kelas.
 
-Class:
-{{ $className }}
+            Class:
+            {$className}
 
-Coach:
-{{ $instructor->name }}
+            Coach:
+            {$instructor->name}
 
-Level:
-{{ ucfirst($instructor->level_class) }}
+            Level:
+            " . ucfirst($instructor->level_class) . "
 
-Mohon info jadwal dan biaya.
-">
-          <button class="btn btn-success px-4 py-2">
-            BOOK NOW
-          </button>
-        </form>
-        @endif
+            Mohon info jadwal dan biaya kelas. Terima kasih.";
+          }
+        @endphp
+
+        <x-frontend.whatsapp-button :text="$waText" />
+
 
       </div>
     </div>
