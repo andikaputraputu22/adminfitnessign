@@ -1,6 +1,6 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="#" class="brand-link text-center">
+    <a href="/" class="brand-link text-center">
         <span class="brand-text font-weight-light">Admin Fitnessign</span>
     </a>
 
@@ -38,14 +38,14 @@
                         Instructors
                     </x-nav-link>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <x-nav-link href="/clients" :active="request()->is('clients')">
                         <x-slot name="icon">
                             <i class="nav-icon fas fa-user"></i>
                         </x-slot>
                         Clients
                     </x-nav-link>
-                </li>
+                </li> -->
                 <li class="nav-item">
                     <x-nav-link href="/services" :active="request()->is('services')">
                         <x-slot name="icon">
@@ -54,20 +54,20 @@
                         Services
                     </x-nav-link>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <x-nav-link href="/orders" :active="request()->is('orders')">
                         <x-slot name="icon">
                             <i class="nav-icon fas fa-calendar-minus"></i>
                         </x-slot>
                         Orders
                     </x-nav-link>
-                </li>
+                </li> -->
                 <li class="nav-item">
                     <x-nav-link href="/blogs" :active="request()->is('blogs')">
                         <x-slot name="icon">
                             <i class="nav-icon fas fa-newspaper"></i>
                         </x-slot>
-                        Blog
+                        Blogs
                     </x-nav-link>
                 </li>
                 <li class="nav-item">
