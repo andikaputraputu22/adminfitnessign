@@ -30,7 +30,7 @@
               </li>
             </ul>
           </div>
-          <a href="https://wa.me/6282118317062?text={{ urlencode('Halo, saya ingin menanyakan seputar tentang coach dan instructuor Fitnessign.') }}" target="_blank" class="fitnessign-btn-get-started mt-3">Order</a>
+          <a href="https://wa.me/6282118317062?text={{ urlencode('Halo, saya ingin menanyakan seputar Coach & Instructor Fitnessign.') }}" target="_blank" class="fitnessign-btn-get-started mt-3">Order</a>
         </div>
       </div>
 
@@ -59,7 +59,7 @@
               </li>
             </ul>
           </div>
-          <a href="https://wa.me/6282118317062?text={{ urlencode('Halo, saya ingin menanyakan seputar Coach & Instructuor Fitnessign.') }}" target="_blank" class="fitnessign-btn-get-started mt-3">Order</a>
+          <a href="https://wa.me/6282118317062?text={{ urlencode('Halo, saya ingin menanyakan seputar Coach & Instructor Fitnessign.') }}" target="_blank" class="fitnessign-btn-get-started mt-3">Order</a>
         </div>
       </div>
     </div>
