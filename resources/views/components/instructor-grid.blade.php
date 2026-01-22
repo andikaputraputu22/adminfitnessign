@@ -1,3 +1,10 @@
+@php
+    $get = fn ($obj, $key) =>
+        is_array($obj)
+            ? ($obj[$key] ?? null)
+            : ($obj->$key ?? null);
+@endphp
+
 <div class="container">
     <div class="row gy-5">
         @foreach ($instructors as $instructor)
@@ -7,14 +14,15 @@
                 data-aos-delay="{{ ($loop->index + 1) * 100 }}"
             >
                 <x-instructor-card
-                    :image="$instructor['image']"
-                    :name="$instructor['name']"
-                    :certified="$instructor['certified'] ?? null"
-                    :specialist="$instructor['specialist'] ?? null"
-                    :class="$instructor['class'] ?? null"
-                    :facebook="$instructor['facebook'] ?? null"
-                    :instagram="$instructor['instagram'] ?? null"
+                    :image="$get($instructor, 'image')"
+                    :name="$get($instructor, 'name')"
+                    :certified="$get($instructor, 'certified')"
+                    :specialist="$get($instructor, 'specialist')"
+                    :class="$get($instructor, 'class_name')"
+                    :instagram="$get($instructor, 'instagram')"
+                    :facebook="$get($instructor, 'facebook')"
                 />
+
             </div>
         @endforeach
     </div>
