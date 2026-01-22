@@ -47,7 +47,7 @@ class BlogController extends Controller
 
     public function delete($id)
     {
-        $blog = Blog::find($id);
+        $blog = Blog::findOrFail($id);
         if ($blog->photo && Storage::disk('public')->exists($blog->photo)) {
             Storage::disk('public')->delete($blog->photo);
         }
