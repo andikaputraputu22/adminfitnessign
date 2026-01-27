@@ -10,7 +10,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $personalTrainingInstructors = Instructor::with('services')
+        $personalTrainers = Instructor::with('services')
             ->whereHas('services', function ($query) {
                 $query->where('is_personal_training', true);
             })
@@ -24,7 +24,7 @@ class HomeController extends Controller
 
         return view('frontend.home.index', [
             'title' => 'Home',
-            'personalTrainingInstructors' => $personalTrainingInstructors,
+            'personalTrainers' => $personalTrainers,
             'classInstructors' => $classInstructors
         ]);
     }
