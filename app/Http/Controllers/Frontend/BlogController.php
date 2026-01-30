@@ -11,7 +11,7 @@ class BlogController extends Controller
     {
         return view('frontend.blog.index', [
             'title' => 'Health Blog',
-            'blogs' => Blog::latest()->get(),
+            'blogs' => Blog::latest()->paginate(6),
         ]);
     }
 
