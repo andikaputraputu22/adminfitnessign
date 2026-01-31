@@ -6,6 +6,7 @@
             class="img-fluid"
             style="height: 420px; width: 100%; object-fit: cover;"
         >
+
     </div>
 
     <div class="member-info">
