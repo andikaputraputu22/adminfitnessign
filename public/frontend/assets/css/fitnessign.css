@@ -16,7 +16,11 @@
 }
 
 
-/* Nav menu */
+/* ================================
+   TEMP DISABLED — NAV STRUCTURE
+   Reason: Let main.css control layout
+   ================================ */
+/*
 .navmenu ul {
   list-style: none;
   display: flex;
@@ -32,6 +36,7 @@
   color: #FFFFFF;
   transition: color 0.3s ease;
 }
+*/
 
 /* Hover + active state */
 .navmenu ul li a:hover,
@@ -39,7 +44,11 @@
   color: #00ff40; /* Green highlight */
 }
 
-/* Dropdown */
+/* ================================
+   TEMP DISABLED — DROPDOWN OVERRIDE
+   Reason: Use Dewi default behavior
+   ================================ */
+/*
 .navmenu .dropdown ul {
   display: none;
   position: absolute;
@@ -55,6 +64,7 @@
 .navmenu .dropdown:hover ul {
   display: block;
 }
+*/
 
 .navmenu .dropdown ul li {
   min-width: 180px;
@@ -205,9 +215,12 @@
 }
 
 
-/*--------------------------------------------------------------
-# Global Section Titles (Fitnessign Override)
---------------------------------------------------------------*/
+/* ================================
+   TEMP DISABLED — OLD SECTION TITLE
+   Reason: Duplicate override
+   ================================ */
+
+/*
 .section-title {
   padding-bottom: 60px;
   position: relative;
@@ -221,7 +234,7 @@
   margin: 0;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: #15FF00; /* neon green small title */
+  color: #15FF00;
   position: relative;
 }
 
@@ -230,18 +243,19 @@
   width: 120px;
   height: 1px;
   display: inline-block;
-  background: #15FF00; /* neon green underline */
+  background: #15FF00;
   margin: 4px 10px;
 }
 
 .section-title p {
-  color: #FFFFFF; /* big title */
+  color: #FFFFFF;
   margin: 0;
   font-size: 36px;
   font-weight: 800;
   text-transform: uppercase;
-  font-family: var(--heading-font);
 }
+*/
+
 
 .title-description {
     padding-bottom: 60px;
@@ -315,22 +329,11 @@
   color: #FFFFFF !important;
 }
 
+
 /* ==========================
    OVERRIDE SCROLL TOP BUTTON
    ========================== */
-.scroll-top {
-  background-color: #15FF00 !important; /* Neon green */
-}
 
-.scroll-top i {
-  color: #000000 !important; /* black arrow for contrast */
-}
-
-.scroll-top:hover {
-  background-color: #0fcc00 !important; /* darker green on hover */
-}
-
-/* Override Scroll Top Button */
 .scroll-top {
   background-color: #00ff00 !important; /* green background */
 }
@@ -342,6 +345,7 @@
 .scroll-top:hover {
   background-color: #00cc00 !important; /* darker green on hover */
 }
+
 
 /* -------------------------------
    FOOTER STYLING
