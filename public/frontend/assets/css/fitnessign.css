@@ -16,55 +16,12 @@
 }
 
 
-/* ================================
-   TEMP DISABLED — NAV STRUCTURE
-   Reason: Let main.css control layout
-   ================================ */
-/*
-.navmenu ul {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 25px;
-  margin: 0;
-  padding: 0;
-}
-
-.navmenu ul li a {
-  font-size: 16px;
-  font-weight: 500;
-  color: #FFFFFF;
-  transition: color 0.3s ease;
-}
-*/
-
 /* Hover + active state */
 .navmenu ul li a:hover,
 .navmenu ul li a.active {
   color: #00ff40; /* Green highlight */
 }
 
-/* ================================
-   TEMP DISABLED — DROPDOWN OVERRIDE
-   Reason: Use Dewi default behavior
-   ================================ */
-/*
-.navmenu .dropdown ul {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: #ffffff;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  padding: 10px 0;
-  border-radius: 6px;
-  z-index: 99;
-}
-
-.navmenu .dropdown:hover ul {
-  display: block;
-}
-*/
 
 .navmenu .dropdown ul li {
   min-width: 180px;
@@ -215,48 +172,6 @@
 }
 
 
-/* ================================
-   TEMP DISABLED — OLD SECTION TITLE
-   Reason: Duplicate override
-   ================================ */
-
-/*
-.section-title {
-  padding-bottom: 60px;
-  position: relative;
-}
-
-.section-title h2 {
-  font-size: 14px;
-  font-weight: 500;
-  padding: 0;
-  line-height: 1px;
-  margin: 0;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: #15FF00;
-  position: relative;
-}
-
-.section-title h2::after {
-  content: "";
-  width: 120px;
-  height: 1px;
-  display: inline-block;
-  background: #15FF00;
-  margin: 4px 10px;
-}
-
-.section-title p {
-  color: #FFFFFF;
-  margin: 0;
-  font-size: 36px;
-  font-weight: 800;
-  text-transform: uppercase;
-}
-*/
-
-
 .title-description {
     padding-bottom: 60px;
     position: relative;
@@ -285,7 +200,7 @@
 }
 
 /*--------------------------------------------------------------
-# Section Title Overrides (Fitnessign Custom)
+# Section Title Overrides
 --------------------------------------------------------------*/
 
 .section-title h2 {
