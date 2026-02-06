@@ -1,0 +1,578 @@
+/* Header styling */
+.fitnessign-header {
+  background: #0B0B0B; /* White background */
+  box-shadow: 0px 2px 15px rgba(0,0,0,0.05);
+  padding: 15px 0;
+}
+
+.fitnessign-header .logo .sitename {
+  font-size: 28px;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.fitnessign-header .logo .text-green {
+  color: #00ff40; /* Neon green dot */
+}
+
+
+/* Hover + active state */
+.navmenu ul li a:hover,
+.navmenu ul li a.active {
+  color: #00ff40; /* Green highlight */
+}
+
+
+.navmenu .dropdown ul li {
+  min-width: 180px;
+}
+
+.navmenu .dropdown ul li a {
+  display: block;
+  padding: 10px 20px;
+  color: #0B0B0B;
+}
+
+.navmenu .dropdown ul li a:hover {
+  color: #15FF00;
+  background: rgba(21, 255, 0, 0.05);
+}
+
+.navmenu>ul>li>a:before {
+  background-color: #15ff00 !important; /* neon green */
+}
+
+
+.fitnessign-text-green {
+    color: #15FF00 !important;
+}
+
+.fitnessign-bg-green {
+    background-color: #0B0B0B !important;
+}
+
+.fitnessign-btn-get-started {
+    background: #1E1E1E;
+    color: #FFFFFF;
+    border: 2px solid transparent; /* start with no visible border */
+    padding: 10px 30px;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out; /* only animate text color */
+}
+
+.fitnessign-btn-get-started:hover {
+    color: #15FF00;           /* text turns neon green */
+    border-color: #15FF00;    /* border fades in green */
+    background: #1E1E1E;      /* keep background the same */
+}
+
+.fitnessign-btn-watch-video {
+  font-size: 16px;
+  transition: 0.5s;
+  margin-left: 25px;
+  font-weight: 400;
+  color: #FFFFFF;
+  transition: color 0.5s ease;
+}
+
+.fitnessign-btn-watch-video i {
+  color: var(#15FF00);
+  font-size: 32px;
+  transition: 0.5 ease;
+  line-height: 0;
+  margin-right: 8px;
+}
+
+.fitnessign-btn-watch-video:hover {
+  color: #15FF00
+}
+
+.fitnessign-btn-watch-video:hover i {
+  color: #15FF00
+}
+
+
+/* Instructor */
+
+.fitnessign-light-background {
+  --background-color: #0B0B0B !important;
+  --surface-color: #0B0B0B !important;
+}
+
+/*--------------------------------------------------------------
+# Team Section (Fitnessign Black & Green Theme)
+--------------------------------------------------------------*/
+.team .member {
+  position: relative;
+}
+
+.team .member .pic {
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+.team .member .member-info {
+  background-color: #1E1E1E; /* dark background */
+  color: #CCCCCC; /* light gray text */
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  bottom: -50px;
+  left: 20px;
+  right: 20px;
+  padding: 20px 15px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.team .member h4 {
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 16px;
+  position: relative;
+  padding-bottom: 10px;
+  color: #FFFFFF; /* white name text */
+}
+
+.team .member h4::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 2px;
+  background: #15FF00; /* neon green underline */
+  bottom: 0;
+  left: 0;
+}
+
+.team .member span {
+  font-style: italic;
+  display: block;
+  font-size: 13px;
+  color: #AAAAAA; /* softer gray for subtitle */
+}
+
+.team .member .social {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+}
+
+.team .member .social a {
+  transition: color 0.3s;
+  color: #888888; /* gray icons */
+}
+
+.team .member .social a:hover {
+  color: #15FF00; /* neon green on hover */
+}
+
+.team .member .social i {
+  font-size: 16px;
+  margin: 0 2px;
+}
+
+
+.title-description {
+    padding-bottom: 60px;
+    position: relative;
+    color: #FFFFFF;
+    font-size: 24px;
+    font-family: var(--heading-font);
+}
+
+.fitnessign-blog-title {
+    color: #FFFFFF !important;
+}
+
+.fitnessign-blog-description {
+    color: #FFFFFF !important;
+}
+
+@media (max-width: 768px) {
+  .section-title p {
+    font-size: 24px;
+  }
+}
+
+
+.starter-section {
+
+}
+
+/*--------------------------------------------------------------
+# Section Title Overrides
+--------------------------------------------------------------*/
+
+.section-title h2 {
+  font-size: 16px;                /* slightly bigger */
+  font-weight: 600;               /* stronger weight */
+  color: #00cc44;                 /* green accent */
+  letter-spacing: 2px;            /* a bit more spacing */
+}
+
+.section-title h2::after {
+  background: #00cc44;            /* green underline */
+  width: 80px;                    /* shorter underline for style */
+}
+
+.section-title p {
+  color: #ffffff;                 /* make "CHECK OUR INFO" white */
+  font-size: 40px;                /* bolder headline */
+  font-weight: 900;               /* extra bold */
+  letter-spacing: 1px;
+  text-transform: none;           /* optional: normal case instead of ALL CAPS */
+}
+
+.about-img {
+    max-width: 100%;
+    width: 100%;
+    max-height: 580px;
+    object-fit: cover;
+    border-radius: 20px; /* increase for smoother corners */
+    margin-left: 20px; /* spacing from text */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4); /* subtle shadow for depth */
+}
+
+.about-text {
+    font-size: 1.1rem;
+    text-align: justify;
+    color: #FFFFFF; /* white text */
+}
+
+#about {
+  background: linear-gradient(135deg, #1E1E1E 70%, #003300 100%);
+  color: #FFFFFF !important;
+}
+
+
+/* ==========================
+   OVERRIDE SCROLL TOP BUTTON
+   ========================== */
+
+.scroll-top {
+  background-color: #00ff00 !important; /* green background */
+}
+
+.scroll-top i {
+  color: #ffffff !important; /* white arrow */
+}
+
+.scroll-top:hover {
+  background-color: #00cc00 !important; /* darker green on hover */
+}
+
+
+/* -------------------------------
+   FOOTER STYLING
+--------------------------------- */
+.footer {
+  background-color: #000; /* black background */
+  color: #fff; /* white text */
+  padding: 40px 0;
+  text-align: center;
+}
+
+.footer h2 {
+  font-family: 'Raleway', sans-serif;
+  color: #fff !important;
+  font-weight: 800;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.footer nav {
+  margin-bottom: 15px;
+}
+
+.footer nav a {
+  color: #fff;
+  margin: 0 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer nav a:hover {
+  color: #4caf50; /* greenish accent hover */
+}
+
+.footer p {
+  font-size: 0.8rem;
+  margin-top: 10px;
+  color: #e0dcdc; /* softer grey for copyright */
+}
+
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+#preloader {
+  background: #000; /* solid black */
+  /* or */
+  background: linear-gradient(135deg, #000 70%, #003300 100%);
+}
+
+#preloader:before {
+  border: 6px solid #fff;
+  border-color: #15FF00 transparent #15FF00 transparent; /* green spinner */
+  width: 80px;
+  height: 80px;
+  top: calc(50% - 40px);
+  left: calc(50% - 40px);
+}
+
+@keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*--------------------------------------------------------------
+# Pricing Section
+--------------------------------------------------------------*/
+.pricing {
+  padding: 80px 0;
+  background: #000;
+}
+
+.pricing h2 {
+  font-size: 22px;
+  color: #00ff40; /* Fitnessign green */
+  font-weight: 600;
+  text-transform: none;
+}
+
+.pricing-card {
+  border: 2px solid #00ff40;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card h4 {
+  color: #000 !important;
+  margin-bottom: 10px;
+}
+
+.pricing-card p {
+  font-size: 14px;
+  color: #333;
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 255, 64, 0.3);
+}
+
+/* Fix bullet alignment */
+.pricing-card ul {
+  padding: 0;
+  margin: 0;
+}
+
+.pricing-card ul li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #000;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.pricing-card ul li i {
+  color: #333;
+  font-size: 14px;
+  margin-top: 4px; /* tweak for perfect vertical centering */
+  flex-shrink: 0;
+}
+
+.pricing-card ul li span {
+  flex: 1;
+}
+
+.btn-dark {
+  background: #000;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-dark:hover {
+  background: #00ff40;
+  color: #000;
+}
+
+.title-description p {
+  text-align: justify;
+  text-justify: inter-word !important;
+}
+
+/* --------------------------------------------------------------
+# Health Detail Page
+-------------------------------------------------------------- */
+.health-detail {
+  padding: 80px 0;
+  background: #0a0a0a;
+  color: #d1d1d1;
+}
+
+.health-hero-img {
+  max-height: 420px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 255, 64, 0.2);
+}
+
+.health-content {
+  line-height: 1.8;
+}
+
+.health-content h1,
+.health-content h4 {
+  font-weight: 700;
+}
+
+.health-content .lead {
+  font-size: 18px;
+  color: #bcbcbc;
+}
+
+.health-content ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.health-content ul li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #cfcfcf;
+}
+
+/* Right sidebar: relevant articles */
+.relevant-articles {
+  position: sticky;
+  top: 100px;
+}
+
+.relevant-articles h3 {
+  font-weight: 600;
+}
+
+.article-card {
+  background: #111;
+  border-radius: 12px;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.article-card:hover {
+  background: #141414;
+  transform: translateY(-3px);
+}
+
+.article-thumb {
+  width: 90px;
+  height: 70px;
+  object-fit: cover;
+}
+
+.text-fg-green {
+  color: #00ff40 !important;
+}
+
+
+/*Detail Instructor Page*/
+
+/* Hide the radio input */
+.session-radio {
+  display: none;
+}
+
+/* Card default style */
+.session-card {
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  display: block;
+}
+
+.session-card:hover {
+  transform: translateY(-5px);
+}
+
+.session-card h6 {
+  margin-top: 10px;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.session-card p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.85;
+  color: #fff;
+}
+
+/* Highlight text and border when input is checked */
+.session-radio:checked + .session-card {
+  border-color: #0f0;
+}
+
+.session-radio:checked + .session-card h6,
+.session-radio:checked + .session-card p {
+  color: #0f0;
+  font-weight: 600;
+}
+
+.img-detail-coach {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+}
+
+.profile-card {
+  background-color: #1E1E1E;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.divider-line {
+  color: #15FF00;
+}
+
+.coach-title-color {
+  color: #15FF00;
+}
+
+/* Instructor classes */
+
+.class-meta {
+  font-size: 0.95rem;
+  color: #e6e6e6;
+}
+
+.class-meta .meta-item {
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+.divider-line {
+  border-top: 1px solid rgba(0, 255, 0, 0.35);
+}
+
+.coach-title-color {
+  letter-spacing: 1px;
+}
