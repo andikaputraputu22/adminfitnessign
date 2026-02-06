@@ -49,9 +49,5 @@
 <script src="/frontend/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 <script src="/frontend/assets/js/main.js"></script>
 
-<!-- Dynamic year -->
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
+@vite(['resources/js/app.js'])
 </html>
