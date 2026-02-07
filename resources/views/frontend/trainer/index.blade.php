@@ -10,5 +10,8 @@
         :image="$heroImage"
     />
 
-    <x-frontend.coach-list :instructors="$instructors"></x-frontend.coach-list>
+    <section id="team" class="team section fitnessign-light-background">
+        <x-instructor-grid :instructors="$instructors" />
+    </section>
+    
 </x-frontend.frontend-layout>
