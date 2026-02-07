@@ -1,37 +1,85 @@
+@props([
+    'instructor' => null,
+
+    // legacy props (temporary, for backward compatibility)
+    'image' => null,
+    'name' => null,
+    'certified' => null,
+    'specialist' => null,
+    'class' => null,
+    'instagram' => null,
+    'facebook' => null,
+])
+
+@php
+    /**
+     * Normalize data source
+     * Prefer instructor object, fallback to legacy props
+     */
+    $src = $instructor ?? (object) [];
+
+    // Canonical frontend fields
+    $photo = $image ?? $src->photo ?? null;
+    $displayName = $name ?? $src->name ?? null;
+
+    $certificate =
+        $certified
+        ?? $src->certificate
+        ?? $src->certified
+        ?? null;
+
+    $specialistName =
+        $specialist
+        ?? $src->specialist
+        ?? $src->specialists
+        ?? null;
+
+    $className =
+        $class
+        ?? $src->class_name
+        ?? null;
+
+    $instagramUrl = $instagram ?? $src->instagram ?? null;
+    $facebookUrl = $facebook ?? $src->facebook ?? null;
+@endphp
+
 <div class="member">
     <div class="pic">
         <img
-            src="{{ $image }}"
-            alt="{{ $name }}"
+            src="{{ $photo }}"
+            alt="{{ $displayName }}"
             class="img-fluid"
             style="height: 420px; width: 100%; object-fit: cover;"
         >
-
     </div>
 
     <div class="member-info">
-        <h4>{{ $name }}</h4>
+        <h4>{{ $displayName }}</h4>
 
-        @isset($certified)
-            <span>Certified : {{ $certified }}</span>
-        @endisset
+        @if($certificate)
+            <span>Certified : {{ $certificate }}</span>
+        @endif
 
-        @isset($specialist)
-            <span>Specialist : {{ $specialist }}</span>
-        @endisset
+        @if($specialistName)
+            <span>Specialist : {{ $specialistName }}</span>
+        @endif
 
-        @isset($class)
-            <span>{{ $class }}</span>
-        @endisset
+        @if($className)
+            <span>{{ $className }}</span>
+        @endif
 
         <div class="social">
-            @isset($facebook)
-                <a href="{{ $facebook }}"><i class="bi bi-facebook"></i></a>
-            @endisset
+            @if($facebookUrl)
+                <a href="{{ $facebookUrl }}">
+                    <i class="bi bi-facebook"></i>
+                </a>
+            @endif
 
-            @isset($instagram)
-                <a href="{{ $instagram }}"><i class="bi bi-instagram"></i></a>
-            @endisset
+            @if($instagramUrl)
+                <a href="{{ $instagramUrl }}">
+                    <i class="bi bi-instagram"></i>
+                </a>
+            @endif
         </div>
     </div>
 </div>
