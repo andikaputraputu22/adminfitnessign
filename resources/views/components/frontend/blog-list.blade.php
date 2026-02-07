@@ -55,7 +55,7 @@
 
         @if ($blogs->hasPages())
             <div class="mt-5 d-flex justify-content-center">
-                {{ $blogs->links() }}
+                {{ $blogs->links('components.frontend.pagination') }}
             </div>
         @endif
     </div>
