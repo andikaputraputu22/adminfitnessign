@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/frontend/assets/vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/frontend/assets/vendor/bootstrap-icons/bootstrap-icons.css">
-    <link rel="stylesheet" href="/frontend/assets/vendor/aos/aos.css">
     <link rel="stylesheet" href="/frontend/assets/vendor/glightbox/css/glightbox.min.css">
     <link rel="stylesheet" href="/frontend/assets/vendor/swiper/swiper-bundle.min.css">
 
