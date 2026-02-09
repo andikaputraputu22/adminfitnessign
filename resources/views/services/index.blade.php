@@ -19,22 +19,23 @@
                             </thead>
                             <tbody>
                                 @foreach ($services as $service)
-                                    <tr>
-                                        <td>{{ Str::limit($service->name, 30) }}</td>
-                                        <td>{{ Str::limit($service->description, 100) }}</td>
-                                        <td class="text-center">
-                                            <button id="editService" type="button" class="btn btn-primary"
-                                                data-id="{{ $service->id }}"
-                                                data-name="{{ $service->name }}"
-                                                data-description="{{ $service->description }}">
-                                                <i class="fa-solid fas fa-pen"></i>
-                                            </button>
-                                            <a id="deleteService" class="btn btn-danger"
-                                                data-url="{{ route('services.delete', ['id' => $service->id]) }}">
-                                                <i class="fa-solid fas fa-trash"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
+                                <tr>
+                                    <td>{{ Str::limit($service->name, 30) }}</td>
+                                    <td>{{ Str::limit($service->description, 100) }}</td>
+                                    <td class="text-center">
+                                        <button id="editService" type="button" class="btn btn-primary"
+                                            data-id="{{ $service->id }}"
+                                            data-name="{{ $service->name }}"
+                                            data-description="{{ $service->description }}"
+                                            data-photo="{{ $service->photo }}">
+                                            <i class="fa-solid fas fa-pen"></i>
+                                        </button>
+                                        <a id="deleteService" class="btn btn-danger"
+                                            data-url="{{ route('services.delete', ['id' => $service->id]) }}">
+                                            <i class="fa-solid fas fa-trash"></i>
+                                        </a>
+                                    </td>
+                                </tr>
                                 @endforeach
                             </tbody>
                         </table>
@@ -53,9 +54,24 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form action="/services/store" method="POST">
+                <form action="/services/store" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="modal-body">
+                        <div class="file-dnd" data-form="servicePhoto">
+                            <label for="photo">Upload Photo</label>
+                            <input type="file" id="editServicePhoto" name="photo">
+                            <div class="before-upload">
+                                <div>
+                                    <i class="fa fa-image"></i>
+                                    <h4>Drag & Drop Image File or Browse</h4>
+                                    <p>Supports: JPEG, PNG, GIF, TIFF</p>
+                                </div>
+                            </div>
+                            <div class="after-upload">
+                                <div class="clear-btn">&times;</div>
+                                <img src="" />
+                            </div>
+                        </div>
                         <div class="form-group">
                             <label for="serviceName">Name</label>
                             <input required type="text" class="form-control" id="serviceName" name="name"
