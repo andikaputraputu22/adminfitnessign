@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\Service;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
 class ServiceController extends Controller
@@ -17,23 +18,38 @@ class ServiceController extends Controller
     }
 
     public function store(Request $request) {
-        $request->validate([
+        $validateData = $request->validate([
             'name' => 'required',
-            'description' => 'required'
+            'description' => 'required',
+            'photo' => 'image|file|max:5120'
         ]);
+
+        // Generate unique slug
+        $slug = Str::slug($request->name);
+        $originalSlug = $slug;
+        $count = 1;
+
+        while (Service::where('slug', $slug)->exists()) {
+            $slug = $originalSlug . '-' . $count++;
+        }
+
+        $validateData['slug'] = $slug;
+        $validateData['is_personal_training'] = false;
         
-        Service::create([
-            'name' => $request->name,
-            'slug' => Str::slug($request->name),
-            'description' => $request->description,
-            'is_personal_training' => false
-        ]);
-        
+        if ($request->file('photo')) {
+            $validateData['photo'] = $request->file('photo')->store('services', 'public');
+        }
+
+        Service::create($validateData);
         return redirect()->back()->with('success', 'New service has been added!');
     }
 
     public function delete($id) {
-        Service::find($id)->delete();
+        $service = Service::findOrFail($id);
+        if ($service->photo && Storage::disk('public')->exists($service->photo)) {
+            Storage::disk('public')->delete($service->photo);
+        }
+        $service->delete();
         return redirect()->back()->with('success', 'Service has been deleted!');
     }
 
