@@ -102,10 +102,25 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form id="formEditService" method="POST">
+                <form id="formEditService" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
                     <div class="modal-body">
+                        <div class="file-dnd" data-form="servicePhoto">
+                            <label for="photo">Upload Photo</label>
+                            <input type="file" id="editServicePhoto" name="photo">
+                            <div class="before-upload">
+                                <div>
+                                    <i class="fa fa-image"></i>
+                                    <h4>Drag & Drop Image File or Browse</h4>
+                                    <p>Supports: JPEG, PNG, GIF, TIFF</p>
+                                </div>
+                            </div>
+                            <div class="after-upload">
+                                <div class="clear-btn">&times;</div>
+                                <img src="" />
+                            </div>
+                        </div>
                         <div class="form-group">
                             <label for="editServiceName">Name</label>
                             <input required type="text" class="form-control" id="editServiceName" name="name"
