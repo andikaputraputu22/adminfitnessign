@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
 use App\Models\Service;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -59,7 +58,34 @@ class ServiceController extends Controller
             return redirect()->back()->with('failed', 'Update service failed!');
         }
 
-        $service->update($request->all());
+        $validateData = $request->validate([
+            'name' => 'required',
+            'description' => 'required',
+            'photo' => 'nullable|image|file|max:5120'
+        ]);
+
+        if ($request->name !== $service->name) {
+            // Generate unique slug
+            $slug = Str::slug($request->name);
+            $originalSlug = $slug;
+            $count = 1;
+
+            while (Service::where('slug', $slug)->where('id', '!=', $id)->exists()) {
+                $slug = $originalSlug . '-' . $count++;
+            }
+
+            $validateData['slug'] = $slug;
+        }
+
+        if ($request->file('photo')) {
+            if ($service->photo && Storage::disk('public')->exists($service->photo)) {
+                Storage::disk('public')->delete($service->photo);
+            }
+
+            $validateData['photo'] = $request->file('photo')->store('services', 'public');
+        }
+
+        $service->update($validateData);
         return redirect()->back()->with('success', 'Service has been updated!');
     }
 }
