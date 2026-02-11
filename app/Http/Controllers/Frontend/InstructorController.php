@@ -10,7 +10,8 @@ class InstructorController extends Controller
     public function index(Service $service) {
         return view('frontend.instructor.index', [
             'title' => strtoupper($service->name),
-            'instructors' => $service->instructors
+            'instructors' => $service->instructors,
+            'service' => $service
         ]);
     }
 }
