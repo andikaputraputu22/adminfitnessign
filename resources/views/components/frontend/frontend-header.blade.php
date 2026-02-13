@@ -9,19 +9,39 @@
             <ul class="fitnessign-text-green">
                 <li><a href="/">Home</a></li>
                 <li><a href="/blog">Health</a></li>
-                <li class="dropdown"><a href="#"><span>Personal Training</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+
+                <li class="dropdown">
+                    <a href="#">
+                        <span>Personal Training</span>
+                        <i class="bi bi-chevron-down toggle-dropdown"></i>
+                    </a>
                     <ul>
-                        <li><a href="{{ route('frontend.trainer', ['service' => 'advanced']) }}">ADVANCED</a></li>
-                        <li><a href="{{ route('frontend.trainer', ['service' => 'prime']) }}">PRIME</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown"><a href="#"><span>Instructor Class</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                    <ul>
-                        @foreach ($services as $service)
-                        <li><a href="{{ route('frontend.instructor', ['service' => Str::slug($service->name)]) }}">{{ strtoupper($service->name) }}</a></li>
+                        @foreach ($services->where('is_personal_training', 1) as $service)
+                            <li>
+                                <a href="{{ route('frontend.trainer', ['service' => $service->slug]) }}">
+                                    {{ strtoupper($service->name) }}
+                                </a>
+                            </li>
                         @endforeach
                     </ul>
                 </li>
+
+                <li class="dropdown">
+                    <a href="#">
+                        <span>Instructor Class</span>
+                        <i class="bi bi-chevron-down toggle-dropdown"></i>
+                    </a>
+                    <ul>
+                        @foreach ($services->where('is_personal_training', 0) as $service)
+                            <li>
+                                <a href="{{ route('frontend.instructor', ['service' => $service->slug]) }}">
+                                    {{ strtoupper($service->name) }}
+                                </a>
+                            </li>
+                        @endforeach
+                    </ul>
+                </li>
+
                 <li><a href="#about">About</a></li>
             </ul>
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
