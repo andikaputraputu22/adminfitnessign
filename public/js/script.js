@@ -134,9 +134,20 @@ $(document).on("click", "#editService", function () {
     let serviceId = $(this).data("id");
     let name = $(this).data("name");
     let description = $(this).data("description");
+    let photo = $(this).data("photo");
 
     $("#editServiceName").val(name);
     $("#editServiceDescription").val(description);
+
+    if (photo) {
+        let fullPhotoUrl = "/storage/" + photo;
+        $('.file-dnd .after-upload img').attr('src', fullPhotoUrl);
+        $('.file-dnd .after-upload').show();
+        $('.file-dnd .before-upload').hide();
+    } else {
+        $('.file-dnd .after-upload').hide();
+        $('.file-dnd .before-upload').show();
+    }
 
     $("#formEditService").attr("action", `/services/${serviceId}/update`);
 
