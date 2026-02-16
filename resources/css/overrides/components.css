@@ -1,0 +1,190 @@
+.fitnessign-btn-get-started {
+    background: #1E1E1E;
+    color: #FFFFFF;
+    border: 2px solid transparent; /* start with no visible border */
+    padding: 10px 30px;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out; /* only animate text color */
+}
+
+.fitnessign-btn-get-started:hover {
+    color: #15FF00;           /* text turns neon green */
+    border-color: #15FF00;    /* border fades in green */
+    background: #1E1E1E;      /* keep background the same */
+}
+
+.fitnessign-btn-watch-video {
+  font-size: 16px;
+  transition: 0.5s;
+  margin-left: 25px;
+  font-weight: 400;
+  color: #FFFFFF;
+  transition: color 0.5s ease;
+}
+
+.fitnessign-btn-watch-video i {
+  color: var(#15FF00);
+  font-size: 32px;
+  transition: 0.5 ease;
+  line-height: 0;
+  margin-right: 8px;
+}
+
+.fitnessign-btn-watch-video:hover {
+  color: #15FF00
+}
+
+.fitnessign-btn-watch-video:hover i {
+  color: #15FF00
+}
+
+
+/*--------------------------------------------------------------
+# Pricing card
+--------------------------------------------------------------*/
+.pricing-card {
+  border: 2px solid #00ff40;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card h4 {
+  color: #000 !important;
+  margin-bottom: 10px;
+}
+
+.pricing-card p {
+  font-size: 14px;
+  color: #333;
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 255, 64, 0.3);
+}
+
+/* Fix bullet alignment */
+.pricing-card ul {
+  padding: 0;
+  margin: 0;
+}
+
+.pricing-card ul li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #000;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.pricing-card ul li i {
+  color: #333;
+  font-size: 14px;
+  margin-top: 4px; /* tweak for perfect vertical centering */
+  flex-shrink: 0;
+}
+
+.pricing-card ul li span {
+  flex: 1;
+}
+
+
+/*--------------------------------------------------------------
+# Session card
+--------------------------------------------------------------*/
+/* Hide the radio input */
+.session-radio {
+  display: none;
+}
+
+/* Card default style */
+.session-card {
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  display: block;
+}
+
+.session-card:hover {
+  transform: translateY(-5px);
+}
+
+.session-card h6 {
+  margin-top: 10px;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.session-card p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.85;
+  color: #fff;
+}
+
+/* Highlight text and border when input is checked */
+.session-radio:checked + .session-card {
+  border-color: #0f0;
+}
+
+.session-radio:checked + .session-card h6,
+.session-radio:checked + .session-card p {
+  color: #0f0;
+  font-weight: 600;
+}
+
+
+/*--------------------------------------------------------------
+# Profile card
+--------------------------------------------------------------*/
+.profile-card {
+  background-color: #1E1E1E;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+
+/*--------------------------------------------------------------
+# Article card
+--------------------------------------------------------------*/
+.article-card {
+  background: #111;
+  border-radius: 12px;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.article-card:hover {
+  background: #141414;
+  transform: translateY(-3px);
+}
+
+.article-thumb {
+  width: 90px;
+  height: 70px;
+  object-fit: cover;
+}
+
+
+/*--------------------------------------------------------------
+# Button Dark Override
+--------------------------------------------------------------*/
+.btn-dark {
+  background: #000;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-dark:hover {
+  background: #00ff40;
+  color: #000;
+}

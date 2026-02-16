@@ -1,0 +1,168 @@
+/* --------------------------------------------------------------
+# Header Styling
+-------------------------------------------------------------- */
+.fitnessign-header {
+  background: #0B0B0B; /* White background */
+  box-shadow: 0px 2px 15px rgba(0,0,0,0.05);
+  padding: 15px 0;
+}
+
+.fitnessign-header .logo .sitename {
+  font-size: 28px;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.fitnessign-header .logo .text-green {
+  color: #00ff40; /* Neon green dot */
+}
+
+
+/* --------------------------------------------------------------
+# Hover + Active States for Navigation
+-------------------------------------------------------------- */
+.navmenu ul li a:hover,
+.navmenu ul li a.active {
+  color: #00ff40; /* Green highlight */
+}
+
+
+.navmenu .dropdown ul li {
+  min-width: 180px;
+}
+
+.navmenu .dropdown ul li a {
+  display: block;
+  padding: 10px 20px;
+  color: #0B0B0B;
+}
+
+.navmenu .dropdown ul li a:hover {
+  color: #15FF00;
+  background: rgba(21, 255, 0, 0.05);
+}
+
+.navmenu>ul>li>a:before {
+  background-color: #15ff00 !important; /* neon green */
+}
+
+/*--------------------------------------------------------------
+# Section Title Overrides
+--------------------------------------------------------------*/
+
+.section-title h2 {
+  font-size: 16px;                /* slightly bigger */
+  font-weight: 600;               /* stronger weight */
+  color: #00cc44;                 /* green accent */
+  letter-spacing: 2px;            /* a bit more spacing */
+}
+
+.section-title h2::after {
+  background: #00cc44;            /* green underline */
+  width: 80px;                    /* shorter underline for style */
+}
+
+.section-title p {
+  color: #ffffff;                 /* make "CHECK OUR INFO" white */
+  font-size: 40px;                /* bolder headline */
+  font-weight: 900;               /* extra bold */
+  letter-spacing: 1px;
+  text-transform: none;           /* optional: normal case instead of ALL CAPS */
+}
+
+/*--------------------------------------------------------------
+# Scroll Top Overrides
+--------------------------------------------------------------*/
+
+.scroll-top {
+  background-color: #00ff00 !important; /* green background */
+}
+
+.scroll-top i {
+  color: #ffffff !important; /* white arrow */
+}
+
+.scroll-top:hover {
+  background-color: #00cc00 !important; /* darker green on hover */
+}
+
+
+/* -------------------------------
+   FOOTER STYLING
+--------------------------------- */
+.footer {
+  background-color: #000; /* black background */
+  color: #fff; /* white text */
+  padding: 40px 0;
+  text-align: center;
+}
+
+.footer h2 {
+  font-family: 'Raleway', sans-serif;
+  color: #fff !important;
+  font-weight: 800;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.footer nav {
+  margin-bottom: 15px;
+}
+
+.footer nav a {
+  color: #fff;
+  margin: 0 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer nav a:hover {
+  color: #4caf50; /* greenish accent hover */
+}
+
+.footer p {
+  font-size: 0.8rem;
+  margin-top: 10px;
+  color: #e0dcdc; /* softer grey for copyright */
+}
+
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+#preloader {
+  background: #000; /* solid black */
+  /* or */
+  background: linear-gradient(135deg, #000 70%, #003300 100%);
+}
+
+#preloader:before {
+  border: 6px solid #fff;
+  border-color: #15FF00 transparent #15FF00 transparent; /* green spinner */
+  width: 80px;
+  height: 80px;
+  top: calc(50% - 40px);
+  left: calc(50% - 40px);
+}
+
+@keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+/*--------------------------------------------------------------
+# #about gradient override
+--------------------------------------------------------------*/
+#about {
+  background: linear-gradient(135deg, #1E1E1E 70%, #003300 100%);
+  color: #FFFFFF !important;
+}
