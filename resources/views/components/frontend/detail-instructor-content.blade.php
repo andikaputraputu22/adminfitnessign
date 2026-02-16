@@ -56,12 +56,12 @@
         @endphp
 
 
-        <h2 class="coach-title coach-title-color">
+        <h5 class="text-uppercase text-fg-green mb-2">
           {{ $isPersonalTraining 
-              ? 'FITNESSIGN PERSONAL TRAINING' 
+              ? 'Personal Trainer' 
               : 'CLASS ' . strtoupper($className) 
           }}
-        </h2>
+        </h5>
 
         @if(!$isPersonalTraining)
           <x-frontend.class-meta 

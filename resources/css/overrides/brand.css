@@ -166,3 +166,34 @@
   background: linear-gradient(135deg, #1E1E1E 70%, #003300 100%);
   color: #FFFFFF !important;
 }
+
+
+/*--------------------------------------------------------------
+# Navigation active state
+--------------------------------------------------------------*/
+:root {
+  --accent-color: #00ff40;
+  --nav-hover-color: #00ff40;
+}
+
+/* Force override mobile active state */
+.navmenu .active,
+.navmenu .active:focus {
+  color: #00ff40 !important;
+}
+
+.navmenu .active i,
+.navmenu .active:focus i {
+  background-color: #00ff40 !important;
+  color: #000 !important;
+}
+
+
+/*--------------------------------------------------------------
+# Mobile Hero font
+--------------------------------------------------------------*/
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 30px;
+  }
+}

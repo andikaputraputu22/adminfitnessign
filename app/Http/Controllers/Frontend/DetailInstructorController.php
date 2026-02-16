@@ -21,7 +21,7 @@ class DetailInstructorController extends Controller
             : [];
 
         return view('frontend.detail_instructor.index', [
-            'title' => 'COACH ADVANCE',
+            'title' => $instructor->name,
             'instructor' => $instructor,
             'certificates' => $certificates,
             'specialists' => $specialists

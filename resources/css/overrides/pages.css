@@ -6,16 +6,22 @@
   --surface-color: #0B0B0B !important;
 }
 
+
 /*--------------------------------------------------------------
-# Team override
+# Team override (instructor section)
 --------------------------------------------------------------*/
 .team .member {
   position: relative;
 }
 
 .team .member .pic {
-  overflow: hidden;
-  margin-bottom: 50px;
+  height: 250px;
+}
+
+.team .member .pic img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .team .member .member-info {
@@ -78,6 +84,7 @@
   margin: 0 2px;
 }
 
+
 /*--------------------------------------------------------------
 # Title description
 --------------------------------------------------------------*/
@@ -102,23 +109,24 @@
     color: #FFFFFF !important;
 }
 
+
 /*--------------------------------------------------------------
 # About us
 --------------------------------------------------------------*/
 .about-img {
     max-width: 100%;
     width: 100%;
-    max-height: 580px;
+    max-height: 500px;
     object-fit: cover;
-    border-radius: 20px; /* increase for smoother corners */
+    border-radius: 20px;
     margin-left: 20px; /* spacing from text */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.4); /* subtle shadow for depth */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
 }
 
 .about-text {
     font-size: 1.1rem;
     text-align: justify;
-    color: #FFFFFF; /* white text */
+    color: #FFFFFF;
 }
 
 
@@ -132,7 +140,7 @@
 
 .pricing h2 {
   font-size: 22px;
-  color: #00ff40; /* Fitnessign green */
+  color: #00ff40;
   font-weight: 600;
   text-transform: none;
 }
@@ -213,6 +221,42 @@
   border-top: 1px solid rgba(0, 255, 0, 0.35);
 }
 
+.coach-title {
+  font-size: 32px;
+  letter-spacing: 1px;
+}
+
 .coach-title-color {
   letter-spacing: 1px;
+  color: #15ff00;
+  text-shadow: 0 0 8px rgba(21, 255, 0, 0.3);
+}
+
+.coach-description {
+  max-width: 600px;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.hero {
+  min-height: 60vh;
+}
+
+.btn-success {
+  background-color: #00aa44;
+  border: none;
+  font-weight: 600;
+  padding: 12px 28px;
+}
+
+#detailInstructor .row {
+  align-items: center;
+}
+
+.img-detail-coach {
+  transition: transform 0.4s ease;
+}
+
+.img-detail-coach:hover {
+  transform: scale(1.02);
 }

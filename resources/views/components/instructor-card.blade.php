@@ -43,7 +43,12 @@
     $facebookUrl = $facebook ?? $src->facebook ?? null;
 @endphp
 
-<div class="member">
+<div class="member position-relative">
+    <a 
+        href="{{ route('frontend.detail_instructor', $src->slug ?? '') }}" 
+        class="stretched-link"
+    ></a>
+
     <div class="pic">
         <img
             src="{{ $photo }}"
