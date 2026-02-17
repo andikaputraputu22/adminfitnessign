@@ -3,8 +3,10 @@
 <section class="services section fitnessign-light-background">
     <div class="container title-description text-center" data-aos="fade-up">
         <p>
-            Disini kami berbagi inspirasi seputar gaya hidup sehat, mulai dari tips menjaga kebugaran,
-            panduan nutrisi, hingga kesehatan mental dan lifestyle.
+            Membangun gaya hidup sehat di tengah kesibukan bukanlah hal mustahil. Fitnessign Healt hadir sebagai panduan gaya hidup sehat modern yang praktis dan realistis.
+            Mulai dari resep makanan sehat cepat saji, tips tetap bugar di meja kerja, hingga tren kesehatan terbaru yang didukung oleh fakta. Mari ubah kebiasaan kecil hari ini menjadi investasi kesehatan jangka panjang."
+            kami akan memberikan seputar LifeStyle, nutrisi dan juga pola makanan diet, bersama fitnessign wujudkan gaya hidup sehatmu. Sekarang juga :  
+             
         </p>
     </div>
 
@@ -44,7 +46,7 @@
                     <div class="text-center py-5" data-aos="fade-up">
                         <h4>No articles yet</h4>
                         <p class="text-muted">
-                            We’re preparing new health & lifestyle content.  
+                            Were preparing new health & lifestyle content.  
                             Please check back soon.
                         </p>
                     </div>
