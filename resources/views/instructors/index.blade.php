@@ -26,10 +26,9 @@
                                         <td>{{ $instructor->phone }}</td>
                                         <td>{{ Str::limit(strip_tags($instructor->description), 80) }}</td>
                                         <td class="text-center">
-                                            <button id="editInstructor" type="button" class="editInstructor btn btn-primary"
-                                                data-instructor='@json($instructor)'>
+                                            <a href="{{ route('instructors.edit', ['id' => $instructor->id]) }}" class="btn btn-primary">
                                                 <i class="fa-solid fas fa-pen"></i>
-                                            </button>
+                                            </a>
                                             <a id="deleteInstructor" class="btn btn-danger"
                                                 data-url="{{ route('instructors.delete', ['id' => $instructor->id]) }}">
                                                 <i class="fa-solid fas fa-trash"></i>

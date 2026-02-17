@@ -71,4 +71,15 @@ class InstructorController extends Controller
         $instructor->delete();
         return redirect()->back()->with('success', 'Instructor has been deleted');
     }
+
+    public function edit($id) {
+        $instructor = Instructor::with('services')->findOrFail($id);
+        $isPersonalTraining = $instructor->services->contains('is_personal_training', true);
+        return view('instructors.edit', [
+            'title' => 'Edit Instructor',
+            'instructor' => $instructor,
+            'services' => Service::all(),
+            'isPersonalTraining' => $isPersonalTraining
+        ]);
+    }
 }
