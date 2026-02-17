@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\InstructorController;
@@ -25,6 +26,11 @@ Route::get('/services/{id}/delete', [ServiceController::class, 'delete'])->middl
 Route::put('/services/{id}/update', [ServiceController::class, 'update'])->middleware('auth')->name('services.update');
 
 Route::get('/orders', [OrderController::class, 'index'])->middleware('auth')->name('orders');
+
+Route::get('/blogs', [BlogController::class, 'index'])->middleware('auth')->name('blogs');
+Route::post('/blogs/store', [BlogController::class, 'store'])->middleware('auth')->name('blogs.store');
+Route::get('/blogs/{id}/delete', [BlogController::class, 'delete'])->middleware('auth')->name('blogs.delete');
+Route::put('/blogs/{id}/update', [BlogController::class, 'update'])->middleware('auth')->name('blogs.update');
 
 Route::get('/login', [LoginController::class, 'index'])->middleware('guest')->name('login');
 Route::post('/login', [LoginController::class, 'authenticate']);

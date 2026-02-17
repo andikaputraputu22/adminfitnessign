@@ -30,7 +30,7 @@ class AppServiceProvider extends ServiceProvider
 
         // Share services data ke header component
         View::composer('components.frontend.frontend-header', function ($view) {
-            $view->with('services', Service::where('is_personal_training', false)->get());
+            $view->with('services', Service::all());
         });
     }
 }

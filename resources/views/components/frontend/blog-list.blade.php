@@ -1,92 +1,62 @@
-<section id="services" class="services section fitnessign-light-background">
+@props(['blogs'])
+
+<section class="services section fitnessign-light-background">
     <div class="container title-description text-center" data-aos="fade-up">
-        <p>Disini kami berbagi inspirasi seputar gaya hidup sehat, mulai dari tips menjaga kebugaran, panduan nutrisi, hingga kesehatan mental, kesehatan umum dan lifestyle Usia lanjut.</p>
+        <p>
+            Disini kami berbagi inspirasi seputar gaya hidup sehat, mulai dari tips menjaga kebugaran,
+            panduan nutrisi, hingga kesehatan mental dan lifestyle.
+        </p>
     </div>
+
     <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row gy-5">
-            <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-                <div class="service-item">
-                    <div class="img">
-                        <img src="frontend/assets/img/services-1.jpg" class="img-fluid" alt="">
-                    </div>
-                    <div class="details position-relative">
-                        <a href="{{ route('frontend.detail_health') }}" class="stretched-link">
-                            <h3 class="fitnessign-blog-title">Nesciunt Mete</h3>
-                        </a>
-                        <p class="fitnessign-blog-description">Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis.</p>
-                    </div>
-                </div>
-            </div>
 
-            <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
-                <div class="service-item">
-                    <div class="img">
-                        <img src="frontend/assets/img/services-2.jpg" class="img-fluid" alt="">
-                    </div>
-                    <div class="details position-relative">
-                        <a href="#" class="stretched-link">
-                            <h3 class="fitnessign-blog-title">Eosle Commodi</h3>
-                        </a>
-                        <p class="fitnessign-blog-description">Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum hic non ut nesciunt dolorem.</p>
-                    </div>
-                </div>
-            </div>
+            @if ($blogs->count())
+                @foreach ($blogs as $blog)
+                    <div class="col-xl-4 col-md-6" data-aos="zoom-in">
+                        <div class="service-item">
+                            <div class="img">
+                                <img
+                                    src="{{ $blog->photo
+                                        ? asset('storage/' . $blog->photo)
+                                        : asset('frontend/assets/img/services-1.jpg') }}"
+                                    class="img-fluid"
+                                    alt="{{ $blog->title }}"
+                                >
+                            </div>
 
-            <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
-                <div class="service-item">
-                    <div class="img">
-                        <img src="frontend/assets/img/services-3.jpg" class="img-fluid" alt="">
-                    </div>
-                    <div class="details position-relative">
-                        <a href="#" class="stretched-link">
-                            <h3 class="fitnessign-blog-title">Ledo Markt</h3>
-                        </a>
-                        <p class="fitnessign-blog-description">Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id voluptas adipisci eos earum corrupti.</p>
-                    </div>
-                </div>
-            </div>
+                            <div class="details position-relative">
+                                <a href="{{ route('frontend.blog.show', $blog->slug) }}" class="stretched-link">
+                                    <h3 class="fitnessign-blog-title">
+                                        {{ $blog->title }}
+                                    </h3>
+                                </a>
 
-            <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-                <div class="service-item">
-                    <div class="img">
-                        <img src="frontend/assets/img/services-1.jpg" class="img-fluid" alt="">
+                                <p class="fitnessign-blog-description">
+                                    {{ \Illuminate\Support\Str::limit(strip_tags($blog->content), 120) }}
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="details position-relative">
-                        <a href="#" class="stretched-link">
-                            <h3 class="fitnessign-blog-title">Nesciunt Mete</h3>
-                        </a>
-                        <p class="fitnessign-blog-description">Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis.</p>
+                @endforeach
+            @else
+                <div class="col-12">
+                    <div class="text-center py-5" data-aos="fade-up">
+                        <h4>No articles yet</h4>
+                        <p class="text-muted">
+                            We’re preparing new health & lifestyle content.  
+                            Please check back soon.
+                        </p>
                     </div>
                 </div>
-            </div>
+            @endif
 
-            <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
-                <div class="service-item">
-                    <div class="img">
-                        <img src="frontend/assets/img/services-2.jpg" class="img-fluid" alt="">
-                    </div>
-                    <div class="details position-relative">
-                        <a href="#" class="stretched-link">
-                            <h3 class="fitnessign-blog-title">Eosle Commodi</h3>
-                        </a>
-                        <p class="fitnessign-blog-description">Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum hic non ut nesciunt dolorem.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
-                <div class="service-item">
-                    <div class="img">
-                        <img src="frontend/assets/img/services-3.jpg" class="img-fluid" alt="">
-                    </div>
-                    <div class="details position-relative">
-                        <a href="#" class="stretched-link">
-                            <h3 class="fitnessign-blog-title">Ledo Markt</h3>
-                        </a>
-                        <p class="fitnessign-blog-description">Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id voluptas adipisci eos earum corrupti.</p>
-                    </div>
-                </div>
-            </div>
         </div>
+
+        @if ($blogs->hasPages())
+            <div class="mt-5 d-flex justify-content-center">
+                {{ $blogs->links('components.frontend.pagination') }}
+            </div>
+        @endif
     </div>
 </section>

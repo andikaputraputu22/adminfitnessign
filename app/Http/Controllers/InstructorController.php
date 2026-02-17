@@ -38,6 +38,8 @@ class InstructorController extends Controller
             'certificate' => 'nullable',
             'specialist' => 'nullable',
             'description' => 'nullable',
+            'participants_number' => 'nullable',
+            'level_class' => 'nullable|in:Beginner,Intermediate,Pro',
             'photo' => 'image|file|max:5120'
         ]);
         
@@ -62,9 +64,9 @@ class InstructorController extends Controller
     }
 
     public function delete($id) {
-        $instructor = Instructor::find($id);
-        if ($instructor->photo) {
-            Storage::delete($instructor->photo);
+        $instructor = Instructor::findOrFail($id);
+        if ($instructor->photo && Storage::disk('public')->exists($instructor->photo)) {
+            Storage::disk('public')->delete($instructor->photo);
         }
         $instructor->delete();
         return redirect()->back()->with('success', 'Instructor has been deleted');

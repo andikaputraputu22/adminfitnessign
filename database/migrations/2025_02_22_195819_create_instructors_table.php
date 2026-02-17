@@ -24,6 +24,8 @@ return new class extends Migration
             $table->text('certificate')->nullable();
             $table->text('specialist')->nullable();
             $table->text('description')->nullable();
+            $table->string('level_class')->nullable();
+            $table->integer('participants_number')->nullable();
             $table->string('photo')->nullable();
             $table->timestamps();
         });

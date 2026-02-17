@@ -5,19 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{ $title }}</title>
+    <title>{{ $title ?? 'Fitnessign' }}</title>
+
 
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/frontend/assets/vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/frontend/assets/vendor/bootstrap-icons/bootstrap-icons.css">
-    <link rel="stylesheet" href="/frontend/assets/vendor/aos/aos.css">
     <link rel="stylesheet" href="/frontend/assets/vendor/glightbox/css/glightbox.min.css">
     <link rel="stylesheet" href="/frontend/assets/vendor/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="/frontend/assets/css/main.css">
-    <link rel="stylesheet" href="/frontend/assets/css/fitnessign.css">
+
+    @vite(['resources/css/app.css'])
 
 </head>
 
@@ -40,7 +41,6 @@
 
 <script src="/frontend/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="/frontend/assets/vendor/php-email-form/validate.js"></script>
-<script src="/frontend/assets/vendor/aos/aos.js"></script>
 <script src="/frontend/assets/vendor/glightbox/js/glightbox.min.js"></script>
 <script src="/frontend/assets/vendor/purecounter/purecounter_vanilla.js"></script>
 <script src="/frontend/assets/vendor/swiper/swiper-bundle.min.js"></script>
@@ -48,9 +48,5 @@
 <script src="/frontend/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 <script src="/frontend/assets/js/main.js"></script>
 
-<!-- Dynamic year -->
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
+@vite(['resources/js/app.js'])
 </html>
