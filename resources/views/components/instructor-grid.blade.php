@@ -14,13 +14,7 @@
                 data-aos-delay="{{ ($loop->index + 1) * 100 }}"
             >
                 <x-instructor-card
-                    :image="$get($instructor, 'photo')"
-                    :name="$get($instructor, 'name')"
-                    :certified="$get($instructor, 'certified')"
-                    :specialist="$get($instructor, 'specialist')"
-                    :class="$get($instructor, 'class_name')"
-                    :instagram="$get($instructor, 'instagram')"
-                    :facebook="$get($instructor, 'facebook')"
+                    :instructor="$instructor"
                 />
 
             </div>

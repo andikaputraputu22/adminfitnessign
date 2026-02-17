@@ -4,7 +4,7 @@
     <div class="container title-description text-center" data-aos="fade-up">
         <p>
             Disini kami berbagi inspirasi seputar gaya hidup sehat, mulai dari tips menjaga kebugaran,
-            panduan nutrisi, hingga kesehatan mental dan lifestyle.
+            panduan nutrisi, hingga pa saja yang klaian dapat dari instructuor kami, kamis sangat bebehagia 
         </p>
     </div>
 
@@ -44,7 +44,7 @@
                     <div class="text-center py-5" data-aos="fade-up">
                         <h4>No articles yet</h4>
                         <p class="text-muted">
-                            We’re preparing new health & lifestyle content.  
+                            Were preparing new health & lifestyle content.  
                             Please check back soon.
                         </p>
                     </div>
