@@ -2,8 +2,8 @@
     background: var(--color-surface);
     color: #FFFFFF;
     border: 2px solid transparent; /* start with no visible border */
-    padding: var(--space-2) var(--space-8);
-    border-radius: 50px;
+    padding: var(--btn-padding-y) var(--btn-padding-x);
+    border-radius: var(--btn-radius);
     transition: all 0.3s ease-in-out; /* only animate text color */
 }
 
@@ -17,7 +17,7 @@
   font-size: var(--fs-base);
   transition: 0.5s;
   margin-left: 25px;
-  font-weight: 400;
+  font-weight: var(--btn-font-weight);
   color: #FFFFFF;
   transition: color 0.5s ease;
 }
@@ -178,13 +178,15 @@
 --------------------------------------------------------------*/
 .btn-dark {
   background: var(--color-bg-primary);
-  color: #fff;
-  font-weight: 600;
+  color: var(--color-text-primary);
+  font-weight: var(--btn-font-weight);
   border: none;
+  border-radius: var(--btn-radius);
+  padding: var(--btn-padding-y) var(--btn-padding-x);
   transition: all 0.3s ease;
 }
 
 .btn-dark:hover {
   background: var(--color-accent);
-  color: #000;
+  color: var(--color-bg-primary);
 }
