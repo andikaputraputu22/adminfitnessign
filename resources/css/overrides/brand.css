@@ -1,20 +1,117 @@
+/* =====================================================
+   PHASE 4 — Single Source of Truth
+===================================================== */
+
+/* ACCENT FOUNDATION */
+:root {
+  --color-accent: #00ff40;
+  --color-accent-hover: #00e63a;
+  --color-accent-soft: rgba(0, 255, 64, 0.15);
+  --color-accent-glow: rgba(0, 255, 64, 0.3);
+}
+
+/* DARK SURFACE FOUNDATION */
+:root {
+
+  --color-bg-primary: #000000;
+  --color-bg-secondary: #0B0B0B;
+
+  --color-surface: #1E1E1E;
+  --color-surface-soft: #111111;
+  --color-surface-hover: #141414;
+
+}
+
+/* TYPOGRAPHY FOUNDATION */
+:root {
+
+  /* Base */
+  --fs-xs: 0.8rem;      /* ~13px */
+  --fs-sm: 0.9rem;      /* ~14px */
+  --fs-base: 1rem;      /* 16px */
+
+  /* Headings */
+  --fs-lg: 1.125rem;    /* 18px */
+  --fs-xl: 1.375rem;    /* 22px */
+  --fs-2xl: 1.5rem;     /* 24px */
+  --fs-3xl: 1.75rem;    /* 28px */
+  --fs-4xl: 2rem;       /* 32px */
+  --fs-5xl: 2.5rem;     /* 40px */
+
+}
+
+/* SPACING FOUNDATION */
+:root {
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 28px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-15: 60px;
+  --space-20: 80px;
+
+}
+
+/* BUTTON FOUNDATION */
+:root {
+
+  --btn-padding-y: var(--space-3);
+  --btn-padding-x: var(--space-8);
+
+  --btn-radius: var(--radius-pill);
+
+  --btn-font-weight: 600;
+
+}
+
+/* RADIUS FOUNDATION */
+:root {
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+  --radius-pill: 20px;
+}
+
+/* SHADOW FOUNDATION */
+:root {
+
+  --shadow-soft: 0 4px 15px rgba(0, 0, 0, 0.4);
+  --shadow-hover: 0 6px 20px rgba(0, 0, 0, 0.5);
+
+  --shadow-accent-glow: 0 0 20px var(--color-accent-glow);
+}
+
+/* BORDER TOKENS */
+:root {
+
+  --border-accent: 2px solid var(--color-accent);
+  --border-soft: 1px solid rgba(255,255,255,0.1);
+  --border-divider: 1px solid var(--color-accent-glow);
+
+}
+
 /* --------------------------------------------------------------
 # Header Styling
 -------------------------------------------------------------- */
 .fitnessign-header {
-  background: #0B0B0B; /* White background */
+  background: var(--color-bg-secondary); /* White background */
   box-shadow: 0px 2px 15px rgba(0,0,0,0.05);
   padding: 15px 0;
 }
 
 .fitnessign-header .logo .sitename {
-  font-size: 28px;
+  font-size: var(--fs-3xl);
   font-weight: 700;
   color: #FFFFFF;
 }
 
 .fitnessign-header .logo .text-green {
-  color: #00ff40; /* Neon green dot */
+  color: var(--color-accent); /* Neon green dot */
 }
 
 
@@ -23,7 +120,7 @@
 -------------------------------------------------------------- */
 .navmenu ul li a:hover,
 .navmenu ul li a.active {
-  color: #00ff40; /* Green highlight */
+  color: var(--color-accent); /* Neon green on hover and active */
 }
 
 
@@ -33,39 +130,38 @@
 
 .navmenu .dropdown ul li a {
   display: block;
-  padding: 10px 20px;
-  color: #0B0B0B;
+  padding: var(--space-2) var(--space-5);
+  color: var(--color-bg-secondary);
 }
 
 .navmenu .dropdown ul li a:hover {
-  color: #15FF00;
-  background: rgba(21, 255, 0, 0.05);
+  color: var(--color-accent);
+  background: var(--color-accent-glow);
 }
 
 .navmenu>ul>li>a:before {
-  background-color: #15ff00 !important; /* neon green */
+  background-color: var(--color-accent) !important;
 }
 
 /*--------------------------------------------------------------
 # Section Title Overrides
 --------------------------------------------------------------*/
-
 .section-title h2 {
-  font-size: 16px;                /* slightly bigger */
-  font-weight: 600;               /* stronger weight */
-  color: #00cc44;                 /* green accent */
-  letter-spacing: 2px;            /* a bit more spacing */
+  font-size: var(--fs-base);
+  font-weight: 600;
+  color: var(--color-accent-hover);                 /* green accent */
+  letter-spacing: 2px;
 }
 
 .section-title h2::after {
-  background: #00cc44;            /* green underline */
+  background: var(--color-accent-hover);            /* green underline */
   width: 80px;                    /* shorter underline for style */
 }
 
 .section-title p {
-  color: #ffffff;                 /* make "CHECK OUR INFO" white */
-  font-size: 40px;                /* bolder headline */
-  font-weight: 900;               /* extra bold */
+  color: #ffffff;                
+  font-size: var(--fs-5xl);         
+  font-weight: 900;             
   letter-spacing: 1px;
   text-transform: none;           /* optional: normal case instead of ALL CAPS */
 }
@@ -73,9 +169,8 @@
 /*--------------------------------------------------------------
 # Scroll Top Overrides
 --------------------------------------------------------------*/
-
 .scroll-top {
-  background-color: #00ff00 !important; /* green background */
+  background-color: var(--color-accent) !important; /* green background */
 }
 
 .scroll-top i {
@@ -83,7 +178,7 @@
 }
 
 .scroll-top:hover {
-  background-color: #00cc00 !important; /* darker green on hover */
+  background-color: var(--color-accent-hover) !important; /* darker green on hover */
 }
 
 
@@ -91,9 +186,9 @@
    FOOTER STYLING
 --------------------------------- */
 .footer {
-  background-color: #000; /* black background */
+  background: var(--color-bg-primary);
   color: #fff; /* white text */
-  padding: 40px 0;
+  padding: var(--space-10) 0;
   text-align: center;
 }
 
@@ -102,7 +197,7 @@
   color: #fff !important;
   font-weight: 800;
   font-size: 1.5rem;
-  margin-bottom: 20px;
+  margin-bottom: var(--space-5);
   letter-spacing: 1px;
 }
 
@@ -112,7 +207,7 @@
 
 .footer nav a {
   color: #fff;
-  margin: 0 12px;
+  margin: 0 var(--space-3);
   font-weight: 500;
   text-transform: uppercase;
   font-size: 0.9rem;
@@ -121,12 +216,12 @@
 }
 
 .footer nav a:hover {
-  color: #4caf50; /* greenish accent hover */
+  color: var(--color-accent-hover); /* green accent hover */
 }
 
 .footer p {
   font-size: 0.8rem;
-  margin-top: 10px;
+  margin-top: var(--space-2);
   color: #e0dcdc; /* softer grey for copyright */
 }
 
@@ -134,14 +229,14 @@
 # Preloader
 --------------------------------------------------------------*/
 #preloader {
-  background: #000; /* solid black */
+  background: var(--color-bg-primary);
   /* or */
   background: linear-gradient(135deg, #000 70%, #003300 100%);
 }
 
 #preloader:before {
   border: 6px solid #fff;
-  border-color: #15FF00 transparent #15FF00 transparent; /* green spinner */
+  border-color: var(--color-accent) transparent var(--color-accent) transparent; /* green spinner */
   width: 80px;
   height: 80px;
   top: calc(50% - 40px);
@@ -163,7 +258,7 @@
 # #about gradient override
 --------------------------------------------------------------*/
 #about {
-  background: linear-gradient(135deg, #1E1E1E 70%, #003300 100%);
+  background: linear-gradient(135deg, #000 70%, #003300 100%);
   color: #FFFFFF !important;
 }
 
@@ -172,20 +267,20 @@
 # Navigation active state
 --------------------------------------------------------------*/
 :root {
-  --accent-color: #00ff40;
-  --nav-hover-color: #00ff40;
+  --accent-color: var(--color-accent);
+  --nav-hover-color: var(--color-accent-hover);
 }
 
 /* Force override mobile active state */
 .navmenu .active,
 .navmenu .active:focus {
-  color: #00ff40 !important;
+  color: var(--color-accent) !important;
 }
 
 .navmenu .active i,
 .navmenu .active:focus i {
-  background-color: #00ff40 !important;
-  color: #000 !important;
+  background: var(--color-bg-primary) !important;
+  color: var(--color-bg-primary) !important; 
 }
 
 

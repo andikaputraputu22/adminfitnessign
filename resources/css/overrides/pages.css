@@ -2,8 +2,8 @@
 # Instructor
 --------------------------------------------------------------*/
 .fitnessign-light-background {
-  --background-color: #0B0B0B !important;
-  --surface-color: #0B0B0B !important;
+  --background-color: var(--color-bg-secondary) !important;
+  --surface-color: var(--color-bg-secondary) !important;
 }
 
 
@@ -25,9 +25,9 @@
 }
 
 .team .member .member-info {
-  background-color: #1E1E1E; /* dark background */
+  background-color: var(--color-surface); /* dark background */
   color: #CCCCCC; /* light gray text */
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow-soft);
   position: absolute;
   bottom: -50px;
   left: 20px;
@@ -39,10 +39,10 @@
 
 .team .member h4 {
   font-weight: 700;
-  margin-bottom: 10px;
-  font-size: 16px;
+  margin-bottom: var(--space-2);
+  font-size: var(--fs-base);
   position: relative;
-  padding-bottom: 10px;
+  padding-bottom: var(--space-2);
   color: #FFFFFF; /* white name text */
 }
 
@@ -52,7 +52,7 @@
   display: block;
   width: 50px;
   height: 2px;
-  background: #15FF00; /* neon green underline */
+  background: var(--color-accent); /* neon green underline */
   bottom: 0;
   left: 0;
 }
@@ -60,7 +60,7 @@
 .team .member span {
   font-style: italic;
   display: block;
-  font-size: 13px;
+  font-size: var(--fs-xs);
   color: #AAAAAA; /* softer gray for subtitle */
 }
 
@@ -76,11 +76,11 @@
 }
 
 .team .member .social a:hover {
-  color: #15FF00; /* neon green on hover */
+  color: var(--color-accent); /* neon green on hover */
 }
 
 .team .member .social i {
-  font-size: 16px;
+  font-size: var(--fs-base);
   margin: 0 2px;
 }
 
@@ -89,10 +89,10 @@
 # Title description
 --------------------------------------------------------------*/
 .title-description {
-    padding-bottom: 60px;
+    padding-bottom: var(--space-15);
     position: relative;
     color: #FFFFFF;
-    font-size: 24px;
+    font-size: var(--fs-2xl);
     font-family: var(--heading-font);
 }
 
@@ -134,13 +134,13 @@
 # Pricing section
 --------------------------------------------------------------*/
 .pricing {
-  padding: 80px 0;
-  background: #000;
+  padding: var(--space-20) 0;
+  background: var(--color-bg-primary); 
 }
 
 .pricing h2 {
-  font-size: 22px;
-  color: #00ff40;
+  font-size: var(--fs-xl);
+  color: var(--color-accent);
   font-weight: 600;
   text-transform: none;
 }
@@ -150,7 +150,7 @@
 # Health Detail
 -------------------------------------------------------------- */
 .health-detail {
-  padding: 80px 0;
+  padding: var(--space-20) 0;
   background: #0a0a0a;
   color: #d1d1d1;
 }
@@ -160,7 +160,7 @@
   width: 100%;
   object-fit: cover;
   border-radius: 20px;
-  box-shadow: 0 0 25px rgba(0, 255, 64, 0.2);
+  box-shadow: var(--shadow-accent-glow);
 }
 
 .health-content {
@@ -173,7 +173,7 @@
 }
 
 .health-content .lead {
-  font-size: 18px;
+  font-size: var(--fs-lg);
   color: #bcbcbc;
 }
 
@@ -183,8 +183,8 @@
 }
 
 .health-content ul li {
-  margin-bottom: 10px;
-  font-size: 16px;
+  margin-bottom: var(--space-2);
+  font-size: var(--fs-base);
   color: #cfcfcf;
 }
 
@@ -218,35 +218,36 @@
 }
 
 .divider-line {
-  border-top: 1px solid rgba(0, 255, 0, 0.35);
+  border-top: 1px solid var(--color-accent-glow);
 }
 
 .coach-title {
-  font-size: 32px;
+  font-size: var(--fs-4xl);
   letter-spacing: 1px;
 }
 
 .coach-title-color {
   letter-spacing: 1px;
-  color: #15ff00;
-  text-shadow: 0 0 8px rgba(21, 255, 0, 0.3);
+  color: var(--color-accent);
+  text-shadow: 0 0 8px var(--color-accent-glow);
 }
 
 .coach-description {
   max-width: 600px;
   line-height: 1.8;
-  font-size: 16px;
+  font-size: var(--fs-base);
 }
 
 .hero {
-  min-height: 60vh;
+  min-height: 100vh;
 }
 
 .btn-success {
-  background-color: #00aa44;
+  background-color: var(--color-accent);
   border: none;
-  font-weight: 600;
-  padding: 12px 28px;
+  font-weight: var(--btn-font-weight);
+  padding: var(--btn-padding-y) var(--btn-padding-x);
+  border-radius: var(--btn-radius);
 }
 
 #detailInstructor .row {

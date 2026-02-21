@@ -1,19 +1,19 @@
 .fitnessign-text-green {
-    color: #15FF00 !important;
+    color: var(--color-accent) !important;
 }
 
 .fitnessign-bg-green {
-    background-color: #0B0B0B !important;
+    background-color: var(--color-bg-secondary) !important;
 }
 
 .text-fg-green {
-  color: #00ff40 !important;
+  color: var(--color-accent) !important;
 }
 
 .divider-line {
-  color: #15FF00;
+  color: var(--color-accent);
 }
 
 .coach-title-color {
-  color: #15FF00;
+  color: var(--color-accent);
 }
