@@ -280,7 +280,7 @@
 .navmenu .active i,
 .navmenu .active:focus i {
   background: var(--color-bg-primary) !important;
-  color: #000 !important;
+  color: var(--color-bg-primary) !important; 
 }
 
 

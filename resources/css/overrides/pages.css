@@ -135,7 +135,7 @@
 --------------------------------------------------------------*/
 .pricing {
   padding: var(--space-20) 0;
-  background: #000;
+  background: var(--color-bg-primary); 
 }
 
 .pricing h2 {
@@ -239,7 +239,7 @@
 }
 
 .hero {
-  min-height: 90vh;
+  min-height: 100vh;
 }
 
 .btn-success {

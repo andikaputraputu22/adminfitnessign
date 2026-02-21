@@ -48,7 +48,7 @@
 }
 
 .pricing-card h4 {
-  color: #000 !important;
+  color: var(--color-bg-primary) !important; /* Ensure title is black */
   margin-bottom: var(--space-2);
 }
 
@@ -72,13 +72,13 @@
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  color: #000;
+  color: var(--color-bg-primary); /* Use the defined background color */
   margin-bottom: var(--space-2);
   line-height: 1.6;
 }
 
 .pricing-card ul li i {
-  color: #333;
+  color: #333; /* Bullet color */
   font-size: var(--fs-sm);
   margin-top: 4px; /* tweak for perfect vertical centering */
   flex-shrink: 0;
