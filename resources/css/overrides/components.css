@@ -1,5 +1,5 @@
 .fitnessign-btn-get-started {
-    background: #1E1E1E;
+    background: var(--color-surface);
     color: #FFFFFF;
     border: 2px solid transparent; /* start with no visible border */
     padding: 10px 30px;
@@ -8,9 +8,9 @@
 }
 
 .fitnessign-btn-get-started:hover {
-    color: #15FF00;           /* text turns neon green */
-    border-color: #15FF00;    /* border fades in green */
-    background: #1E1E1E;      /* keep background the same */
+    color: var(--color-accent);           /* text turns neon green */
+    border-color: var(--color-accent);    /* border fades in green */
+    background: var(--color-surface);      /* keep background the same */
 }
 
 .fitnessign-btn-watch-video {
@@ -23,7 +23,7 @@
 }
 
 .fitnessign-btn-watch-video i {
-  color: var(#15FF00);
+  color: var(--color-accent);
   font-size: 32px;
   transition: 0.5 ease;
   line-height: 0;
@@ -31,11 +31,11 @@
 }
 
 .fitnessign-btn-watch-video:hover {
-  color: #15FF00
+  color: var(--color-accent)
 }
 
 .fitnessign-btn-watch-video:hover i {
-  color: #15FF00
+  color: var(--color-accent)
 }
 
 
@@ -43,7 +43,7 @@
 # Pricing card
 --------------------------------------------------------------*/
 .pricing-card {
-  border: 2px solid #00ff40;
+  border: 2px solid var(--color-accent);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -59,7 +59,7 @@
 
 .pricing-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(0, 255, 64, 0.3);
+  box-shadow: 0 0 20px var(--color-accent-glow);
 }
 
 /* Fix bullet alignment */
@@ -99,7 +99,7 @@
 
 /* Card default style */
 .session-card {
-  background: #111;
+  background: var(--color-surface-soft);
   border: 1px solid rgba(255,255,255,0.1);
   border-radius: 16px;
   padding: 20px;
@@ -129,12 +129,12 @@
 
 /* Highlight text and border when input is checked */
 .session-radio:checked + .session-card {
-  border-color: #0f0;
+  border-color: var(--color-accent);
 }
 
 .session-radio:checked + .session-card h6,
 .session-radio:checked + .session-card p {
-  color: #0f0;
+  color: var(--color-accent);
   font-weight: 600;
 }
 
@@ -143,7 +143,7 @@
 # Profile card
 --------------------------------------------------------------*/
 .profile-card {
-  background-color: #1E1E1E;
+  background-color: var(--color-surface);
   padding-left: 18px;
   padding-right: 18px;
   padding-top: 18px;
@@ -155,14 +155,14 @@
 # Article card
 --------------------------------------------------------------*/
 .article-card {
-  background: #111;
+  background: var(--color-surface-soft);
   border-radius: 12px;
   padding: 10px;
   transition: all 0.3s ease;
 }
 
 .article-card:hover {
-  background: #141414;
+  background: var(--color-surface-hover);
   transform: translateY(-3px);
 }
 
@@ -177,7 +177,7 @@
 # Button Dark Override
 --------------------------------------------------------------*/
 .btn-dark {
-  background: #000;
+  background: var(--color-bg-primary);
   color: #fff;
   font-weight: 600;
   border: none;
@@ -185,6 +185,6 @@
 }
 
 .btn-dark:hover {
-  background: #00ff40;
+  background: var(--color-accent);
   color: #000;
 }

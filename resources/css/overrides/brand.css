@@ -1,8 +1,31 @@
+/* =====================================================
+   PHASE 4 — Single Source of Truth
+===================================================== */
+
+/* ACCENT FOUNDATION */
+:root {
+  --color-accent: #00ff40;
+  --color-accent-hover: #00e63a;
+  --color-accent-soft: rgba(0, 255, 64, 0.15);
+  --color-accent-glow: rgba(0, 255, 64, 0.3);
+}
+
+/* DARK SURFACE FOUNDATION */
+:root {
+
+  --color-bg-primary: #000000;
+  --color-bg-secondary: #0B0B0B;
+
+  --color-surface: #1E1E1E;
+  --color-surface-soft: #111111;
+  --color-surface-hover: #141414;
+
+}
 /* --------------------------------------------------------------
 # Header Styling
 -------------------------------------------------------------- */
 .fitnessign-header {
-  background: #0B0B0B; /* White background */
+  background: var(--color-bg-secondary); /* White background */
   box-shadow: 0px 2px 15px rgba(0,0,0,0.05);
   padding: 15px 0;
 }
@@ -14,7 +37,7 @@
 }
 
 .fitnessign-header .logo .text-green {
-  color: #00ff40; /* Neon green dot */
+  color: var(--color-accent); /* Neon green dot */
 }
 
 
@@ -23,7 +46,7 @@
 -------------------------------------------------------------- */
 .navmenu ul li a:hover,
 .navmenu ul li a.active {
-  color: #00ff40; /* Green highlight */
+  color: var(--color-accent); /* Green highlight */
 }
 
 
@@ -34,16 +57,16 @@
 .navmenu .dropdown ul li a {
   display: block;
   padding: 10px 20px;
-  color: #0B0B0B;
+  color: var(--color-bg-secondary);
 }
 
 .navmenu .dropdown ul li a:hover {
-  color: #15FF00;
-  background: rgba(21, 255, 0, 0.05);
+  color: var(--color-accent);
+  background: var(--color-accent-glow);
 }
 
 .navmenu>ul>li>a:before {
-  background-color: #15ff00 !important; /* neon green */
+  background-color: var(--color-accent) !important; /* neon green */
 }
 
 /*--------------------------------------------------------------
@@ -53,12 +76,12 @@
 .section-title h2 {
   font-size: 16px;                /* slightly bigger */
   font-weight: 600;               /* stronger weight */
-  color: #00cc44;                 /* green accent */
+  color: var(--color-accent-hover);                 /* green accent */
   letter-spacing: 2px;            /* a bit more spacing */
 }
 
 .section-title h2::after {
-  background: #00cc44;            /* green underline */
+  background: var(--color-accent-hover);            /* green underline */
   width: 80px;                    /* shorter underline for style */
 }
 
@@ -75,7 +98,7 @@
 --------------------------------------------------------------*/
 
 .scroll-top {
-  background-color: #00ff00 !important; /* green background */
+  background-color: var(--color-accent) !important; /* green background */
 }
 
 .scroll-top i {
@@ -83,7 +106,7 @@
 }
 
 .scroll-top:hover {
-  background-color: #00cc00 !important; /* darker green on hover */
+  background-color: var(--color-accent-hover) !important; /* darker green on hover */
 }
 
 
@@ -91,7 +114,7 @@
    FOOTER STYLING
 --------------------------------- */
 .footer {
-  background-color: #000; /* black background */
+  background: var(--color-bg-primary);
   color: #fff; /* white text */
   padding: 40px 0;
   text-align: center;
@@ -134,14 +157,14 @@
 # Preloader
 --------------------------------------------------------------*/
 #preloader {
-  background: #000; /* solid black */
+  background: var(--color-bg-primary);
   /* or */
   background: linear-gradient(135deg, #000 70%, #003300 100%);
 }
 
 #preloader:before {
   border: 6px solid #fff;
-  border-color: #15FF00 transparent #15FF00 transparent; /* green spinner */
+  border-color: var(--color-accent) transparent var(--color-accent) transparent; /* green spinner */
   width: 80px;
   height: 80px;
   top: calc(50% - 40px);
@@ -163,7 +186,7 @@
 # #about gradient override
 --------------------------------------------------------------*/
 #about {
-  background: linear-gradient(135deg, #1E1E1E 70%, #003300 100%);
+  background: linear-gradient(135deg, #000 70%, #003300 100%);
   color: #FFFFFF !important;
 }
 
@@ -172,19 +195,19 @@
 # Navigation active state
 --------------------------------------------------------------*/
 :root {
-  --accent-color: #00ff40;
-  --nav-hover-color: #00ff40;
+  --accent-color: var(--color-accent);
+  --nav-hover-color: var(--color-accent-hover);
 }
 
 /* Force override mobile active state */
 .navmenu .active,
 .navmenu .active:focus {
-  color: #00ff40 !important;
+  color: var(--color-accent) !important;
 }
 
 .navmenu .active i,
 .navmenu .active:focus i {
-  background-color: #00ff40 !important;
+  background: var(--color-bg-primary) !important;
   color: #000 !important;
 }
 
