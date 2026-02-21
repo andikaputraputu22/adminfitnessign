@@ -10,11 +10,11 @@
         <div class="pricing-card bg-white text-dark p-4 rounded-4 shadow-sm h-100 d-flex flex-column justify-content-between">
           <div>
             <h4 class="fw-bold text-uppercase">PRIVATE COACH</h4>
-            <p class="mb-3">Start Rp.120.000</p>
+            <p class="mb-3">Start Rp.125.000</p>
             <ul class="list-unstyled text-start small">
               <li>
                 <i class="fa-regular fa-alarm-clock"></i>
-                <span>1x session duration 60 minutes</span>
+                <span>1x session duration 65 minutes</span>
               </li>
               <li>
                 <i class="fa-solid fa-sack-dollar"></i>
@@ -39,11 +39,11 @@
         <div class="pricing-card bg-white text-dark p-4 rounded-4 shadow-sm h-100 d-flex flex-column justify-content-between">
           <div>
             <h4 class="fw-bold text-uppercase">INSTRUCTOR CLASS</h4>
-            <p class="mb-3">Start Rp.750.000</p>
+            <p class="mb-3">Start Rp.850.000</p>
             <ul class="list-unstyled text-start small">
               <li>
                 <i class="fa-regular fa-alarm-clock"></i>
-                <span>Duration 90 minutes</span>
+                <span>Duration 95 minutes</span>
               </li>
               <li>
                 <i class="fa-solid fa-sack-dollar"></i>
