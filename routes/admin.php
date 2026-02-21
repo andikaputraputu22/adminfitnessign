@@ -13,8 +13,10 @@ Route::get('/', [DashboardController::class, 'index'])->middleware('auth')->name
 
 Route::get('/instructors', [InstructorController::class, 'index'])->middleware('auth')->name('instructors');
 Route::get('/instructors/create', [InstructorController::class, 'create'])->middleware('auth')->name('instructors.create');
+Route::get('/instructors/{id}/edit', [InstructorController::class, 'edit'])->middleware('auth')->name('instructors.edit');
 Route::post('/instructors/store', [InstructorController::class, 'store'])->middleware('auth')->name('instructors.store');
 Route::get('/instructors/{id}/delete', [InstructorController::class, 'delete'])->middleware('auth')->name('instructors.delete');
+Route::put('/instructors/{id}/update', [InstructorController::class, 'update'])->middleware('auth')->name('instructors.update');
 
 Route::get('/clients', [ClientController::class, 'index'])->middleware('auth')->name('clients');
 Route::get('/clients/detail/{id}', [ClientController::class, 'detail'])->middleware('auth')->name('clients.detail');

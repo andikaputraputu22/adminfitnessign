@@ -10,21 +10,24 @@ use Illuminate\Support\Str;
 
 class InstructorController extends Controller
 {
-    public function index() {
+    public function index()
+    {
         return view('instructors.index', [
             'title' => 'Instructors',
             'instructors' => Instructor::with('services')->get()
         ]);
     }
 
-    public function create() {
+    public function create()
+    {
         return view('instructors.create', [
             'title' => 'Add Instructor',
             'services' => Service::all()
         ]);
     }
 
-    public function store(Request $request) {
+    public function store(Request $request)
+    {
         $validateData = $request->validate([
             'service_id' => 'required|array',
             'service_id.*' => 'exists:services,id',
@@ -42,7 +45,7 @@ class InstructorController extends Controller
             'level_class' => 'nullable|in:Beginner,Intermediate,Pro',
             'photo' => 'image|file|max:5120'
         ]);
-        
+
         // Generate unique slug
         $slug = Str::slug($request->name);
         $originalSlug = $slug;
@@ -63,12 +66,76 @@ class InstructorController extends Controller
         return redirect('/instructors')->with('success', 'New instructor has been added!');
     }
 
-    public function delete($id) {
+    public function delete($id)
+    {
         $instructor = Instructor::findOrFail($id);
         if ($instructor->photo && Storage::disk('public')->exists($instructor->photo)) {
             Storage::disk('public')->delete($instructor->photo);
         }
         $instructor->delete();
         return redirect()->back()->with('success', 'Instructor has been deleted');
+    }
+
+    public function edit($id)
+    {
+        $instructor = Instructor::with('services')->findOrFail($id);
+        $isPersonalTraining = $instructor->services->contains('is_personal_training', true);
+        return view('instructors.edit', [
+            'title' => 'Edit Instructor',
+            'instructor' => $instructor,
+            'services' => Service::all(),
+            'isPersonalTraining' => $isPersonalTraining,
+            'selectedServices' => $instructor->services->pluck('id')->toArray()
+        ]);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $instructor = Instructor::findOrFail($id);
+
+        $validateData = $request->validate([
+            'service_id' => 'required|array',
+            'service_id.*' => 'exists:services,id',
+            'name' => 'required',
+            'email' => 'required|email',
+            'phone' => 'required',
+            'price_4_sessions' => 'nullable|integer',
+            'price_8_sessions' => 'nullable|integer',
+            'price_16_sessions' => 'nullable|integer',
+            'price_24_sessions' => 'nullable|integer',
+            'certificate' => 'nullable',
+            'specialist' => 'nullable',
+            'description' => 'nullable',
+            'participants_number' => 'nullable',
+            'level_class' => 'nullable|in:Beginner,Intermediate,Pro',
+            'photo' => 'nullable|image|file|max:5120'
+        ]);
+
+        if ($request->name !== $instructor->name) {
+            $slug = Str::slug($request->name);
+            $originalSlug = $slug;
+            $count = 1;
+
+            while (Instructor::where('slug', $slug)->where('id', '!=', $id)->exists()) {
+                $slug = $originalSlug . '-' . $count++;
+            }
+
+            $validateData['slug'] = $slug;
+        }
+
+        if ($request->file('photo')) {
+
+            // delete old photo
+            if ($instructor->photo && Storage::disk('public')->exists($instructor->getRawOriginal('photo'))) {
+                Storage::disk('public')->delete($instructor->getRawOriginal('photo'));
+            }
+
+            $validateData['photo'] = $request->file('photo')->store('instructors', 'public');
+        }
+
+        $instructor->update($validateData);
+        $instructor->services()->sync($request->service_id);
+
+        return redirect('/instructors')->with('success','Instructor updated successfully!');
     }
 }

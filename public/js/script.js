@@ -206,6 +206,11 @@ function applyDnDFile($el) {
         }
     }
 
+    if ($imagePreview.attr("src") && $imagePreview.attr("src") !== "") {
+        $afterUploadEl.show();
+        $beforeUploadEl.hide();
+    }
+
     $beforeUploadEl.on("click", function (e) {
         e.preventDefault();
         $inputFile.trigger("click");
@@ -220,6 +225,7 @@ function applyDnDFile($el) {
         e.preventDefault();
         $afterUploadEl.hide();
         $beforeUploadEl.css("display", "flex");
+        $inputFile.val("");
     });
 
     $beforeUploadEl.on("dragover", function (e) {
