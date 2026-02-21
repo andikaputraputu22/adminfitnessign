@@ -39,6 +39,25 @@
   --fs-5xl: 2.5rem;     /* 40px */
 
 }
+
+/* SPACING FOUNDATION */
+:root {
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 28px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-15: 60px;
+  --space-20: 80px;
+
+}
+
+
 /* --------------------------------------------------------------
 # Header Styling
 -------------------------------------------------------------- */
@@ -64,7 +83,7 @@
 -------------------------------------------------------------- */
 .navmenu ul li a:hover,
 .navmenu ul li a.active {
-  color: var(--color-accent); /* Green highlight */
+  color: var(--color-accent); /* Neon green on hover and active */
 }
 
 
@@ -74,7 +93,7 @@
 
 .navmenu .dropdown ul li a {
   display: block;
-  padding: 10px 20px;
+  padding: var(--space-2) var(--space-5);
   color: var(--color-bg-secondary);
 }
 
@@ -84,7 +103,7 @@
 }
 
 .navmenu>ul>li>a:before {
-  background-color: var(--color-accent) !important; /* neon green */
+  background-color: var(--color-accent) !important;
 }
 
 /*--------------------------------------------------------------
@@ -132,7 +151,7 @@
 .footer {
   background: var(--color-bg-primary);
   color: #fff; /* white text */
-  padding: 40px 0;
+  padding: var(--space-10) 0;
   text-align: center;
 }
 
@@ -141,7 +160,7 @@
   color: #fff !important;
   font-weight: 800;
   font-size: 1.5rem;
-  margin-bottom: 20px;
+  margin-bottom: var(--space-5);
   letter-spacing: 1px;
 }
 
@@ -151,7 +170,7 @@
 
 .footer nav a {
   color: #fff;
-  margin: 0 12px;
+  margin: 0 var(--space-3);
   font-weight: 500;
   text-transform: uppercase;
   font-size: 0.9rem;
@@ -160,12 +179,12 @@
 }
 
 .footer nav a:hover {
-  color: #4caf50; /* greenish accent hover */
+  color: var(--color-accent-hover); /* green accent hover */
 }
 
 .footer p {
   font-size: 0.8rem;
-  margin-top: 10px;
+  margin-top: var(--space-2);
   color: #e0dcdc; /* softer grey for copyright */
 }
 

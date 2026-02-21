@@ -39,10 +39,10 @@
 
 .team .member h4 {
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: var(--space-2);
   font-size: var(--fs-base);
   position: relative;
-  padding-bottom: 10px;
+  padding-bottom: var(--space-2);
   color: #FFFFFF; /* white name text */
 }
 
@@ -89,7 +89,7 @@
 # Title description
 --------------------------------------------------------------*/
 .title-description {
-    padding-bottom: 60px;
+    padding-bottom: var(--space-15);
     position: relative;
     color: #FFFFFF;
     font-size: var(--fs-2xl);
@@ -134,7 +134,7 @@
 # Pricing section
 --------------------------------------------------------------*/
 .pricing {
-  padding: 80px 0;
+  padding: var(--space-20) 0;
   background: #000;
 }
 
@@ -150,7 +150,7 @@
 # Health Detail
 -------------------------------------------------------------- */
 .health-detail {
-  padding: 80px 0;
+  padding: var(--space-20) 0;
   background: #0a0a0a;
   color: #d1d1d1;
 }
@@ -183,7 +183,7 @@
 }
 
 .health-content ul li {
-  margin-bottom: 10px;
+  margin-bottom: var(--space-2);
   font-size: var(--fs-base);
   color: #cfcfcf;
 }
@@ -246,7 +246,7 @@
   background-color: var(--color-accent-hover);
   border: none;
   font-weight: 600;
-  padding: 12px 28px;
+  padding: var(--space-3) var(--space-7);
 }
 
 #detailInstructor .row {

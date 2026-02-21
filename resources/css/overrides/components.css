@@ -2,7 +2,7 @@
     background: var(--color-surface);
     color: #FFFFFF;
     border: 2px solid transparent; /* start with no visible border */
-    padding: 10px 30px;
+    padding: var(--space-2) var(--space-8);
     border-radius: 50px;
     transition: all 0.3s ease-in-out; /* only animate text color */
 }
@@ -49,7 +49,7 @@
 
 .pricing-card h4 {
   color: #000 !important;
-  margin-bottom: 10px;
+  margin-bottom: var(--space-2);
 }
 
 .pricing-card p {
@@ -73,7 +73,7 @@
   align-items: flex-start;
   gap: 10px;
   color: #000;
-  margin-bottom: 10px;
+  margin-bottom: var(--space-2);
   line-height: 1.6;
 }
 
@@ -102,7 +102,7 @@
   background: var(--color-surface-soft);
   border: 1px solid rgba(255,255,255,0.1);
   border-radius: 16px;
-  padding: 20px;
+  padding: var(--space-5);
   text-align: center;
   cursor: pointer;
   transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
@@ -114,7 +114,7 @@
 }
 
 .session-card h6 {
-  margin-top: 10px;
+  margin-top: var(--space-2);
   margin-bottom: 6px;
   font-weight: 500;
   color: #fff;
@@ -157,7 +157,7 @@
 .article-card {
   background: var(--color-surface-soft);
   border-radius: 12px;
-  padding: 10px;
+  padding: var(--space-2);
   transition: all 0.3s ease;
 }
 
