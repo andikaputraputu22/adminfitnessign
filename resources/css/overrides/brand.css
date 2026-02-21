@@ -69,12 +69,30 @@
 
 }
 
-/* PHASE 4 — RADIUS FOUNDATION */
+/* RADIUS FOUNDATION */
 :root {
   --radius-sm: 12px;
   --radius-md: 16px;
   --radius-lg: 20px;
   --radius-pill: 20px;
+}
+
+/* SHADOW FOUNDATION */
+:root {
+
+  --shadow-soft: 0 4px 15px rgba(0, 0, 0, 0.4);
+  --shadow-hover: 0 6px 20px rgba(0, 0, 0, 0.5);
+
+  --shadow-accent-glow: 0 0 20px var(--color-accent-glow);
+}
+
+/* BORDER TOKENS */
+:root {
+
+  --border-accent: 2px solid var(--color-accent);
+  --border-soft: 1px solid rgba(255,255,255,0.1);
+  --border-divider: 1px solid var(--color-accent-glow);
+
 }
 
 /* --------------------------------------------------------------
