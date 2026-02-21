@@ -40,7 +40,7 @@
 .team .member h4 {
   font-weight: 700;
   margin-bottom: 10px;
-  font-size: 16px;
+  font-size: var(--fs-base);
   position: relative;
   padding-bottom: 10px;
   color: #FFFFFF; /* white name text */
@@ -60,7 +60,7 @@
 .team .member span {
   font-style: italic;
   display: block;
-  font-size: 13px;
+  font-size: var(--fs-xs);
   color: #AAAAAA; /* softer gray for subtitle */
 }
 
@@ -80,7 +80,7 @@
 }
 
 .team .member .social i {
-  font-size: 16px;
+  font-size: var(--fs-base);
   margin: 0 2px;
 }
 
@@ -92,7 +92,7 @@
     padding-bottom: 60px;
     position: relative;
     color: #FFFFFF;
-    font-size: 24px;
+    font-size: var(--fs-2xl);
     font-family: var(--heading-font);
 }
 
@@ -139,7 +139,7 @@
 }
 
 .pricing h2 {
-  font-size: 22px;
+  font-size: var(--fs-xl);
   color: var(--color-accent);
   font-weight: 600;
   text-transform: none;
@@ -173,7 +173,7 @@
 }
 
 .health-content .lead {
-  font-size: 18px;
+  font-size: var(--fs-lg);
   color: #bcbcbc;
 }
 
@@ -184,7 +184,7 @@
 
 .health-content ul li {
   margin-bottom: 10px;
-  font-size: 16px;
+  font-size: var(--fs-base);
   color: #cfcfcf;
 }
 
@@ -222,7 +222,7 @@
 }
 
 .coach-title {
-  font-size: 32px;
+  font-size: var(--fs-4xl);
   letter-spacing: 1px;
 }
 
@@ -235,7 +235,7 @@
 .coach-description {
   max-width: 600px;
   line-height: 1.8;
-  font-size: 16px;
+  font-size: var(--fs-base);
 }
 
 .hero {

@@ -14,7 +14,7 @@
 }
 
 .fitnessign-btn-watch-video {
-  font-size: 16px;
+  font-size: var(--fs-base);
   transition: 0.5s;
   margin-left: 25px;
   font-weight: 400;
@@ -24,7 +24,7 @@
 
 .fitnessign-btn-watch-video i {
   color: var(--color-accent);
-  font-size: 32px;
+  font-size: var(--fs-4xl);
   transition: 0.5 ease;
   line-height: 0;
   margin-right: 8px;
@@ -53,7 +53,7 @@
 }
 
 .pricing-card p {
-  font-size: 14px;
+  font-size: var(--fs-sm);
   color: #333;
 }
 
@@ -79,7 +79,7 @@
 
 .pricing-card ul li i {
   color: #333;
-  font-size: 14px;
+  font-size: var(--fs-sm);
   margin-top: 4px; /* tweak for perfect vertical centering */
   flex-shrink: 0;
 }
@@ -122,7 +122,7 @@
 
 .session-card p {
   margin: 0;
-  font-size: 14px;
+  font-size: var(--fs-sm);
   opacity: 0.85;
   color: #fff;
 }

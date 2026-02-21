@@ -21,6 +21,24 @@
   --color-surface-hover: #141414;
 
 }
+
+/* TYPOGRAPHY FOUNDATION */
+:root {
+
+  /* Base */
+  --fs-xs: 0.8rem;      /* ~13px */
+  --fs-sm: 0.9rem;      /* ~14px */
+  --fs-base: 1rem;      /* 16px */
+
+  /* Headings */
+  --fs-lg: 1.125rem;    /* 18px */
+  --fs-xl: 1.375rem;    /* 22px */
+  --fs-2xl: 1.5rem;     /* 24px */
+  --fs-3xl: 1.75rem;    /* 28px */
+  --fs-4xl: 2rem;       /* 32px */
+  --fs-5xl: 2.5rem;     /* 40px */
+
+}
 /* --------------------------------------------------------------
 # Header Styling
 -------------------------------------------------------------- */
@@ -31,7 +49,7 @@
 }
 
 .fitnessign-header .logo .sitename {
-  font-size: 28px;
+  font-size: var(--fs-3xl);
   font-weight: 700;
   color: #FFFFFF;
 }
@@ -72,12 +90,11 @@
 /*--------------------------------------------------------------
 # Section Title Overrides
 --------------------------------------------------------------*/
-
 .section-title h2 {
-  font-size: 16px;                /* slightly bigger */
-  font-weight: 600;               /* stronger weight */
+  font-size: var(--fs-base);
+  font-weight: 600;
   color: var(--color-accent-hover);                 /* green accent */
-  letter-spacing: 2px;            /* a bit more spacing */
+  letter-spacing: 2px;
 }
 
 .section-title h2::after {
@@ -86,9 +103,9 @@
 }
 
 .section-title p {
-  color: #ffffff;                 /* make "CHECK OUR INFO" white */
-  font-size: 40px;                /* bolder headline */
-  font-weight: 900;               /* extra bold */
+  color: #ffffff;                
+  font-size: var(--fs-5xl);         
+  font-weight: 900;             
   letter-spacing: 1px;
   text-transform: none;           /* optional: normal case instead of ALL CAPS */
 }
@@ -96,7 +113,6 @@
 /*--------------------------------------------------------------
 # Scroll Top Overrides
 --------------------------------------------------------------*/
-
 .scroll-top {
   background-color: var(--color-accent) !important; /* green background */
 }
