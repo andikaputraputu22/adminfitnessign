@@ -13,7 +13,7 @@
                 data-aos="fade-up"
                 data-aos-delay="{{ ($loop->index + 1) * 100 }}"
             >
-                <x-instructor-card
+                <x-frontend.instructor-card
                     :instructor="$instructor"
                 />
 

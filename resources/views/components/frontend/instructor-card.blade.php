@@ -59,32 +59,29 @@
     </div>
 
     <div class="member-info">
-        <h4>{{ $displayName }}</h4>
+        <h4 class="member-name">{{ $displayName }}</h4>
 
         @if($certificate)
-            <span>Certified : {{ $certificate }}</span>
+            <div class="member-meta">
+                <span class="member-label">Certified</span>
+                <span class="member-value">{{ $certificate }}</span>
+            </div>
         @endif
 
         @if($specialistName)
-            <span>Specialist : {{ $specialistName }}</span>
+            <div class="member-meta">
+                <span class="member-label">Specialist</span>
+                <span class="member-value">{{ $specialistName }}</span>
+            </div>
         @endif
 
         @if($className)
-            <span>{{ $className }}</span>
+            <div class="member-meta">
+                <span class="member-label">Class</span>
+                <span class="member-value">{{ $className }}</span>
+            </div>
         @endif
 
-        <div class="social">
-            @if($facebookUrl)
-                <a href="{{ $facebookUrl }}">
-                    <i class="bi bi-facebook"></i>
-                </a>
-            @endif
-
-            @if($instagramUrl)
-                <a href="{{ $instagramUrl }}">
-                    <i class="bi bi-instagram"></i>
-                </a>
-            @endif
         </div>
     </div>
 </div>

@@ -13,7 +13,7 @@
             </div>
         @endif
 
-        <x-instructor-grid :instructors="$instructors" />
+        <x-frontend.instructor-grid :instructors="$instructors" />
 
     </section>
 </x-frontend.frontend-layout>

@@ -190,3 +190,61 @@
   background: var(--color-accent);
   color: var(--color-bg-primary);
 }
+
+
+/*--------------------------------------------------------------
+Dropdown Menu Override
+--------------------------------------------------------------*/
+.header .navmenu .dropdown > ul {
+    background: var(--color-surface-elevated);
+}
+
+.header .navmenu .dropdown ul a {
+    color: #ffffff;
+    padding: 8px 16px;
+    display: block;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.header .navmenu .dropdown ul a:hover {
+    color: var(--color-accent);
+    background: var(--color-surface-hover);
+}
+
+.header .navmenu .dropdown ul a.active {
+    color: #ffffff;
+    font-weight: 600;
+    background: transparent;
+}
+
+
+/* =========================================
+   INSTRUCTOR CARD HIERARCHY REFINEMENT
+========================================= */
+
+.member-info {
+    padding: 20px 16px;
+}
+
+.member-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.member-meta {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    margin-bottom: 4px;
+}
+
+.member-label {
+    display: inline-block;
+    font-weight: 500;
+    margin-right: 4px;
+    opacity: 0.6;
+}
+
+.member-value {
+    font-weight: 400;
+}

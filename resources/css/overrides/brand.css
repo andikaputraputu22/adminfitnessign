@@ -19,6 +19,7 @@
   --color-surface: #1E1E1E;
   --color-surface-soft: #111111;
   --color-surface-hover: #141414;
+  --color-surface-elevated: #1a1f24;
 
 }
 
@@ -95,6 +96,7 @@
 
 }
 
+
 /* --------------------------------------------------------------
 # Header Styling
 -------------------------------------------------------------- */
@@ -118,25 +120,15 @@
 /* --------------------------------------------------------------
 # Hover + Active States for Navigation
 -------------------------------------------------------------- */
-.navmenu ul li a:hover,
-.navmenu ul li a.active {
-  color: var(--color-accent); /* Neon green on hover and active */
-}
 
+/* Top-level nav */
+.navmenu > ul > li > a:hover,
+.navmenu > ul > li > a.active {
+  color: var(--color-accent);
+}
 
 .navmenu .dropdown ul li {
   min-width: 180px;
-}
-
-.navmenu .dropdown ul li a {
-  display: block;
-  padding: var(--space-2) var(--space-5);
-  color: var(--color-bg-secondary);
-}
-
-.navmenu .dropdown ul li a:hover {
-  color: var(--color-accent);
-  background: var(--color-accent-glow);
 }
 
 .navmenu>ul>li>a:before {
@@ -275,12 +267,6 @@
 .navmenu .active,
 .navmenu .active:focus {
   color: var(--color-accent) !important;
-}
-
-.navmenu .active i,
-.navmenu .active:focus i {
-  background: var(--color-bg-primary) !important;
-  color: var(--color-bg-primary) !important; 
 }
 
 

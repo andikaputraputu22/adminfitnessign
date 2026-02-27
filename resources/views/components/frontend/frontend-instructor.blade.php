@@ -5,7 +5,7 @@
         subtitle="Check our personal training"
     />
 
-    <x-instructor-grid :instructors="$personalTrainers" />
+    <x-frontend.instructor-grid :instructors="$personalTrainers" />
 </section>
 
 <section class="team section fitnessign-light-background">
@@ -14,6 +14,6 @@
         subtitle="Check our instructor class"
     />
 
-    <x-instructor-grid :instructors="$classInstructors" />
+    <x-frontend.instructor-grid :instructors="$classInstructors" />
 </section>
 
