@@ -16,7 +16,6 @@
                 <x-frontend.instructor-card
                     :instructor="$instructor"
                 />
-
             </div>
         @endforeach
     </div>

@@ -1,0 +1,184 @@
+[33mfb2f1a4[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mfeature/main-layout[m[33m)[m Phase 4.5: Navbar active state & dropdown refinement, updating coach card and grid
+[33m4806735[m[33m ([m[1;31morigin/feature/main-layout[m[33m)[m Merge pull request #42 from andikaputraputu22/task/coach-session
+[33m774e101[m Add session coach
+[33m1fa3c06[m update css
+[33m8d2c642[m changes price
+[33mef59b53[m Phase 4: complete Design System Lite foundation and stabilize token usage
+[33ma30ef6d[m Phase 4: normalize shadow and border styles into design tokens
+[33mf5b9b01[m Phase 4: normalize button paddings, radius, and weight using tokens & introduce radius tokens and restore button rounding
+[33ma9c9554[m Phase 4: introduce spacing tokens and normalize common paddings
+[33m1c9e09d[m Phase 4: introduce typography scale tokens and normalize font sizes
+[33m021dbd7[m Phase 4 : Accent Unification & normalize dark surface colors into design tokens
+[33mb4f6673[m Merge branch 'feature/main-layout' of https://github.com/andikaputraputu22/adminfitnessign into feature/main-layout
+[33mcfc40df[m smal commit, adli
+[33m7b9587b[m Merge pull request #41 from andikaputraputu22/task/update-instructor
+[33mbef5469[m Add function to update data instructor
+[33mfe5028c[m Merge pull request #40 from andikaputraputu22/task/edit-instructor
+[33m837cc3d[m Update from blog list description
+[33m416a242[m Determine selected tab edit instructor
+[33m8149f9b[m perubahan rudi
+[33m691ef25[m Merge branch 'feature/main-layout' of github.com:andikaputraputu22/adminfitnessign into feature/main-layout
+[33m70fe675[m Update from main layout
+[33m0511356[m Clickable instructor cards via slug route + instructor detail page refinement
+[33m780f634[m refactor(frontend): split fitnessign.css into modular override structure
+[33mb1ca616[m Merge branch 'feature/main-layout' of github.com:andikaputraputu22/adminfitnessign into feature/main-layout
+[33md2cdd03[m feat(frontend): fully service-driven navigation & pages
+[33m672d089[m feat(frontend): fully service-driven instructor & trainer pages
+[33m5e72f9c[m Merge pull request #39 from andikaputraputu22/task/load-data-service
+[33m3a41931[m Load data service from database
+[33mcacda78[m Merge pull request #38 from andikaputraputu22/task/edit-service-with-image
+[33m8575cd2[m Update data service with image
+[33m68c0a6f[m Merge pull request #37 from andikaputraputu22/task/service-image
+[33mbd5ca69[m Add photo when add service
+[33m1f2240e[m navbar
+[33mff506bb[m navbar
+[33ma1ca247[m navbar
+[33mc32b81e[m refactor(instructor): move intro text to pages and make instructor-card canonical adapter
+[33m59a3e4a[m Merge pull request #36 from andikaputraputu22/task/remove-admin-notification
+[33m6e9b371[m Remove icon messages and notifications
+[33m3673d71[m refactor(instructor): move intro text to pages and make instructor-card canonical adapter
+[33m9708345[m refactor(instructor): replace coach-list with instructor-grid
+[33m3e45fb7[m refactor(instructor): unify hero component and move hero logic to page level
+[33m79e768c[m Normalize blog frontend structure and pagination
+[33m38ba512[m Revert unused Swiper dependency after verification
+[33maee9eb1[m Migrate AOS JS to Vite app.js
+[33m0d1b71f[m Establish frontend JS discipline using Vite app.js
+[33m0cd3ff0[m Remove Tailwind from frontend build after CSS migration
+[33me2e2da6[m Migrate frontend CSS to Vite without visual changes
+[33m60fb8fd[m Remove duplicate and unsafe CSS overrides; stabilize frontend styles
+[33m820891e[m CSS overrides stabilized; template behavior restored
+[33m1294733[m Merge pull request #35 from andikaputraputu22/task/hero-watch-video
+[33me611b78[m Open new tab for watch video on hero section
+[33mad94214[m Merge pull request #34 from andikaputraputu22/task/remove-dashboard
+[33mfe1f61e[m Remove label dashboard
+[33m25ccf16[m edit instructor grid blade
+[33m4c7e7a8[m blog update
+[33m8df6ec3[m Merge pull request #33 from andikaputraputu22/task/pass-data-instructors
+[33mec22d81[m Pass data instructors to view
+[33mf6e6239[m Merge pull request #32 from andikaputraputu22/task/home-instructor
+[33m650a6a2[m Add list instructor at Home page
+[33m077b4f8[m Merge pull request #31 from andikaputraputu22/task/adjust-delete-instructor
+[33mc844149[m Adjustment method delete for instructor
+[33m3b40797[m resolve blog git conflict
+[33md644c23[m creating detail blog page
+[33ma178c3a[m instructor grid ready for array & object
+[33m16418cf[m Merge pull request #30 from andikaputraputu22/task/adjust-admin-sidebar
+[33m4a0851e[m Takeout unused menu sidebar
+[33m264742a[m Merge pull request #29 from andikaputraputu22/task/footer-link
+[33m3f2eeff[m Adjustment link href at footer
+[33mf325d3a[m Merge pull request #28 from andikaputraputu22/task/blog-list
+[33m358de51[m Show blog list
+[33m98aa89e[m refactor frontend instructor and detail instructor
+[33m5235ec6[m refactor instructor and detail instructor
+[33m80ca6a9[m Merge pull request #27 from andikaputraputu22/task/edit-blog
+[33m12b5613[m Add function to edit blog
+[33mc6d32e0[m update detail instructor
+[33m43996b3[m[33m ([m[1;33mtag: [m[1;33mrecovery-clean-start[m[33m, [m[1;33mtag: [m[1;33mlaragon-working[m[33m)[m Merge pull request #26 from andikaputraputu22/task/form-blog
+[33m6312afd[m Implement function to add article blog
+[33mb1362eb[m Add database and page for blogs
+[33me504680[m Merge pull request #25 from andikaputraputu22/task/instructor-participant
+[33m00af8ce[m Resolve update detail instructor
+[33m02f8336[m Add participants and level
+[33m0a6ed6a[m update instructor html and css
+[33mef50dd3[m WIP Edit instructor
+[33m110eee0[m update instructor
+[33mba65d0f[m update detail instructor
+[33m454f7e3[m update detail instructor page
+[33m73ccd6b[m Fix load image
+[33m3d03e53[m edit detail instructor
+[33m05cbee3[m Merge pull request #24 from andikaputraputu22/task/detail-instructor
+[33m310ac9a[m Add function to get instructor detail
+[33m31f2cad[m Merge pull request #23 from andikaputraputu22/task/instuctor-price
+[33m7f575a8[m Add instructor price
+[33m6528774[m Merge pull request #22 from andikaputraputu22/task/load-instructor
+[33m4961566[m Load personal training and instructor class
+[33mb8a7708[m Merge pull request #21 from andikaputraputu22/task/adjust-cms-instructor
+[33mc7c86a8[m Adjustment dashboard for create instructors
+[33m04626d0[m Load service from database
+[33m9e49839[m Fix view header not found
+[33m329c9a1[m Fix order button
+[33m3b86e02[m Fix conflict
+[33m351ad41[m Update WA message
+[33m58826c0[m update pricing list icon
+[33mc35a488[m update pricing section
+[33m84f18c4[m update detail health blog
+[33m971935b[m Merge pull request #20 from andikaputraputu22/task/whatsapp
+[33m35e6f04[m Add order whatsapp sample
+[33m0b235d2[m Add route to open detail blog health
+[33m7c0ff49[m create health blog page
+[33m7a7b1af[m Merge pull request #19 from andikaputraputu22/task/detail-instructor
+[33m59b9e40[m Add detail instructor page
+[33m917c5f8[m update text style coach list and css
+[33m768deb9[m update
+[33mce163f9[m change text
+[33m213de36[m edit coch list text description
+[33m1b304c6[m Change description
+[33m0202016[m edit branding logo header and footer
+[33mf59d0e7[m Add font awesome
+[33m95a0792[m Change logo
+[33mf288c56[m Update header logo to image and adjust styling
+[33m7bfad4c[m update pricing and blog list
+[33m1db67c1[m update: add dynamic copyright, footer improvements, and custom preloader
+[33m623b3fe[m Update photo
+[33m78e8795[m Merge pull request #18 from andikaputraputu22/task/health-blog
+[33m6506a8f[m Update footer
+[33m17760cb[m Add blog page
+[33mb7bf1df[m edit preload
+[33m9231749[m add dynamic copyright year in footer
+[33ma37dabe[m add dynamic copyright year in footer
+[33me95d600[m Update about section
+[33m1180730[m Update footer and scroll-top button styles
+[33mf56de84[m style: add green accent background for About section
+[33ma92f72b[m Merge pull request #17 from andikaputraputu22/task/coaches
+[33m14aef27[m Update changes
+[33m317bc63[m Add list coach
+[33m05e9aad[m feat: add black background to about section in fitnessign.css
+[33m28faa96[m Merge branch 'feature/main-layout' of github.com:andikaputraputu22/adminfitnessign into feature/main-layout
+[33m8a250b8[m Update hero section and header
+[33m30a7783[m Update content about
+[33m0374b8d[m Merge pull request #16 from andikaputraputu22/task/personal-trainer
+[33m239cf2c[m Add navigation page for Personal Trainer
+[33mb3c9f2e[m Merge pull request #15 from andikaputraputu22/task/instructor-class
+[33mc98e172[m Add navigation page for Instructors Class
+[33m0da875b[m Fix stretch image on about section
+[33md18f5bc[m Merge pull request #14 from andikaputraputu22/task/about-page
+[33md62ce08[m Add about section
+[33m6089142[m Update navigation
+[33mced8dff[m Adjustment header menu
+[33me9d0fc9[m Merge pull request #13 from andikaputraputu22/rudi-branch
+[33mf5107e1[m Update main layout
+[33m7ac6274[m My current work
+[33m282a77a[m my current work
+[33m3af708f[m Add instructors page
+[33m4d85220[m Adjust basic layout for frontend
+[33mc75f5d1[m Merge pull request #11 from andikaputraputu22/task/adjust-instructor
+[33mb7a45f9[m Add instructor section
+[33mb596ea2[m Merge pull request #10 from andikaputraputu22/task/adjust-add-service
+[33mea6d3e7[m Adjustment on add and edit service
+[33m82eff57[m Merge pull request #9 from andikaputraputu22/task/frontend
+[33mb522569[m Add frontend layout
+[33m755f704[m Merge pull request #8 from andikaputraputu22/task/payment
+[33m1d4943e[m Add order datetime
+[33m496b677[m Fix order datatables
+[33m8b82bd2[m Adjustment order page
+[33m00d0e21[m Adjust table order
+[33m556bc6f[m Add api for payment
+[33m4ca15d9[m Merge pull request #7 from andikaputraputu22/task/client
+[33m487020a[m Add alert dialog when sign out
+[33m36459fd[m Add client page
+[33mfc835c2[m Merge pull request #6 from andikaputraputu22/task/adjust-service
+[33md3553fd[m Add additional data for service
+[33m8d958e5[m Adjust service
+[33m6f65e75[m Merge pull request #5 from andikaputraputu22/task/rest-api-authentication
+[33m6823222[m Add email verification
+[33mc126fdf[m Merge pull request #4 from andikaputraputu22/task/instructor
+[33m12a1f63[m Adjustment delete instructor
+[33maec4fac[m Add data instructor
+[33m4c61637[m Merge pull request #3 from andikaputraputu22/task/services
+[33m110a3c7[m Add function to update and delete service
+[33m7f39ba9[m Show modal dialog to add service
+[33m475d395[m Merge pull request #2 from andikaputraputu22/task/login
+[33ma9918de[m Add login function
+[33me8c07f9[m Merge pull request #1 from andikaputraputu22/task/side-nav-bar
+[33m548ad05[m Adjustment sidebar navigation
+[33m442401a[m first commit
