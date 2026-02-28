@@ -221,7 +221,8 @@ Dropdown Menu Override
 /* ===== Minimal Instructor Card ===== */
 
 .member {
-  background: var(--color-surface);
+  background: #161616;  /* slightly lighter than body */
+  border-top: 2px solid rgba(0, 255, 64, 0.15);
   border-radius: 12px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: 100%;
@@ -237,16 +238,19 @@ Dropdown Menu Override
 }
 
 .member:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.55);
 }
 
 .member-info {
-  padding: 20px;
+  padding: 20px 22px 26px;
 }
 
 .member-specialist {
   font-size: 14px;
-  color: #8a949c;
+  color: #8b949e;
+  line-height: 1.7;
+  max-width: 85%;
   letter-spacing: 0.3px;
 }
 

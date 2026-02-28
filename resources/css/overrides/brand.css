@@ -13,8 +13,9 @@
 /* DARK SURFACE FOUNDATION */
 :root {
 
-  --color-bg-primary: #000000;
+  --color-bg-primary: #0b0b0b;
   --color-bg-secondary: #0B0B0B;
+  --color-bg-layer: #141414;   /* slightly lifted from pure black */
 
   --color-surface: #1E1E1E;
   --color-surface-soft: #111111;
@@ -143,6 +144,7 @@
   font-weight: 600;
   color: var(--color-accent-hover);                 /* green accent */
   letter-spacing: 2px;
+  margin-bottom: 12px;
 }
 
 .section-title h2::after {
@@ -152,11 +154,31 @@
 
 .section-title p {
   color: #ffffff;                
-  font-size: var(--fs-5xl);         
+  font-size: var(--fs-4xl);         
   font-weight: 900;             
   letter-spacing: 1px;
   text-transform: none;           /* optional: normal case instead of ALL CAPS */
+  margin-top: 8px;
 }
+
+/*--------------------------------------------------------------
+SECTION
+--------------------------------------------------------------*/ 
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.team.section {
+  padding-top: 120px;
+  padding-bottom: 100px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04); /* subtle divider */
+}
+
+.team.section .section-title {
+  margin-bottom: 0px;
+}
+
 
 /*--------------------------------------------------------------
 # Scroll Top Overrides
