@@ -316,14 +316,120 @@
   border-radius: var(--btn-radius);
 }
 
-#detailInstructor .row {
-  align-items: center;
-}
-
 .img-detail-coach {
   transition: transform 0.4s ease;
 }
 
 .img-detail-coach:hover {
   transform: scale(1.02);
+}
+
+/* =========================================
+   DETAIL INSTRUCTOR — REFINED RHYTHM
+========================================= */
+
+#detailInstructor {
+  padding-top: 140px;
+  padding-bottom: 120px;
+}
+
+#detailInstructor .row {
+  align-items: flex-start; /* remove forced center */
+  gap: var(--space-8);
+}
+
+/* =========================================
+   DETAIL INSTRUCTOR — CLEAN STRUCTURE
+========================================= */
+
+.pt-hero {
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+
+.pt-trust-block {
+  padding-bottom: 100px;
+}
+
+.pt-credential-block {
+  padding: 80px 0;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.pt-offer-block {
+  padding: 100px 0;
+}
+
+.pt-offer-inline {
+  margin-top: 10px;
+}
+
+.pt-cta {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+
+.coach-role {
+  letter-spacing: 2px;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* -----------------------------------------
+   Credential Cards
+----------------------------------------- */
+
+.pt-credential-card {
+  background: var(--color-surface);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: var(--shadow-soft);
+}
+
+.pt-credential-title {
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.pt-credential-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pt-credential-list li {
+  margin-bottom: 10px;
+  opacity: 0.85;
+  line-height: 1.6;
+}
+
+/* -----------------------------------------
+   Right Column Alignment
+----------------------------------------- */
+
+.pt-right-content {
+  max-width: 520px;
+  margin-top: 0px;
+  margin-left: auto;
+  padding-top: 0px;
+  padding-right: 20px;
+}
+
+.pt-main-layout {
+  display: flex;
+  align-items: flex-start; 
+  column-gap: 60px;
+}
+
+/* -----------------------------------------
+   Session Grid Fix
+----------------------------------------- */
+
+/* Force horizontal session layout */
+.pt-session-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
 }
