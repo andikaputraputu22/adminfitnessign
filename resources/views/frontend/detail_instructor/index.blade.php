@@ -2,8 +2,8 @@
     <x-slot:title>{{ $title }}</x-slot:title>
 
     <x-frontend.instructor-hero
-        :title="$instructor->name"
-        :image="$instructor->photo"
+        :title="$service->name"
+        :image="$service->photo"
     />
 
     <x-frontend.detail-instructor-content

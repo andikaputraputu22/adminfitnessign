@@ -10,7 +10,11 @@ class DetailInstructorController extends Controller
 {
     public function index($slug)
     {
-        $instructor = Instructor::where('slug', $slug)->firstOrFail();
+        $instructor = Instructor::where('slug', $slug)
+                    ->with('services')
+                    ->firstOrFail();
+
+         $service = $instructor->services->first();
 
         $certificates = $instructor->certificate
             ? array_map('trim', explode(',', $instructor->certificate))
@@ -22,9 +26,11 @@ class DetailInstructorController extends Controller
 
         return view('frontend.detail_instructor.index', [
             'title' => $instructor->name,
+            'service' => $service,
             'instructor' => $instructor,
             'certificates' => $certificates,
             'specialists' => $specialists
         ]);
     }
 }
+    
