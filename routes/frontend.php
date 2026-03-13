@@ -20,4 +20,5 @@ Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('frontend.blog
 
 Route::get('/detail_instructor/{slug}', [DetailInstructorController::class, 'index'])->name('frontend.detail_instructor');
 
-Route::get('/detail_health', [DetailHealthController::class, 'index'])->name('frontend.detail_health');
+Route::get('/health/{slug}', [DetailHealthController::class, 'show'])
+    ->name('frontend.health.detail');
