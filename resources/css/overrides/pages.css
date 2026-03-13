@@ -298,10 +298,28 @@
   text-shadow: 0 0 8px var(--color-accent-glow);
 }
 
+/* Coach description */
 .coach-description {
-  max-width: 600px;
+  max-width: 560px;
   line-height: 1.8;
   font-size: var(--fs-base);
+  text-align: justify;
+  hyphens: auto;
+}
+
+.coach-description p {
+  margin-bottom: 16px;
+}
+
+.coach-description p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .coach-description {
+    max-width: 100%;
+    text-align: left;
+  }
 }
 
 .hero {
@@ -365,10 +383,36 @@
   margin-top: 10px;
 }
 
+
+/* Instructor CTA */
 .pt-cta {
   padding-top: 60px;
   padding-bottom: 40px;
 }
+
+.pt-cta-inline {
+  margin-top: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pt-cta-inline form {
+  width: 100%;
+}
+
+.pt-cta-inline button {
+  width: 220px;
+}
+
+@media (max-width: 768px) {
+
+  .pt-cta-inline button {
+    width: 100%;
+  }
+
+}
+
 
 .coach-role {
   letter-spacing: 2px;

@@ -51,8 +51,12 @@ TEXT;
 
         <img
             src="{{ $instructor->photo }}"
-            class="img-detail-coach rounded-4 mb-4"
+            class="img-detail-coach rounded-4 mb-3"
             alt="{{ $instructor->name }}">
+
+        <div class="pt-coach-name">
+            {{ strtoupper($instructor->name) }}
+        </div>
 
         @if($certificates || $specialists)
 
@@ -94,7 +98,7 @@ TEXT;
 
         @if($isPersonalTraining)
 
-        <h4 class="mb-4">Session Options</h4>
+        <h4 class="mb-3">Session Options</h4>
 
         <form id="sessionForm">
 
