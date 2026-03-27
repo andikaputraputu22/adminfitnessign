@@ -1,9 +1,12 @@
-@props(['title'])
+@props(['title', 'image'])
 
 <section id="hero" class="hero section dark-background">
+
     <img
-        src="frontend/assets/img/header-image-blog.jpg"
-        alt=""
+        src="{{ $image
+            ? asset('storage/' . $image)
+            : asset('frontend/assets/img/health-blog.jpeg') }}"
+        alt="{{ $title }}"
         data-aos="fade-in"
     >
 
@@ -12,4 +15,5 @@
             {{ $title }}
         </h2>
     </div>
+
 </section>

@@ -21,7 +21,5 @@
             {!! $blog->content !!}
         </div>
 
-        {{ dd($image) }}
-
     </div>
 </section>

@@ -1,7 +1,9 @@
 <x-frontend.frontend-layout>
     <x-slot:title>{{ $blog->title }}</x-slot:title>
 
-    <x-frontend.blog-detail.hero :title="$blog->title" />
+    {{-- Static Section Hero --}}
+    <x-frontend.blog-hero title="Health Blog" />
 
+    {{-- Article Content --}}
     <x-frontend.blog-detail.content :blog="$blog" />
 </x-frontend.frontend-layout>
