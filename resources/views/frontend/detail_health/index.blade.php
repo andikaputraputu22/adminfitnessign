@@ -3,5 +3,7 @@
 
     <x-frontend.blog-hero title="Health Blog" />
 
-    <x-frontend.blog-detail.content :blog="$blog" />
+    <x-frontend.blog-detail.content 
+    :blog="$blog" 
+    :blogs="$blogs" />
 </x-frontend.frontend-layout>

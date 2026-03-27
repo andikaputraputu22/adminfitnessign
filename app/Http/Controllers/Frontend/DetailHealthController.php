@@ -14,7 +14,7 @@ class DetailHealthController extends Controller
 
         return view('frontend.detail_health.index', [
             'title' => $blog->title,
-            'blog' => $blog
+            'blog' => $blog,
         ]);
     }
 }

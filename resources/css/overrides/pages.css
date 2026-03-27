@@ -213,7 +213,7 @@
 
 
 /* --------------------------------------------------------------
-# Health Detail
+# HEALTH BLOG DETAIL
 -------------------------------------------------------------- */
 .health-detail {
   padding: var(--space-20) 0;
@@ -255,12 +255,114 @@
 }
 
 
-/* --------------------------------------------------------------
-# Relevant Articles
--------------------------------------------------------------- */
-.relevant-articles {
+/* === BLOG DETAIL — READABILITY SYSTEM === */
+
+.blog-detail {
+  background-color: #0b0b0b;
+  padding: 80px 0;
+}
+
+.blog-detail-container {
+  max-width: 1320px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+/* FIX alignment properly */
+.blog-detail .blog-content {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #d1d5db;
+}
+
+.blog-detail .blog-content * {
+  text-align: left !important;
+}
+
+/* FIX spacing WITHOUT breaking layout */
+.blog-detail .blog-content p {
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.blog-detail-image {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 32px;
+}
+
+.blog-detail-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 720px) 280px;
+  justify-content: center;
+  gap: 48px;
+}
+
+.blog-detail-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #ffffff;
+}
+
+.blog-detail-meta {
+  color: #9ca3af;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+/* === BLOG DETAIL — SIDEBAR POLISH === */
+
+.blog-sidebar {
+  padding-top: 8px;
   position: sticky;
-  top: 100px;
+  top: 120px;
+}
+
+.blog-sidebar-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+
+.blog-sidebar-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin-bottom: 18px;
+  text-decoration: none;
+}
+
+.blog-sidebar-item img {
+  width: 72px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+
+  transition: transform 0.3s ease;
+}
+
+.blog-sidebar-item p {
+  font-size: 14px;
+  color: #d1d5db;
+  margin: 0;
+  line-height: 1.4;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  overflow: hidden;
+}
+
+.blog-sidebar-item:hover img {
+  transform: scale(1.05);
 }
 
 

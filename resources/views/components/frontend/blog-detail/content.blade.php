@@ -1,24 +1,56 @@
-@props(['blog'])
+@props(['blog', 'blogs'])
 
 <section class="section blog-detail">
-    <div class="container" data-aos="fade-up">
+    <div class="container blog-detail-container" data-aos="fade-up">
 
-        <h1 class="mb-3">{{ $blog->title }}</h1>
+        <div class="blog-detail-layout">
 
-        <div class="mb-4 text-muted">
-            <span>By {{ $blog->author }}</span>
-        </div>
+            {{-- LEFT SIDE --}}
+            <div class="blog-main">
 
-        @if ($blog->photo)
-            <img
-                src="{{ asset('storage/' . $blog->photo) }}"
-                class="img-fluid rounded mb-4"
-                alt="{{ $blog->title }}"
-            >
-        @endif
+                <h1 class="blog-detail-title">
+                    {{ $blog->title }}
+                </h1>
 
-        <div class="blog-content">
-            {!! $blog->content !!}
+                <div class="blog-detail-meta">
+                    <span>By {{ $blog->author }}</span>
+                </div>
+
+                @if ($blog->photo)
+                    <img
+                        src="{{ asset('storage/' . $blog->photo) }}"
+                        class="blog-detail-image"
+                        alt="{{ $blog->title }}"
+                    >
+                @endif
+
+                <div class="blog-content">
+                    {!! $blog->content !!}
+                </div>
+
+            </div>
+
+            <aside class="blog-sidebar">
+                <h4 class="blog-sidebar-title">Related Articles</h4>
+
+                @foreach ($blogs as $item)
+                    @if ($item->id !== $blog->id)
+                        <a href="{{ route('frontend.blog.show', $item->slug) }}" class="blog-sidebar-item">
+
+                            <img
+                                src="{{ $item->photo
+                                    ? asset('storage/' . $item->photo)
+                                    : asset('frontend/assets/img/services-1.jpg') }}"
+                                alt="{{ $item->title }}"
+                            >
+
+                            <p>{{ $item->title }}</p>
+
+                        </a>
+                    @endif
+                @endforeach
+            </aside>
+
         </div>
 
     </div>
