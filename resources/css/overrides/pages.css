@@ -255,7 +255,12 @@
 }
 
 
-/* === BLOG DETAIL — READABILITY SYSTEM === */
+/* === BLOG DETAIL — RHYTHM SYSTEM === */
+
+.blog-main {
+  display: flex;
+  flex-direction: column;
+}
 
 .blog-detail {
   background-color: #0b0b0b;
@@ -283,7 +288,7 @@
 /* FIX spacing WITHOUT breaking layout */
 .blog-detail .blog-content p {
   line-height: 1.8;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   font-size: 16px;
 }
 
@@ -297,7 +302,7 @@
 
 .blog-detail-layout {
   display: grid;
-  grid-template-columns: minmax(0, 720px) 280px;
+  grid-template-columns: minmax(0, 680px) 300px;
   justify-content: center;
   gap: 48px;
 }
@@ -305,20 +310,21 @@
 .blog-detail-title {
   font-size: 32px;
   font-weight: 700;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
   color: #ffffff;
 }
 
 .blog-detail-meta {
   color: #9ca3af;
   font-size: 14px;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
 }
 
 /* === BLOG DETAIL — SIDEBAR POLISH === */
 
 .blog-sidebar {
-  padding-top: 8px;
+  padding-top: 12px;
+  padding-left: 8px;
   position: sticky;
   top: 120px;
 }
@@ -326,21 +332,21 @@
 .blog-sidebar-title {
   font-size: 18px;
   font-weight: 600;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
   color: #ffffff;
 }
 
 .blog-sidebar-item {
   display: flex;
-  gap: 12px;
-  align-items: flex-start;
-  margin-bottom: 18px;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 14px;
   text-decoration: none;
 }
 
 .blog-sidebar-item img {
-  width: 72px;
-  height: 56px;
+  width: 96px;
+  height: 72px;
   object-fit: cover;
   border-radius: 6px;
   flex-shrink: 0;
@@ -350,6 +356,7 @@
 
 .blog-sidebar-item p {
   font-size: 14px;
+  font-weight: 500;
   color: #d1d5db;
   margin: 0;
   line-height: 1.4;
