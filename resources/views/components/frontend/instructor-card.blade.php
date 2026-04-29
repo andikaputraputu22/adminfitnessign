@@ -43,25 +43,24 @@
     $facebookUrl = $facebook ?? $src->facebook ?? null;
 @endphp
 
-<div class="member position-relative">
+<div class="instructor-card text-center">
     <a 
         href="{{ route('frontend.detail_instructor', $src->slug ?? '') }}" 
         class="stretched-link"
     ></a>
 
-    <div class="pic">
+    <div class="instructor-avatar">
         <img
             src="{{ $photo }}"
             alt="{{ $displayName }}"
-            class="img-fluid member-img"
         >
     </div>
 
-    <div class="member-info">
-        <h4 class="member-name">{{ $displayName }}</h4>
+    <div class="instructor-content">
+        <h4 class="instructor-name">{{ $displayName }}</h4>
 
         @if($specialistName)
-            <p class="member-specialist">
+            <p class="instructor-specialist">
                 {{ $specialistName }}
             </p>
         @endif
