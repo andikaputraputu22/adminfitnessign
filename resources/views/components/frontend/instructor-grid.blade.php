@@ -6,7 +6,7 @@
 @endphp
 
 <div class="container">
-    <div class="row gy-4">
+    <div class="row gy-4 justify-content-center">
         @foreach ($instructors as $instructor)
             <div
                 class="col-lg-4 col-md-6"
