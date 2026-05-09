@@ -59,10 +59,17 @@
     <div class="instructor-content">
         <h4 class="instructor-name">{{ $displayName }}</h4>
 
+        @php
+            $cardMeta =
+                $specialistName
+                ?? $className
+                ?? $certificate
+                ?? 'Fitness Coach';
+        @endphp
+
         <p class="instructor-specialist">
-            {{ $certificate ? "$certificate | " : '' }}
-            {{ $specialistName ? "$specialistName | " : '' }}
-            {{ $className ?? '' }}
+            {{ $cardMeta }}
         </p>
+        
     </div>
 </div>
