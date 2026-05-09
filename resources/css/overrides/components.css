@@ -1,41 +1,96 @@
 .fitnessign-btn-get-started {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
     background: var(--color-surface);
     color: #FFFFFF;
-    border: 2px solid transparent; /* start with no visible border */
-    padding: var(--btn-padding-y) var(--btn-padding-x);
+
+    border: 2px solid transparent;
+
+    padding: 14px 28px;
     border-radius: var(--btn-radius);
-    transition: all 0.3s ease-in-out; /* only animate text color */
+
+    font-size: var(--fs-base);
+    font-weight: var(--btn-font-weight);
+
+    transition: all 0.3s ease-in-out;
 }
 
 .fitnessign-btn-get-started:hover {
-    color: var(--color-accent);           /* text turns neon green */
-    border-color: var(--color-accent);    /* border fades in green */
-    background: var(--color-surface);      /* keep background the same */
+    color: var(--color-accent);
+    border-color: var(--color-accent);
+    background: var(--color-surface);
 }
 
 .fitnessign-btn-watch-video {
-  font-size: var(--fs-base);
-  transition: 0.5s;
-  margin-left: 25px;
-  font-weight: var(--btn-font-weight);
-  color: #FFFFFF;
-  transition: color 0.5s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: var(--fs-base);
+    font-weight: var(--btn-font-weight);
+
+    color: #FFFFFF;
+    margin-left: 25px;
+
+    transition: color 0.3s ease;
 }
 
 .fitnessign-btn-watch-video i {
-  color: var(--color-accent);
-  font-size: var(--fs-4xl);
-  transition: 0.5 ease;
-  line-height: 0;
-  margin-right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    border: 2px solid var(--color-accent);
+    border-radius: 50%;
+
+    color: var(--color-accent);
+    font-size: 16px;
+
+    line-height: 1;
+
+    transition: all 0.3s ease;
 }
 
 .fitnessign-btn-watch-video:hover {
-  color: var(--color-accent)
+    color: var(--color-accent);
 }
 
 .fitnessign-btn-watch-video:hover i {
-  color: var(--color-accent)
+    background: rgba(0, 255, 64, 0.08);
+}
+
+
+@media (max-width: 768px) {
+
+    .fitnessign-btn-get-started,
+    .fitnessign-btn-watch-video {
+        font-size: 13px;
+    }
+
+    .fitnessign-btn-get-started {
+        padding: 10px 20px;
+        border-radius: 12px;
+    }
+
+    .fitnessign-btn-watch-video {
+        gap: 8px;
+        margin-left: 10px;
+    }
+
+    .fitnessign-btn-watch-video i {
+        width: 40px;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .hero .d-flex {
+        gap: 12px;
+    }
 }
 
 
