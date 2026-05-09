@@ -9,7 +9,7 @@
     <div class="row gy-4 justify-content-center">
         @foreach ($instructors as $instructor)
             <div
-                class="col-6 col-md-6 col-lg-4"
+                class="col-6 col-md-6 col-lg-3"
                 data-aos="fade-up"
                 data-aos-delay="{{ ($loop->index + 1) * 100 }}"
             >

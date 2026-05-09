@@ -48,6 +48,7 @@ TEXT;
 
     <x-frontend.instructor.detail.content
         :instructor="$instructor"
+        :service="$service"
         :certificates="$certificates"
         :specialists="$specialists"
         :isPersonalTraining="$isPersonalTraining"

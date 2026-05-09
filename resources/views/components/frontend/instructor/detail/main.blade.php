@@ -1,5 +1,15 @@
-<div class="col-lg-7">
+<div class="col-lg-8">
     <div class="pt-right-content">
+
+        @unless($isPersonalTraining)
+
+            <x-frontend.class-meta
+                :level="$instructor->level_class"
+                :participants="$instructor->participants_number"
+                :className="$service->name"
+            />
+
+        @endunless
 
         <div class="coach-description mb-4">
             {!! $instructor->description !!}
@@ -11,7 +21,7 @@
             <x-frontend.instructor.detail.session-options :instructor="$instructor" />
         @endif
 
-        <div class="pt-cta-inline mt-5 text-center">
+        <div class="pt-cta-inline mt-4 text-center">
             <x-frontend.whatsapp-button :text="$waText" />
         </div>
 

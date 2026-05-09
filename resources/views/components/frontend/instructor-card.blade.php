@@ -59,10 +59,10 @@
     <div class="instructor-content">
         <h4 class="instructor-name">{{ $displayName }}</h4>
 
-        @if($specialistName)
-            <p class="instructor-specialist">
-                {{ $specialistName }}
-            </p>
-        @endif
+        <p class="instructor-specialist">
+            {{ $certificate ? "$certificate | " : '' }}
+            {{ $specialistName ? "$specialistName | " : '' }}
+            {{ $className ?? '' }}
+        </p>
     </div>
 </div>

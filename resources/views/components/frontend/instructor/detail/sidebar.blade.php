@@ -1,4 +1,4 @@
-<div class="col-lg-5">
+<div class="col-lg-4">
 
     <img
         src="{{ $instructor->photo }}"

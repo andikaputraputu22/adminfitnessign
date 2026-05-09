@@ -12,6 +12,7 @@
             {{-- RIGHT --}}
             <x-frontend.instructor.detail.main
                 :instructor="$instructor"
+                :service="$service"
                 :isPersonalTraining="$isPersonalTraining"
                 :waText="$waText"
             />
