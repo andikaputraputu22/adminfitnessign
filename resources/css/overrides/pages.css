@@ -239,13 +239,122 @@
   text-justify: inter-word !important;
 }
 
+/* =========================================
+   BLOG LIST — CARD SYSTEM
+========================================= */
+
+.services .service-item {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  background: transparent;
+}
+
+.services .service-item .img {
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.services .service-item .img img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+
+  transition: transform 0.45s ease;
+}
+
+.services .service-item:hover .img img {
+  transform: scale(1.04);
+}
+
+.services .details {
+  margin: -72px 20px 0;
+  padding: 28px 24px;
+
+  background: rgba(10, 10, 10, 0.92);
+  backdrop-filter: blur(10px);
+
+  border-radius: 20px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+
+  text-align: left;
+
+  flex: 1;
+}
+
 .fitnessign-blog-title {
-    color: #FFFFFF !important;
+  color: #FFFFFF !important;
+
+  font-size: 24px;
+  line-height: 1.3;
+  font-weight: 700;
+
+  margin-bottom: 14px;
+
+  transition: color 0.25s ease;
+}
+
+.services .service-item:hover .fitnessign-blog-title {
+  color: var(--color-accent) !important;
 }
 
 .fitnessign-blog-description {
-    color: #FFFFFF !important;
+  color: #b7c0c9 !important;
+
+  font-size: 15px;
+  line-height: 1.8;
+
+  margin-bottom: 0;
 }
+
+/* =========================================
+   BLOG LIST — MOBILE POLISH
+========================================= */
+
+@media (max-width: 768px) {
+
+  .services .row {
+    row-gap: 32px;
+  }
+
+  .services .service-item .img {
+    border-radius: 14px;
+  }
+
+  .services .service-item .img img {
+    aspect-ratio: 16 / 9;
+  }
+
+  .services .details {
+    margin: -40px 12px 0;
+    padding: 18px 16px;
+
+    border-radius: 16px;
+  }
+
+  .fitnessign-blog-title {
+    font-size: 16px;
+    line-height: 1.32;
+
+    margin-bottom: 8px;
+  }
+
+  .fitnessign-blog-description {
+    font-size: 13px;
+    line-height: 1.7;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+
+    line-clamp: 3;
+    overflow: hidden;
+  }
+
+}
+
 
 /* =========================
    Description Mobile Fix
@@ -530,6 +639,95 @@
 .blog-sidebar-item:hover img {
   transform: scale(1.06);
   filter: brightness(1.05);
+}
+
+/* =========================================
+   BLOG DETAIL — MOBILE STABILIZATION
+========================================= */
+
+@media (max-width: 991px) {
+
+  .blog-detail {
+    padding-top: 56px;
+    padding-bottom: 72px;
+  }
+
+  .blog-detail-layout {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+
+  .blog-main {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .blog-sidebar {
+    position: static;
+    top: unset;
+
+    padding-top: 0;
+    padding-left: 0;
+
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding-top: 32px;
+  }
+
+  .blog-detail-title {
+    font-size: 34px;
+    line-height: 1.18;
+
+    margin-bottom: 16px;
+
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+
+  .blog-detail-meta {
+    margin-bottom: 24px;
+  }
+
+  .blog-detail-image {
+    max-height: 280px;
+    border-radius: 14px;
+    margin-bottom: 28px;
+  }
+
+  .blog-detail .blog-content {
+    max-width: 100%;
+  }
+
+  .blog-detail .blog-content * {
+    text-align: left;
+  }
+
+  .blog-detail .blog-content p,
+  .blog-detail .blog-content li {
+    font-size: 15px;
+    line-height: 1.9;
+  }
+
+  .blog-sidebar-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .blog-sidebar-item {
+    gap: 14px;
+    align-items: flex-start;
+  }
+
+  .blog-sidebar-item img {
+    width: 110px;
+    height: 82px;
+    border-radius: 10px;
+  }
+
+  .blog-sidebar-item p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
 }
 
 
