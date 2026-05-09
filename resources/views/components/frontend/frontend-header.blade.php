@@ -6,7 +6,7 @@
         </a>
 
         <nav id="navmenu" class="navmenu">
-            <ul class="fitnessign-text-green">
+            <ul>
 
                 <li>
                     <a href="{{ route('frontend.home') }}"
