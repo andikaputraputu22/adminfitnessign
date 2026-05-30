@@ -8,37 +8,25 @@
         $className = $instructor->services->first()?->name ?? 'Class';
 
         if ($isPersonalTraining) {
-            $waText = <<<TEXT
-Halo Admin Fitnessign
+    $waText = <<<TEXT
+Halo Coach!
 
-Saya tertarik untuk Personal Training.
+Saya tertarik untuk daftar Private Training bersama Coach {$instructor->name} dengan __SESSION__ bersama *Fitnessign*.
 
-Coach:
-{$instructor->name}
+Tolong info ketersediaan jadwal Coach {$instructor->name} & detail latihan yang cocok dengan saya.
 
-Pilihan paket:
-__SESSION__
+Terima kasih! 🏋️‍♂️
 
-Mohon info detail dan rekomendasi paket yang cocok. Terima kasih.
+(Isi data Anda)
+
+Nama :
+No.tlp :
+Umur :
+Domisili :
+Riwayat cidera :
+Goals Training :
 TEXT;
-        } else {
-            $waText = <<<TEXT
-Halo Admin Fitnessign
-
-Saya ingin mendaftar kelas.
-
-Class:
-{$className}
-
-Coach:
-{$instructor->name}
-
-Level:
-{$instructor->level_class}
-
-Mohon info jadwal dan biaya kelas. Terima kasih.
-TEXT;
-        }
+}
     @endphp
 
     <x-frontend.instructor-hero

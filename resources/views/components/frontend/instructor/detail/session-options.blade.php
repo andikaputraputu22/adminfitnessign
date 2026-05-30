@@ -18,7 +18,8 @@
                         id="session{{ $session }}"
                         name="session"
                         value="{{ $session }}"
-                        class="session-radio">
+                        class="session-radio"
+                        {{ $loop->first ? 'checked' : '' }}>
 
                     <label class="session-card" for="session{{ $session }}">
                         <h6>{{ $session }} Sessions</h6>
