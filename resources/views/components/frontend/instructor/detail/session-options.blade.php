@@ -4,10 +4,10 @@
     <div class="pt-session-grid">
 
         @foreach([
-            4 => $instructor->price_4_sessions,
             8 => $instructor->price_8_sessions,
             16 => $instructor->price_16_sessions,
-            24 => $instructor->price_24_sessions
+            24 => $instructor->price_24_sessions,
+            32 => $instructor->price_32_sessions
         ] as $session => $price)
 
             @if($price)
@@ -23,7 +23,6 @@
 
                     <label class="session-card" for="session{{ $session }}">
                         <h6>{{ $session }} Sessions</h6>
-                        <p>Rp {{ number_format($price,0,',','.') }}</p>
                     </label>
 
                 </div>

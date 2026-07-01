@@ -71,13 +71,6 @@
                                     <div class="row">
                                         <div class="col-md-3">
                                             <div class="form-group">
-                                                <label for="price_4_sessions">Price 4 Sessions</label>
-                                                <input type="number" class="form-control" id="price_4_sessions"
-                                                    name="price_4_sessions" value="{{ old('price_4_sessions', $instructor->price_4_sessions) }}" placeholder="Enter price for 4 sessions" min="0" step="1">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="form-group">
                                                 <label for="price_8_sessions">Price 8 Sessions</label>
                                                 <input type="number" class="form-control" id="price_8_sessions"
                                                     name="price_8_sessions" value="{{ old('price_8_sessions', $instructor->price_8_sessions) }}" placeholder="Enter price for 8 sessions" min="0" step="1">
@@ -95,6 +88,13 @@
                                                 <label for="price_24_sessions">Price 24 Sessions</label>
                                                 <input type="number" class="form-control" id="price_24_sessions"
                                                     name="price_24_sessions" value="{{ old('price_24_sessions', $instructor->price_24_sessions) }}" placeholder="Enter price for 24 sessions" min="0" step="1">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label for="price_32_sessions">Price 32 Sessions</label>
+                                                <input type="number" class="form-control" id="price_32_sessions"
+                                                    name="price_32_sessions" value="{{ old('price_32_sessions', $instructor->price_32_sessions) }}" placeholder="Enter price for 32 sessions" min="0" step="1">
                                             </div>
                                         </div>
                                     </div>
