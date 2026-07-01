@@ -9,26 +9,12 @@
                 <div class="col-lg-6 order-2 order-lg-1 d-flex align-items-center">
                     <div class="about-text">
                         <p>
-                            Di Fitnessign, kami percaya bahwa kebugaran bukan sekadar olahraga —
-                            tetapi fondasi untuk hidup yang sehat, produktif, dan penuh energi.
-                            Kami hadir untuk membantu setiap individu menemukan keseimbangan
-                            antara tubuh, pikiran, dan gaya hidup melalui pengalaman latihan
-                            yang nyaman, modern, dan menyenangkan.
+                            Di Fitnessign, kami percaya bahwa tubuh yang sehat bukan sekadar impian, melainkan sebuah komitmen yang terarah. Nama kami lahir dari filosofi sederhana: menjadi petunjuk dan partner terpercaya bagi siapa saja yang ingin memulai, menjaga, dan meningkatkan kualitas hidup melalui kebugaran.
+Melalui program latihan yang terarah, instruktur berpengalaman, dan lingkungan yang suportif, kami membantu setiap individu membangun kebiasaan sehat, meningkatkan performa, dan menjadi versi terbaik dari dirinya.
                         </p>
 
                         <p>
-                            Dengan dukungan fasilitas berkualitas dan instruktur berpengalaman,
-                            kami mendampingi perjalanan kebugaran Anda mulai dari pemula
-                            hingga yang sudah terbiasa berlatih. Berbagai program seperti
-                            Personal Training, Strength & Conditioning, Yoga, Zumba,
-                            dan Body Combat dirancang agar efektif, terarah, dan mudah
-                            dinikmati dalam rutinitas harian.
-                        </p>
-
-                        <p>
-                            Lebih dari sekadar tempat latihan, Fitnessign ingin membangun
-                            komunitas yang positif, suportif, dan mampu mendorong setiap anggota
-                            untuk terus berkembang menjadi versi terbaik dari dirinya.
+                            Melalui program latihan yang terarah, instruktur berpengalaman, dan lingkungan yang suportif, kami membantu setiap individu membangun kebiasaan sehat, meningkatkan performa, dan menjadi versi terbaik dari dirinya.
                         </p>
                     </div>
                 </div>
